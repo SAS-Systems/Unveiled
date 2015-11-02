@@ -1,3 +1,4 @@
+@wip
 Feature: Settings
   AS a user and a logged-in user
   I want to change the settings on my Android Smartphone

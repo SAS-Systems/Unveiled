@@ -5,4 +5,4 @@ Feature: test MainActivity
   Scenario: main activity started
     Given I see MainActivity
     When I press nothing
-    Then I see "Hello World"
+    Then I see "Hello World!"

@@ -9,4 +9,14 @@
     <TextView android:text="Hello World!" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/lbHello" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture Video"
+        android:id="@+id/btCamera"
+        android:layout_below="@+id/lbHello"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="startCaptureVideo()" />
 </RelativeLayout>
