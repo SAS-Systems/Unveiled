@@ -137,3 +137,16 @@ body {
   width: 140px ;
   height: 140px;
 }
+
+/* Change Font Awesome icon color */
+.fa-star{
+  color:#fff !important;
+}
+
+.fa-envelope{
+  color:#fff !important;
+}
+
+.fa-font{
+  color:#fff !important;
+}
