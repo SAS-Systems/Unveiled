@@ -64,5 +64,3 @@ function sendSSEMessageId($content, $event, $retry, $id)
     echo "data:" . $content . "\n\n";
     flush();
 }
-
-?>

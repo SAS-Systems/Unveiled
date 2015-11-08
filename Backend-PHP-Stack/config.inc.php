@@ -25,4 +25,3 @@ $gvCryptSalt = "CRPqC56GCRPqC56G";
 //Default Timezone
 date_default_timezone_set('Europe/Berlin');
 ///////////////////////////////////////////////////////////////////////////
-?>

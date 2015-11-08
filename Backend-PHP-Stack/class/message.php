@@ -111,7 +111,7 @@ class Message
      */
     public function toHTML() {
 
-        return '<div class="message>"'+$this->getMsg()+'</div>';
+        return '<div class="message>"'.$this->getMsg().'</div>';
     }
 
 }

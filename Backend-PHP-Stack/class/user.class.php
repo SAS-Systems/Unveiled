@@ -330,9 +330,6 @@ class User
         $query = "UPDATE `user` SET `username`=?, `email`=?, `email_notification_flag`=?, `mobile_number`=?, `mobile_number_notification_flag`=?, `password`=?, `token`=?, `last_ip`=?, `last_login`=?, `permission`=? WHERE `id`=? ";
         $query_stmt = $dbConn->prepare($query);
 
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $now = time();
-
         $id = (int)$this->id;
         $username = utf8_decode(strip_tags($this->username));
         $email = $this->email;
@@ -542,5 +539,3 @@ permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
     }
 
 }
-
-?>
