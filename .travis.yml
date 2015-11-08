@@ -18,6 +18,7 @@ php:
 branches:
   only:
     - Backend-PHP-Stack
+	- travisTest
 
 before_install:
    - /home/travis/.phpenv/versions/5.5/bin/composer self-update
