@@ -33,8 +33,8 @@ script: true
 # use curl to deploy to our server
 # $FTP_USER, $FTP_PASSWORD and $FTP_URL are enrypted env-variables
 after_success:
-   - "find Backend-PHP-Stack -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/{}"
-#   - "curl --ftp-create-dirs -T Backend-PHP-Stack/config.inc.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
+#   - "find Backend-PHP-Stack -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/{}"
+   - 'curl --ftp-create-dirs -T "Backend-PHP-Stack/config.inc.php" -u $FTP_USER:$FTP_PASSWORD "$FTP_URL/test/"'
 #   - "curl --ftp-create-dirs -T Backend-PHP-Stack/index.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
 #   - "curl --ftp-create-dirs -T Backend-PHP-Stack/webstart.inc.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
 #   - "curl --ftp-create-dirs -T 'Backend-PHP-Stack/{config.inc.php,index.php,webstart.inc.php}' -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
