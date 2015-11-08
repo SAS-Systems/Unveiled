@@ -25,8 +25,8 @@ install: true
 
 #before_script:
 
-# use default script (phpunit)
-#script:
+# skip build
+script: true
 
 # use curl to deploy to our server
 # $FTP_USER, $FTP_PASSWORD and $FTP_URL are enrypted env-variables
