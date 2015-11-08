@@ -9,7 +9,7 @@ $dbHost = 'localhost';
 $dbUser = 'root';
 
 //DB Password
-$dbPassword = '123456789';
+$dbPassword = '123456789000';
 
 //DB Name
 $dbName = 'unveiled';
