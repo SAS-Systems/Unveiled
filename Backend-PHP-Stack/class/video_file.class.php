@@ -52,11 +52,22 @@ class VideoFile extends File
             if ($row != null) {
 
                 $db_id = (int)$row->id;
-                $db_username = utf8_encode($row->username);
+                $db_ownerId = (int)$row->owner_id;
+                $db_caption = utf8_encode($row->caption);
+                $db_filename = utf8_encode($row->filename);
+                $db_mediatype = utf8_encode($row->mediatype);
+                $db_uploadedAt = (int)$row->uploaded_at;
+                $db_size = (int)$row->size;
+                $db_lat = (float)$row->lat;
+                $db_lng = (float)$row->lng;
+                $db_id = (int)$row->id;
+                $db_caption = utf8_encode($row->caption);
+                $db_caption = utf8_encode($row->caption);
 
 
-                $u = new User($db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
-                return $u;
+
+
+                return new VideoFile();
 
             } else {
 
