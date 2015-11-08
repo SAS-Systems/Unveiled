@@ -174,5 +174,4 @@ class VideoFile extends File
         $this->length = $length;
     }
 
-
 }
