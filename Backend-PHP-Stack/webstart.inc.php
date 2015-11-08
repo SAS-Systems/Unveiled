@@ -8,7 +8,6 @@ set_time_limit ( 999 );
 
 require_once( __DIR__.DIRECTORY_SEPARATOR.'config.inc.php' );
 
-
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
@@ -38,7 +37,6 @@ require_once( __DIR__.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'message.c
 require_once( __DIR__.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'user.class.php' );
 
 require_once( __DIR__.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'error_log.class.php' );
-
 
 ///////////////////////////////////////////////////////////////////////////
 

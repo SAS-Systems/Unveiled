@@ -60,14 +60,11 @@ class VideoFile extends File
                 $db_size = (int)$row->size;
                 $db_lat = (float)$row->lat;
                 $db_lng = (float)$row->lng;
-                $db_id = (int)$row->id;
-                $db_caption = utf8_encode($row->caption);
-                $db_caption = utf8_encode($row->caption);
+                $db_public = intToBool((int)$row->public);
+                $db_verified = intToBool((int)$row->verified);
+                $db_length = (int)$row->length;
 
-
-
-
-                return new VideoFile();
+                return new VideoFile($db_id, $db_ownerId, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length);
 
             } else {
 

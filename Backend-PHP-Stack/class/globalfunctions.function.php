@@ -26,6 +26,8 @@ function intToBool($int)
         return true;
     } else if ($int == 1) {
         return true;
+    } else {
+        return false;
     }
 }
 

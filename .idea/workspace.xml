@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
     </list>
@@ -76,15 +76,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_file.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="video_file.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.375">
-              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.7590759">
+              <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
               <folding>
-                <marker date="1446998185000" expanded="true" signature="978:1013" placeholder="SELECT * FRO..file..." />
-                <marker date="1446998185000" expanded="true" signature="2232:2441" placeholder="UPDATE `user..." />
-                <marker date="1446998185000" expanded="true" signature="3757:3934" placeholder="INSERT INTO user..." />
+                <marker date="1446998866000" expanded="true" signature="978:1013" placeholder="SELECT * FRO..file..." />
+                <marker date="1446998866000" expanded="true" signature="2386:2595" placeholder="UPDATE `user..." />
+                <marker date="1446998866000" expanded="true" signature="3911:4088" placeholder="INSERT INTO user..." />
               </folding>
             </state>
           </provider>
@@ -93,18 +93,18 @@
       <file leaf-file-name="webstart.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4117646">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.470589">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globalfunctions.function.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="globalfunctions.function.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2640264">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -178,9 +178,9 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/44da7e07-f95a-4821-9ef3-104e8dece541/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec4a41f5-3462-45d6-aeed-1273128ba3fe/console.sql" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
       </list>
     </option>
   </component>
@@ -394,7 +394,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446996714163</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added globalfunctions">
+      <created>1446998612008</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1446998612008</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -441,7 +447,8 @@
     <MESSAGE value="second try gitignore" />
     <MESSAGE value="3. try gitignore" />
     <MESSAGE value="4. try gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="4. try gitignore" />
+    <MESSAGE value="added globalfunctions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added globalfunctions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -612,31 +619,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.375">
-          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-          <folding>
-            <marker date="1446998185000" expanded="true" signature="978:1013" placeholder="SELECT * FRO..file..." />
-            <marker date="1446998185000" expanded="true" signature="2232:2441" placeholder="UPDATE `user..." />
-            <marker date="1446998185000" expanded="true" signature="3757:3934" placeholder="INSERT INTO user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4117646">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.470589">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2640264">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7590759">
+          <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+          <folding>
+            <marker date="1446998866000" expanded="true" signature="978:1013" placeholder="SELECT * FRO..file..." />
+            <marker date="1446998866000" expanded="true" signature="2386:2595" placeholder="UPDATE `user..." />
+            <marker date="1446998866000" expanded="true" signature="3911:4088" placeholder="INSERT INTO user..." />
+          </folding>
         </state>
       </provider>
     </entry>
