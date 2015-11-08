@@ -85,6 +85,46 @@ class PictureFile extends File
         }
     }
 
+    /**
+     * write the data into DB
+     */
+    public function flushDB()
+    {
+        global $dbConn;
+
+        $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
+                  public=?, verified=?, height=?, width=? WHERE id=? ";
+        $query_stmt = $dbConn->prepare($query);
+
+        $id = (int)$this->getId();
+        $ownerId = (int)$this->getOwnerID();
+        $caption = utf8_decode(strip_tags($this->getCaption()));
+        $filename = utf8_decode(strip_tags($this->getFilename()));
+        $mediatype = utf8_decode(strip_tags($this->getMediatype()));
+        $uploadedAt = (int)$this->getUploadedAt();
+        $size = (int)$this->getSize();
+        $lat = (double)$this->getLat();
+        $lng = (double)$this->getLng();
+        $public = (int)$this->isPublic();
+        $verified = (int)$this->isVerified();
+        $height = (int)$this->getHeight();
+        $width = (int)$this->getWidth();
+
+        $query_stmt->bind_param('isssiiddiiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $height, $width, $id);
+        $query_stmt->execute();
+
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
+
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+
+            return false;
+        }
+
+        return true;
+    }
+
 
     /**
      * @return int

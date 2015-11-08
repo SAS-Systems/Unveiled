@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,13 +54,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="picture_file.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="picture_file.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-48.125">
-              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.48844886">
+              <caret line="103" column="50" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
               <folding>
-                <marker date="1447000443000" expanded="true" signature="1153:1188" placeholder="SELECT * FRO..file..." />
+                <marker date="1447001234000" expanded="true" signature="1153:1188" placeholder="SELECT * FRO..file..." />
+                <marker date="1447001234000" expanded="true" signature="2620:2789" placeholder="UPDATE file ..." />
               </folding>
             </state>
           </provider>
@@ -78,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_file.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="video_file.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6039604">
-              <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+            <state vertical-scroll-proportion="-2.25">
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="116" selection-end-column="5" />
               <folding>
                 <marker date="1447001101000" expanded="true" signature="978:1013" placeholder="SELECT * FRO..file..." />
                 <marker date="1447001101000" expanded="true" signature="2386:2546" placeholder="UPDATE `user..." />
@@ -180,9 +179,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec4a41f5-3462-45d6-aeed-1273128ba3fe/console.sql" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php" />
       </list>
     </option>
   </component>
@@ -414,7 +413,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446999278625</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="implemented: VideoFile-&gt;flushDB">
+      <created>1447001144991</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1447001144991</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -428,7 +433,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14057508" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14057508" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -464,7 +469,8 @@
     <MESSAGE value="added globalfunctions" />
     <MESSAGE value="implemented: VideoFile-&gt;newFromId" />
     <MESSAGE value="implemented: PictureFile-&gt;newFromId" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented: PictureFile-&gt;newFromId" />
+    <MESSAGE value="implemented: VideoFile-&gt;flushDB" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented: VideoFile-&gt;flushDB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -618,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-48.125">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <marker date="1447000443000" expanded="true" signature="1153:1188" placeholder="SELECT * FRO..file..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-31.25">
@@ -655,12 +651,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6039604">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+        <state vertical-scroll-proportion="-2.25">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="116" selection-end-column="5" />
           <folding>
             <marker date="1447001101000" expanded="true" signature="978:1013" placeholder="SELECT * FRO..file..." />
             <marker date="1447001101000" expanded="true" signature="2386:2546" placeholder="UPDATE `user..." />
             <marker date="1447001101000" expanded="true" signature="3854:4031" placeholder="INSERT INTO user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48844886">
+          <caret line="103" column="50" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+          <folding>
+            <marker date="1447001234000" expanded="true" signature="1153:1188" placeholder="SELECT * FRO..file..." />
+            <marker date="1447001234000" expanded="true" signature="2620:2789" placeholder="UPDATE file ..." />
           </folding>
         </state>
       </provider>
