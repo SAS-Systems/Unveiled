@@ -19,7 +19,8 @@ branches:
   only:
     - Backend-PHP-Stack
 
-#before_install:
+before_install:
+   - /home/travis/.phpenv/versions/5.5/bin/composer self-update
 
 # skip installation step
 install: true
@@ -32,9 +33,10 @@ script: true
 # use curl to deploy to our server
 # $FTP_USER, $FTP_PASSWORD and $FTP_URL are enrypted env-variables
 after_success:
-   - "curl --ftp-create-dirs -T Backend-PHP-Stack/config.inc.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
-   - "curl --ftp-create-dirs -T Backend-PHP-Stack/index.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
-   - "curl --ftp-create-dirs -T Backend-PHP-Stack/webstart.inc.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
+   - "find Backend-PHP-Stack -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/{}"
+#   - "curl --ftp-create-dirs -T Backend-PHP-Stack/config.inc.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
+#   - "curl --ftp-create-dirs -T Backend-PHP-Stack/index.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
+#   - "curl --ftp-create-dirs -T Backend-PHP-Stack/webstart.inc.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
 #   - "curl --ftp-create-dirs -T 'Backend-PHP-Stack/{config.inc.php,index.php,webstart.inc.php}' -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
 #   - "curl --ftp-create-dirs -T 'Backend-PHP-Stack/class/{error_log.class.php,file.class.php,globalfunctions.function.php,message.class.php,message.class.php,picture_file.class.php,user.class.php,video_file.class.php}' -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/class/"
   
