@@ -84,25 +84,24 @@ class VideoFile extends File
     {
         global $dbConn;
 
-        $query = "UPDATE `user` SET `username`=?, `email`=?, `email_notification_flag`=?, `mobile_number`=?, `mobile_number_notification_flag`=?, `password`=?, `token`=?, `last_ip`=?, `last_login`=?, `permission`=? WHERE `id`=? ";
+        $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
+                  public=?, verified=?, length=? WHERE id=? ";
         $query_stmt = $dbConn->prepare($query);
 
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $now = time();
+        $id = (int)$this->getId();
+        $ownerId = (int)$this->getOwnerID();
+        $caption = utf8_decode(strip_tags($this->getCaption()));
+        $filename = utf8_decode(strip_tags($this->getFilename()));
+        $mediatype = utf8_decode(strip_tags($this->getMediatype()));
+        $uploadedAt = (int)$this->getUploadedAt();
+        $size = (int)$this->getSize();
+        $lat = (double)$this->getLat();
+        $lng = (double)$this->getLng();
+        $public = (int)$this->isPublic();
+        $verified = (int)$this->isVerified();
+        $length = (int)$this->getLength();
 
-        $id = (int)$this->id;
-        $username = utf8_decode(strip_tags($this->username));
-        $email = $this->email;
-        $emailNotification = (int)$this->emailNotification;
-        $mobileNumber = (int)$this->mobileNumber;
-        $mobileNumberNotification = (int)$this->mobileNumberNotification;
-        $password = $this->password;
-        $token = $this->token;
-        $lastIP = $this->lastIP;
-        $lastLogin = (int)$this->lastLogin;
-        $permission = (int)$this->permission;
-
-        $query_stmt->bind_param('ssiiisssiii', $username, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $password, $token, $lastIP, $lastLogin, $permission, $id);
+        $query_stmt->bind_param('isssiiddiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $id);
         $query_stmt->execute();
 
         //Logg all MySQL errors

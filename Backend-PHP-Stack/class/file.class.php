@@ -3,17 +3,17 @@
 abstract class File
 {
 
-    private $id = -1;
-    private $ownerID = -1;
-    private $caption = "";
-    private $filename = "";
-    private $mediatype = "";
-	private $uploadedAt = 0; //timestamp
-	private $size = 0; //byte
-	private $lat = 0.0;
-	private $lng = 0.0;
-	private $public = false;
-	private $verified = false;
+    protected $id = -1;
+    protected $ownerID = -1;
+    protected $caption = "";
+    protected $filename = "";
+    protected $mediatype = "";
+    protected $uploadedAt = 0; //timestamp
+    protected $size = 0; //byte
+    protected $lat = 0.0;
+    protected $lng = 0.0;
+    protected $public = false;
+    protected $verified = false;
 
     /**
      * File constructor.

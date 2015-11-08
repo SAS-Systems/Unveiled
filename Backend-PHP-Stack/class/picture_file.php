@@ -72,7 +72,7 @@ class PictureFile extends File
                 $db_height = (int)$row->height;
                 $db_width = (int)$row->width;
 
-                return new VideoFile($db_id, $db_ownerId, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_height, $db_width);
+                return new PictureFile($db_id, $db_ownerId, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_height, $db_width);
 
             } else {
 
