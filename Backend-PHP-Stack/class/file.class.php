@@ -56,11 +56,6 @@ abstract class File
      */
     abstract public function flushDB();
 
-    /**
-     * create a ne entry in DB
-     */
-    public function create() { }
-
 
     abstract public function getAllFilesFromUser($user);
 
