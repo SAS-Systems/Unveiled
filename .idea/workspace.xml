@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
+    <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="bug fixed">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +32,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="picture_file.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php">
+      <file leaf-file-name="picture_file.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-22.5">
               <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
@@ -87,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webstart.inc.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="webstart.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.7058825">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.90106004">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="file.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3960396">
+            <state vertical-scroll-proportion="-15.0">
               <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
               <folding />
             </state>
@@ -452,33 +451,39 @@
       <option name="project" value="LOCAL" />
       <updated>1447006468990</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="bug fixed">
+      <created>1447007524596</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1447007524596</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270501" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08844953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -508,7 +513,8 @@
     <MESSAGE value="implemented: PhotoFile-&gt;create" />
     <MESSAGE value="implemented: getAllFilesFromUser" />
     <MESSAGE value="better code smell" />
-    <option name="LAST_COMMIT_MESSAGE" value="better code smell" />
+    <MESSAGE value="bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -523,7 +529,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="148" column="54" selection-start-line="148" selection-start-column="54" selection-end-line="148" selection-end-column="54" />
@@ -782,7 +788,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.5">
           <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
@@ -859,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7058825">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.75">
@@ -877,8 +875,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3960396">
+        <state vertical-scroll-proportion="-15.0">
           <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90106004">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
