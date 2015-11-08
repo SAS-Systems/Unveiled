@@ -3,10 +3,25 @@
 class VideoFile extends File
 {
 
-    private $length;
+    private $length = 0;
 
 
-    private function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length)
+    /**
+     * VideoFile constructor.
+     * @param int $id
+     * @param int $ownerID
+     * @param string $caption
+     * @param string $filename
+     * @param string $mediatype
+     * @param int $uploadedAt
+     * @param int $size
+     * @param float $lat
+     * @param float $lng
+     * @param bool $public
+     * @param bool $verified
+     * @param int $lenth
+     */
+    protected function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length)
     {
 
         parent::__construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
@@ -37,11 +52,19 @@ class VideoFile extends File
             if ($row != null) {
 
                 $db_id = (int)$row->id;
-                $db_username = utf8_encode($row->username);
+                $db_ownerId = (int)$row->owner_id;
+                $db_caption = utf8_encode($row->caption);
+                $db_filename = utf8_encode($row->filename);
+                $db_mediatype = utf8_encode($row->mediatype);
+                $db_uploadedAt = (int)$row->uploaded_at;
+                $db_size = (int)$row->size;
+                $db_lat = (float)$row->lat;
+                $db_lng = (float)$row->lng;
+                $db_public = intToBool((int)$row->public);
+                $db_verified = intToBool((int)$row->verified);
+                $db_length = (int)$row->length;
 
-
-                $u = new User($db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
-                return $u;
+                return new VideoFile($db_id, $db_ownerId, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length);
 
             } else {
 
@@ -61,25 +84,24 @@ class VideoFile extends File
     {
         global $dbConn;
 
-        $query = "UPDATE `user` SET `username`=?, `email`=?, `email_notification_flag`=?, `mobile_number`=?, `mobile_number_notification_flag`=?, `password`=?, `token`=?, `last_ip`=?, `last_login`=?, `permission`=? WHERE `id`=? ";
+        $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
+                  public=?, verified=?, length=? WHERE id=? ";
         $query_stmt = $dbConn->prepare($query);
 
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $now = time();
+        $id = (int)$this->getId();
+        $ownerId = (int)$this->getOwnerID();
+        $caption = utf8_decode(strip_tags($this->getCaption()));
+        $filename = utf8_decode(strip_tags($this->getFilename()));
+        $mediatype = utf8_decode(strip_tags($this->getMediatype()));
+        $uploadedAt = (int)$this->getUploadedAt();
+        $size = (int)$this->getSize();
+        $lat = (double)$this->getLat();
+        $lng = (double)$this->getLng();
+        $public = boolToInt($this->isPublic());
+        $verified = boolToInt($this->isVerified());
+        $length = (int)$this->getLength();
 
-        $id = (int)$this->id;
-        $username = utf8_decode(strip_tags($this->username));
-        $email = $this->email;
-        $emailNotification = (int)$this->emailNotification;
-        $mobileNumber = (int)$this->mobileNumber;
-        $mobileNumberNotification = (int)$this->mobileNumberNotification;
-        $password = $this->password;
-        $token = $this->token;
-        $lastIP = $this->lastIP;
-        $lastLogin = (int)$this->lastLogin;
-        $permission = (int)$this->permission;
-
-        $query_stmt->bind_param('ssiiisssiii', $username, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $password, $token, $lastIP, $lastLogin, $permission, $id);
+        $query_stmt->bind_param('isssiiddiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $id);
         $query_stmt->execute();
 
         //Logg all MySQL errors
@@ -94,24 +116,27 @@ class VideoFile extends File
         return true;
     }
 
-
-    public function create()
+    /**
+     * create a ne entry in DB
+     */
+    public function create($user, $caption, $filename, $mediatype, $size=0, $lat=0.0, $lng=0.0, $public=false, $verified=false, $length=0)
     {
-
         global $dbConn;
 
-        $username = utf8_decode(strip_tags($username));
-        $password = crypt($dbConn->real_escape_string($password), $gvCryptSalt);
-
-        $query = "INSERT INTO user (username, email, email_notification_flag, mobile_number, mobile_number_notification_flag,
-permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
+        $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, length) VALUES (?,?,?,?,?,?,?,?,?,?)";
         $query_stmt = $dbConn->prepare($query);
 
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $now = time();
+        $caption = utf8_decode(strip_tags($caption));
+        $filename = utf8_decode(strip_tags($filename));
+        $mediatype = utf8_decode(strip_tags($mediatype));
+        $size = (int)$size;
+        $lat = (double)$lat;
+        $lng = (double)$lng;
+        $public = boolToInt($public);
+        $verified = boolToInt($verified);
+        $length = (int)$length;
 
-        $query_stmt->bind_param('ssiiiisis', $username, $email, $emailNotification, $mobileNumber,
-            $mobileNumberNotification, $permission, $password, $now, $ip);
+        $query_stmt->bind_param('ssssiddiii', $user->getId(), $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $length);
         $query_stmt->execute();
 
         if ($dbConn->affected_rows > 0) {
@@ -123,9 +148,18 @@ permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
         }
     }
 
+    /**
+     * return all files from user
+     * @param $user
+     */
+    public function getAllFilesFromUser($user)
+    {
+        // TODO: Implement getAllFilesFromUser() method.
+    }
+
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getLength()
     {
@@ -133,14 +167,11 @@ permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
     }
 
     /**
-     * @param mixed $length
+     * @param int $length
      */
     public function setLength($length)
     {
         $this->length = $length;
     }
 
-
 }
-
-?>
