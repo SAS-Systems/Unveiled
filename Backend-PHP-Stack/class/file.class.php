@@ -62,6 +62,8 @@ abstract class File
     public function create() { }
 
 
+    abstract public function getAllFilesFromUser($user);
+
     /**
      * @return int
      */
