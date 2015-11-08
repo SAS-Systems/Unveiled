@@ -1,13 +1,13 @@
 <?php
 
-class File
+abstract class File
 {
 
     private $id = -1;
     private $ownerID = -1;
     private $caption = "";
     private $filename = "";
-    private $mediatype "";
+    private $mediatype = "";
 	private $uploadedAt = 0; //timestamp
 	private $size = 0; //byte
 	private $lat = 0.0;
@@ -21,7 +21,7 @@ class File
      * @param int $ownerID
      * @param string $caption
      * @param string $filename
-     * @param $mediatype
+     * @param string $mediatype
      * @param int $uploadedAt
      * @param int $size
      * @param float $lat
@@ -29,7 +29,7 @@ class File
      * @param bool $public
      * @param bool $verified
      */
-    public function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
+    protected function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
     {
         $this->id = $id;
         $this->ownerID = $ownerID;
@@ -49,25 +49,18 @@ class File
      * creates a new object of this class using id
      * @param int $id
      */
-    public function newFromId($id)
-    {
-
-    }
+    abstract public function newFromId($id);
 
     /*
      * write the data into DB
      */
-    public function flushDB()
-    {
-
-    }
+    abstract public function flushDB();
 
     /*
      *
      */
-    public function create(){
+    abstract public function create();
 
-    }
 
     /**
      * @return int
@@ -114,13 +107,13 @@ class File
     {
         $this->filename = $filename;
     }/**
- * @return mixed
+ * @return string
  */
     public function getMediatype()
     {
         return $this->mediatype;
     }/**
- * @param mixed $mediatype
+ * @param string $mediatype
  */
     public function setMediatype($mediatype)
     {

@@ -3,10 +3,25 @@
 class VideoFile extends File
 {
 
-    private $length;
+    private $length = 0;
 
 
-    private function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length)
+    /**
+     * VideoFile constructor.
+     * @param int $id
+     * @param int $ownerID
+     * @param string $caption
+     * @param string $filename
+     * @param string $mediatype
+     * @param int $uploadedAt
+     * @param int $size
+     * @param float $lat
+     * @param float $lng
+     * @param bool $public
+     * @param bool $verified
+     * @param int $lenth
+     */
+    protected function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length)
     {
 
         parent::__construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
@@ -125,7 +140,7 @@ permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
 
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getLength()
     {
@@ -133,7 +148,7 @@ permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
     }
 
     /**
-     * @param mixed $length
+     * @param int $length
      */
     public function setLength($length)
     {
