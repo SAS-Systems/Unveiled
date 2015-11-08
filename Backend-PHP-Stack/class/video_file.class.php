@@ -117,7 +117,7 @@ class VideoFile extends File
     }
 
     /**
-     *
+     * create a ne entry in DB
      */
     public function create($user, $caption, $filename, $mediatype, $size=0, $lat=0.0, $lng=0.0, $public=false, $verified=false, $length=0)
     {

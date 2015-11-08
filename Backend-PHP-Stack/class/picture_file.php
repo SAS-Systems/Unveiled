@@ -125,6 +125,39 @@ class PictureFile extends File
         return true;
     }
 
+    /**
+     * create a ne entry in DB
+     */
+    public function create($user, $caption, $filename, $mediatype, $size=0, $lat=0.0, $lng=0.0, $public=false, $verified=false, $height=0, $width=0)
+    {
+        global $dbConn;
+
+        $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, height, width) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        $query_stmt = $dbConn->prepare($query);
+
+        $caption = utf8_decode(strip_tags($caption));
+        $filename = utf8_decode(strip_tags($filename));
+        $mediatype = utf8_decode(strip_tags($mediatype));
+        $size = (int)$size;
+        $lat = (double)$lat;
+        $lng = (double)$lng;
+        $public = boolToInt($public);
+        $verified = boolToInt($verified);
+        $height = (int)$height;
+        $width = (int)$width;
+
+        $query_stmt->bind_param('ssssiddiiii', $user->getId(), $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $height, $width);
+        $query_stmt->execute();
+
+        if ($dbConn->affected_rows > 0) {
+
+            return self::NewFromId($dbConn->insert_id);
+        } else {
+
+            return null;
+        }
+    }
+
 
     /**
      * @return int

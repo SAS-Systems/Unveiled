@@ -56,10 +56,10 @@ abstract class File
      */
     abstract public function flushDB();
 
-    /*
-     *
+    /**
+     * create a ne entry in DB
      */
-    abstract public function create();
+    public function create() { }
 
 
     /**
