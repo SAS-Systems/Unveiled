@@ -1,571 +1,545 @@
 <?php
 
-class User {
+class User
+{
 
-	private $id;
-	private $username;
-	private $email;
-	private $emailNotification; // Int
-	private $mobileNumber;
-	private $mobileNumberNotification; // Int
-	private $password; //Crypt
-	private $token;
-	private $lastIP;
-	private $lastLogin; //Timestamp
-	private $permission;
+    private $id;
+    private $username;
+    private $email;
+    private $emailNotification; // Int
+    private $mobileNumber;
+    private $mobileNumberNotification; // Int
+    private $password; //Crypt
+    private $token;
+    private $lastIP;
+    private $lastLogin; //Timestamp
+    private $permission;
 
 
-	private function __construct( $id, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $username, $password, $token, $lastIP, $lastLogin, $permission ) {
+    private function __construct($id, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $username, $password, $token, $lastIP, $lastLogin, $permission)
+    {
 
-		$this->id = (int) $id;
-		$this->username = $username;
-		$this->email = $email;
-		$this->emailNotification = $emailNotification;
-		$this->mobileNumber = $mobileNumber;
-		$this->mobileNumberNotification = $mobileNumberNotification;
-		$this->password = $password;
-		$this->token = $token;
-		$this->lastIP = $lastIP;
-		$this->lastLogin = $lastLogin;
-		$this->permission = $permission;
+        $this->id = (int)$id;
+        $this->username = $username;
+        $this->email = $email;
+        $this->emailNotification = $emailNotification;
+        $this->mobileNumber = $mobileNumber;
+        $this->mobileNumberNotification = $mobileNumberNotification;
+        $this->password = $password;
+        $this->token = $token;
+        $this->lastIP = $lastIP;
+        $this->lastLogin = $lastLogin;
+        $this->permission = $permission;
 
-	}
+    }
 
-	public static function NewFromToken( $id, $token ) {
-		global $dbConn;
+    public static function NewFromToken($id, $token)
+    {
+        global $dbConn;
 
-		$id = (int) $id;
-		$token = $dbConn->real_escape_string( $token );
+        $id = (int)$id;
+        $token = $dbConn->real_escape_string($token);
 
-		if( self::isTokenValid( $token, $id ) ) {
+        if (self::isTokenValid($token, $id)) {
 
-			$res = $dbConn->query( "SELECT * FROM user WHERE token = '$token'" );
-			$row = $res->fetch_object();
+            $res = $dbConn->query("SELECT * FROM user WHERE token = '$token'");
+            $row = $res->fetch_object();
 
-			//Logg all MySQL errors
-            if( $dbConn->error != "" ) {
-
-                //Log error
-                errorLog::newEntry( "MySQL error: ".$dbConn->error , 2, __FILE__, __CLASS__, __FUNCTION__ );
-            }
-
-			if( $row != null ) {
-				
-				$db_id = (int) $row->id;
-				$db_username = utf8_encode( $row->username );
-				$db_email = $row->email;
-				$db_emailNotification = (int) $row->email_notification_flag;
-				$db_mobileNumber = $row->mobile_number;
-				$db_mobileNumberNotification = (int) $row->mobile_number_notification_flag;
-				$db_password = $row->password;
-				$db_token = $row->token;
-				$db_lastIP = $row->last_ip;
-				$db_lastLogin = (int) $row->last_login;
-				$db_permission = (int) $row->permission;
-
-				$u = new User( $db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission );
-				return $u;
-			}
-			else {
-
-				return null;
-			}
-
-		}
-		else {
-
-			return null;
-		}
-
-	}
-
-	public static function NewFromSession() {
-
-		if( isset( $_COOKIE["loginID"] ) && $_COOKIE["loginID"] != '' && isset( $_COOKIE["loginToken"] ) && $_COOKIE["loginToken"] != '' ) {
-
-			$u = self::NewFromToken( $_COOKIE["loginID"], $_COOKIE["loginToken"] );
-			return $u;
-		}
-		else {
-
-			return null;
-		}
-	}
-
-	public static function NewFromId( $id ) {
-		global $dbConn;
-
-		if( is_int( $id ) ) {
-
-			$res = $dbConn->query( "SELECT * FROM user WHERE id = '$id'" );
-			$row = $res->fetch_object();
-
-			//Logg all MySQL errors
-            if( $dbConn->error != "" ) {
+            //Logg all MySQL errors
+            if ($dbConn->error != "") {
 
                 //Log error
-                errorLog::newEntry( "MySQL error: ".$dbConn->error , 2, __FILE__, __CLASS__, __FUNCTION__ );
+                errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
             }
 
-			if( $row != null ) {
+            if ($row != null) {
 
-				$db_id = (int) $row->id;
-				$db_username = utf8_encode( $row->username );
-				$db_email = $row->email;
-				$db_emailNotification = (int) $row->email_notification_flag;
-				$db_mobileNumber = $row->mobile_number;
-				$db_mobileNumberNotification = (int) $row->mobile_number_notification_flag;
-				$db_password = $row->password;
-				$db_token = $row->token;
-				$db_lastIP = $row->last_ip;
-				$db_lastLogin = (int) $row->last_login;
-				$db_permission = (int) $row->permission;
+                $db_id = (int)$row->id;
+                $db_username = utf8_encode($row->username);
+                $db_email = $row->email;
+                $db_emailNotification = (int)$row->email_notification_flag;
+                $db_mobileNumber = $row->mobile_number;
+                $db_mobileNumberNotification = (int)$row->mobile_number_notification_flag;
+                $db_password = $row->password;
+                $db_token = $row->token;
+                $db_lastIP = $row->last_ip;
+                $db_lastLogin = (int)$row->last_login;
+                $db_permission = (int)$row->permission;
 
-				$u = new User( $db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission );
-				return $u;
+                $u = new User($db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
+                return $u;
+            } else {
 
-			}
-			else {
+                return null;
+            }
 
-				return null;
-			}
+        } else {
 
-		}
-		else {
-
-			return null;
-		}
-
-	}
-
-
-	/**
-	*Login the User with email and password.
-	*!!Session not will be set!!!
-	*@param $email string
-	*@param $password string crypted
-	*@return User Object or null
-	*/
-	public static function NewFromLogin( $email, $password ) {
-		global $dbConn;
-		global $gvCryptSalt;
-
-		$email = $dbConn->real_escape_string( $email );
-		$password = $dbConn->real_escape_string( $password );
-
-		$res = $dbConn->query( "SELECT * FROM user WHERE email = '$email'" );
-		$row = $res->fetch_object();
-
-		//Logg all MySQL errors
-        if( $dbConn->error != "" ) {
-
-            //Log error
-            errorLog::newEntry( "MySQL error: ".$dbConn->error , 2, __FILE__, __CLASS__, __FUNCTION__ );
+            return null;
         }
 
-		if( $row != null ) {
+    }
 
-			$db_id = (int) $row->id;
-			$db_username = utf8_encode( $row->username );
-			$db_email = $row->email;
-			$db_emailNotification = (int) $row->email_notification_flag;
-			$db_mobileNumber = $row->mobile_number;
-			$db_mobileNumberNotification = (int) $row->mobile_number_notification_flag;
-			$db_password = $row->password;
-			$db_token = $row->token;
-			$db_lastIP = $row->last_ip;
-			$db_lastLogin = (int) $row->last_login;
-			$db_permission = (int) $row->permission;
+    public static function NewFromSession()
+    {
 
-			if( crypt($password, $gvCryptSalt) == $db_password ) {
+        if (isset($_COOKIE["loginID"]) && $_COOKIE["loginID"] != '' && isset($_COOKIE["loginToken"]) && $_COOKIE["loginToken"] != '') {
 
-				$u = new User( $db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password,
-					$db_token, $db_lastIP, $db_lastLogin, $db_permission );
+            $u = self::NewFromToken($_COOKIE["loginID"], $_COOKIE["loginToken"]);
+            return $u;
+        } else {
 
-				$u->setToken( self::generateToken( $db_id ) );
-				$u->setLastLogin( time() );
-				$u->setLastIP( $_SERVER['REMOTE_ADDR'] );
+            return null;
+        }
+    }
 
-				$u->flushDB();
+    public static function NewFromId($id)
+    {
+        global $dbConn;
 
-				return $u;
+        if (is_int($id)) {
 
-			}
-			else {
+            $res = $dbConn->query("SELECT * FROM user WHERE id = '$id'");
+            $row = $res->fetch_object();
 
-				return null;
-			}
+            //Logg all MySQL errors
+            if ($dbConn->error != "") {
 
-		}
-		else {
+                //Log error
+                errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+            }
 
-			return null;
-		}
+            if ($row != null) {
 
-	}
+                $db_id = (int)$row->id;
+                $db_username = utf8_encode($row->username);
+                $db_email = $row->email;
+                $db_emailNotification = (int)$row->email_notification_flag;
+                $db_mobileNumber = $row->mobile_number;
+                $db_mobileNumberNotification = (int)$row->mobile_number_notification_flag;
+                $db_password = $row->password;
+                $db_token = $row->token;
+                $db_lastIP = $row->last_ip;
+                $db_lastLogin = (int)$row->last_login;
+                $db_permission = (int)$row->permission;
 
+                $u = new User($db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
+                return $u;
 
-	public function getId(){
-		return $this->id;
-	}
+            } else {
 
-	public function getUsername(){
-		return $this->username;
-	}
+                return null;
+            }
 
-	public function setUsername($username){
-		$this->username = $username;
-	}
+        } else {
 
-	public function getEmail(){
-		return $this->email;
-	}
+            return null;
+        }
 
-	public function setEmail($email){
-		$this->email = $email;
-	}
+    }
 
-	public function getMobileNumber(){
-		return $this->mobileNumber;
-	}
 
-	public function setMobileNumber($mobileNumber){
-		$this->mobileNumber = (int) $mobileNumber;
-	}
+    /**
+     *Login the User with email and password.
+     *!!Session not will be set!!!
+     * @param $email string
+     * @param $password string crypted
+     * @return User Object or null
+     */
+    public static function NewFromLogin($email, $password)
+    {
+        global $dbConn;
+        global $gvCryptSalt;
 
-	public function getPassword(){
-		return $this->password;
-	}
+        $email = $dbConn->real_escape_string($email);
+        $password = $dbConn->real_escape_string($password);
 
-	/**
-	*Set the password attribut
-	*@param $passwordOld has to be crypted!
-	*@param $passwordNew has to be crypted!
-	*/
-	public function setPassword( $passwordOld, $passwordNew ) {
+        $res = $dbConn->query("SELECT * FROM user WHERE email = '$email'");
+        $row = $res->fetch_object();
 
-		if( $passwordOld == $this->password ) {
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
 
-			$this->password = $passwordNew;
-			return true;
-		}
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+        }
 
-		return false;
-	}
+        if ($row != null) {
 
-	public function getToken(){
-		return $this->token;
-	}
+            $db_id = (int)$row->id;
+            $db_username = utf8_encode($row->username);
+            $db_email = $row->email;
+            $db_emailNotification = (int)$row->email_notification_flag;
+            $db_mobileNumber = $row->mobile_number;
+            $db_mobileNumberNotification = (int)$row->mobile_number_notification_flag;
+            $db_password = $row->password;
+            $db_token = $row->token;
+            $db_lastIP = $row->last_ip;
+            $db_lastLogin = (int)$row->last_login;
+            $db_permission = (int)$row->permission;
 
-	public function setToken($token){
-		$this->token = $token;
-	}
+            if (crypt($password, $gvCryptSalt) == $db_password) {
 
-	public function getLastIP(){
-		return $this->lastIP;
-	}
+                $u = new User($db_id, $db_email, $db_emailNotification, $db_mobileNumber, $db_mobileNumberNotification, $db_username, $db_password,
+                    $db_token, $db_lastIP, $db_lastLogin, $db_permission);
 
-	public function setLastIP($lastIP){
-		$this->lastIP = $lastIP;
-	}
+                $u->setToken(self::generateToken($db_id));
+                $u->setLastLogin(time());
+                $u->setLastIP($_SERVER['REMOTE_ADDR']);
 
-	public function getLastLogin(){
-		return $this->lastLogin;
-	}
+                $u->flushDB();
 
-	public function setLastLogin($lastLogin){
+                return $u;
 
-		$this->lastLogin = (int) $lastLogin;
-	}
+            } else {
 
-	public function getEmailNotification()
-	{
-		return $this->emailNotification;
-	}
+                return null;
+            }
 
-	public function setEmailNotification($emailNotification)
-	{
-		$this->emailNotification = (int) $emailNotification;
-	}
+        } else {
 
-	public function getPermission()
-	{
-		return $this->permission;
-	}
+            return null;
+        }
 
-	public function setPermission($permission)
-	{
-		$this->permission = (int) $permission;
-	}
+    }
 
-	public function getMobileNumberNotification()
-	{
-		return $this->mobileNumberNotification;
-	}
 
-	public function setMobileNumberNotification($mobileNumberNotification)
-	{
-		$this->mobileNumberNotification = (int) $mobileNumberNotification;
-	}
+    public function getId()
+    {
+        return $this->id;
+    }
 
+    public function getUsername()
+    {
+        return $this->username;
+    }
 
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
 
-	public function flushDB() {
-		global $dbConn;
+    public function getEmail()
+    {
+        return $this->email;
+    }
 
-		$query = "UPDATE `user` SET `username`=?, `email`=?, `email_notification_flag`=?, `mobile_number`=?, `mobile_number_notification_flag`=?, `password`=?, `token`=?, `last_ip`=?, `last_login`=?, `permission`=? WHERE `id`=? ";
-		$query_stmt = $dbConn->prepare($query);
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
 
-		$ip = $_SERVER['REMOTE_ADDR'];
-		$now = time();
+    public function getMobileNumber()
+    {
+        return $this->mobileNumber;
+    }
 
-		$id = (int)$this->id;
-		$username = utf8_decode(strip_tags($this->username));
-		$email = $this->email;
-		$emailNotification = (int)$this->emailNotification;
-		$mobileNumber = (int)$this->mobileNumber;
-		$mobileNumberNotification = (int)$this->mobileNumberNotification;
-		$password = $this->password;
-		$token = $this->token;
-		$lastIP = $this->lastIP;
-		$lastLogin = (int)$this->lastLogin;
-		$permission = (int)$this->permission;
+    public function setMobileNumber($mobileNumber)
+    {
+        $this->mobileNumber = (int)$mobileNumber;
+    }
 
-		$query_stmt->bind_param('ssiiisssiii', $username, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $password, $token, $lastIP, $lastLogin, $permission, $id);
-		$query_stmt->execute();
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     *Set the password attribut
+     * @param $passwordOld has to be crypted!
+     * @param $passwordNew has to be crypted!
+     */
+    public function setPassword($passwordOld, $passwordNew)
+    {
+
+        if ($passwordOld == $this->password) {
+
+            $this->password = $passwordNew;
+            return true;
+        }
 
-		//Logg all MySQL errors
-		if ($dbConn->error != "") {
+        return false;
+    }
 
-			//Log error
-			errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+    public function getToken()
+    {
+        return $this->token;
+    }
 
-			return false;
-		}
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
 
-		return true;
-	}
+    public function getLastIP()
+    {
+        return $this->lastIP;
+    }
 
+    public function setLastIP($lastIP)
+    {
+        $this->lastIP = $lastIP;
+    }
 
-	public function setSession() {
+    public function getLastLogin()
+    {
+        return $this->lastLogin;
+    }
 
-		if( $this->token != '' ) {
+    public function setLastLogin($lastLogin)
+    {
 
-			setcookie("loginID", $this->id, time()+86400, "/");
-			setcookie("loginToken", $this->token, time()+86400, "/");
-		}
-	}
+        $this->lastLogin = (int)$lastLogin;
+    }
 
-	public static function unsetSession() {
+    public function getEmailNotification()
+    {
+        return $this->emailNotification;
+    }
 
-		setcookie("loginToken", "", time()-100, "/");
-		setcookie("loginToken", "", time()-100, "/");
-	}
+    public function setEmailNotification($emailNotification)
+    {
+        $this->emailNotification = (int)$emailNotification;
+    }
 
-	public static function isTokenValid( $token, $id ) {
+    public function getPermission()
+    {
+        return $this->permission;
+    }
 
-		$hash_id = md5( $id );
+    public function setPermission($permission)
+    {
+        $this->permission = (int)$permission;
+    }
 
-		if( $hash_id == substr( $token, 0, 32 ) ) {
+    public function getMobileNumberNotification()
+    {
+        return $this->mobileNumberNotification;
+    }
 
-			return true;
-		}
-		else {
+    public function setMobileNumberNotification($mobileNumberNotification)
+    {
+        $this->mobileNumberNotification = (int)$mobileNumberNotification;
+    }
 
-			return false;
-		}
-	}
 
-	public static function generateToken( $id ) {
+    public function flushDB()
+    {
+        global $dbConn;
 
-		$hash_id = md5( $id );
+        $query = "UPDATE `user` SET `username`=?, `email`=?, `email_notification_flag`=?, `mobile_number`=?, `mobile_number_notification_flag`=?, `password`=?, `token`=?, `last_ip`=?, `last_login`=?, `permission`=? WHERE `id`=? ";
+        $query_stmt = $dbConn->prepare($query);
 
-		$hash_str = microtime(true) . rand ( 0 , 99999 );
-		$hash = md5( $hash_str );
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $now = time();
 
-		$token = $hash_id.$hash;
+        $id = (int)$this->id;
+        $username = utf8_decode(strip_tags($this->username));
+        $email = $this->email;
+        $emailNotification = (int)$this->emailNotification;
+        $mobileNumber = (int)$this->mobileNumber;
+        $mobileNumberNotification = (int)$this->mobileNumberNotification;
+        $password = $this->password;
+        $token = $this->token;
+        $lastIP = $this->lastIP;
+        $lastLogin = (int)$this->lastLogin;
+        $permission = (int)$this->permission;
 
-		return $token;
-	}
+        $query_stmt->bind_param('ssiiisssiii', $username, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $password, $token, $lastIP, $lastLogin, $permission, $id);
+        $query_stmt->execute();
 
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
 
-	public static function create( $username, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $permission, $password ) {
-		global $dbConn;
-		global $gvCryptSalt;
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
 
-		$username = utf8_decode( strip_tags(  $username  ) );
-		$password = crypt( $dbConn->real_escape_string( $password ), $gvCryptSalt );
+            return false;
+        }
 
-		$query = "INSERT INTO user (username, email, email_notification_flag, mobile_number, mobile_number_notification_flag,
+        return true;
+    }
+
+
+    public function setSession()
+    {
+
+        if ($this->token != '') {
+
+            setcookie("loginID", $this->id, time() + 86400, "/");
+            setcookie("loginToken", $this->token, time() + 86400, "/");
+        }
+    }
+
+    public static function unsetSession()
+    {
+
+        setcookie("loginToken", "", time() - 100, "/");
+        setcookie("loginToken", "", time() - 100, "/");
+    }
+
+    public static function isTokenValid($token, $id)
+    {
+
+        $hash_id = md5($id);
+
+        if ($hash_id == substr($token, 0, 32)) {
+
+            return true;
+        } else {
+
+            return false;
+        }
+    }
+
+    public static function generateToken($id)
+    {
+
+        $hash_id = md5($id);
+
+        $hash_str = microtime(true) . rand(0, 99999);
+        $hash = md5($hash_str);
+
+        $token = $hash_id . $hash;
+
+        return $token;
+    }
+
+
+    public static function create($username, $email, $emailNotification, $mobileNumber, $mobileNumberNotification, $permission, $password)
+    {
+        global $dbConn;
+        global $gvCryptSalt;
+
+        $username = utf8_decode(strip_tags($username));
+        $password = crypt($dbConn->real_escape_string($password), $gvCryptSalt);
+
+        $query = "INSERT INTO user (username, email, email_notification_flag, mobile_number, mobile_number_notification_flag,
 permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
-		$query_stmt = $dbConn->prepare( $query );
+        $query_stmt = $dbConn->prepare($query);
 
-		$ip = $_SERVER['REMOTE_ADDR'];
-		$now = time();
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $now = time();
 
-		$query_stmt->bind_param( 'ssiiiisis', $username, $email, $emailNotification, $mobileNumber,
-			$mobileNumberNotification, $permission, $password, $now, $ip );
-		$query_stmt->execute();
+        $query_stmt->bind_param('ssiiiisis', $username, $email, $emailNotification, $mobileNumber,
+            $mobileNumberNotification, $permission, $password, $now, $ip);
+        $query_stmt->execute();
 
-		if( $dbConn->affected_rows > 0 ) {
+        if ($dbConn->affected_rows > 0) {
 
-			return self::NewFromId( $dbConn->insert_id );
-		}
-		else {
+            return self::NewFromId($dbConn->insert_id);
+        } else {
 
-			return null;
-		}
+            return null;
+        }
 
-	}
-
-
-	public static function generatePassword( $pwd ) {
-		global $gvCryptSalt;
-
-		return crypt( $pwd, $gvCryptSalt );
-	}
+    }
 
 
-	public static function getEmailNotificationList() {
-		global $dbConn;
+    public static function generatePassword($pwd)
+    {
+        global $gvCryptSalt;
 
-		$res = $dbConn->query( "SELECT email FROM user WHERE email_notification_flag = 1" );
+        return crypt($pwd, $gvCryptSalt);
+    }
 
-		//Logg all MySQL errors
-		if( $dbConn->error != "" ) {
+    /**
+     * Check user permission
+     * 0 = Read
+     * 1 = Read & Write
+     * 2 = Mod
+     * 3 = Owner
+     * 4 = Admin
+     * @param $permission
+     * @return bool
+     */
+    public function hasPermission($permission)
+    {
 
-			//Log error
-			errorLog::newEntry( "MySQL error: ".$dbConn->error , 2, __FILE__, __CLASS__, __FUNCTION__ );
-		}
+        if ($this->permission >= $permission) {
 
-		$tmp = array();
+            return true;
+        }
 
-		while( $row = $res->fetch_object() ) {
-			
-			$tmp[] = $row->email;
-		}
+        return false;
+    }
 
-		return $tmp;
-	}
+    public static function convertPerssionCode($code)
+    {
 
+        switch ($code) {
 
-	public static function getMobileNumberNotificationList() {
-		global $dbConn;
+            case 0:
+                return "Read";
+                break;
 
-		$res = $dbConn->query( "SELECT mobile_number FROM user WHERE mobile_number_notification_flag = 1" );
+            case 1:
+                return "Read & Write";
+                break;
 
-		//Logg all MySQL errors
-		if( $dbConn->error != "" ) {
+            case 2:
+                return "Moderator";
+                break;
 
-			//Log error
-			errorLog::newEntry( "MySQL error: ".$dbConn->error , 2, __FILE__, __CLASS__, __FUNCTION__ );
-		}
+            case 3:
+                return "Owner";
+                break;
 
-		$tmp = array();
-
-		while( $row = $res->fetch_object() ) {
-			
-			$tmp[] = $row->mobile_number;
-		}
-
-		return $tmp;
-	}
-
-	/**
-	 * Check user permission
-	 * 0 = Read
-	 * 1 = Read & Write
-	 * 2 = Mod
-	 * 3 = Owner
-	 * 4 = Admin
-	 * @param $permission
-	 * @return bool
-	 */
-	public function hasPermission($permission) {
-
-		if($this->permission >= $permission) {
-
-			return true;
-		}
-
-		return false;
-	}
-
-	public static function convertPerssionCode($code) {
-
-		switch($code) {
-
-			case 0:
-				return "Read";
-				break;
-
-			case 1:
-				return "Read & Write";
-				break;
-
-			case 2:
-				return "Moderator";
-				break;
-
-			case 3:
-				return "Owner";
-				break;
-
-			case 4:
-				return "Admin";
-				break;
-		}
-	}
+            case 4:
+                return "Admin";
+                break;
+        }
+    }
 
 
-	public static function listAll( $format = false, $limit = 99 ) {
-		global $dbConn;
+    public static function listAll($format = false, $limit = 99)
+    {
+        global $dbConn;
 
-		$limit = (int) $limit;
-
-
-		$res = $dbConn->query( "SELECT * FROM user LIMIT 0, ".$limit );
-
-		//Logg all MySQL errors
-		if( $dbConn->error != "" ) {
-
-			//Log error
-			errorLog::newEntry( "MySQL error: ".$dbConn->error , 2, __FILE__, __CLASS__, __FUNCTION__ );
-		}
-
-		$tmp = array();
-
-		while( $row = $res->fetch_object() ) {
-
-			$db_id = (int) $row->id;
-			$db_username = utf8_encode( $row->username );
-			$db_email = $row->email;
-			$db_emailNotification = (int) $row->email_notification_flag;
-			$db_mobileNumber = $row->mobile_number;
-			$db_mobileNumberNotification = (int) $row->mobile_number_notification_flag;
-			$db_lastIP = $row->last_ip;
+        $limit = (int)$limit;
 
 
-			if( $format ) {
+        $res = $dbConn->query("SELECT * FROM user LIMIT 0, " . $limit);
 
-				$db_lastLogin = date("H:i:s d.m.Y", $row->last_login);
-				$db_permission = User::convertPerssionCode($row->permission);
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
 
-			}
-			else {
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+        }
 
-				$db_lastLogin = (int) $row->last_login;
-				$db_permission = (int) $row->permission;
-			}
+        $tmp = array();
 
-			$tmp[] = array("id" => $db_id, "username" => $db_username, "email" => $db_email, "emailNotification" => $db_emailNotification,
-				"mobileNumber" => $db_mobileNumber, "mobileNumberNotification" => $db_mobileNumberNotification, "lastIP" => $db_lastIP,
-				"lastLogin" => $db_lastLogin, "permission" => $db_permission);
-		}
+        while ($row = $res->fetch_object()) {
 
-		return $tmp;
+            $db_id = (int)$row->id;
+            $db_username = utf8_encode($row->username);
+            $db_email = $row->email;
+            $db_emailNotification = (int)$row->email_notification_flag;
+            $db_mobileNumber = $row->mobile_number;
+            $db_mobileNumberNotification = (int)$row->mobile_number_notification_flag;
+            $db_lastIP = $row->last_ip;
 
-	}
+
+            if ($format) {
+
+                $db_lastLogin = date("H:i:s d.m.Y", $row->last_login);
+                $db_permission = User::convertPerssionCode($row->permission);
+
+            } else {
+
+                $db_lastLogin = (int)$row->last_login;
+                $db_permission = (int)$row->permission;
+            }
+
+            $tmp[] = array("id" => $db_id, "username" => $db_username, "email" => $db_email, "emailNotification" => $db_emailNotification,
+                "mobileNumber" => $db_mobileNumber, "mobileNumberNotification" => $db_mobileNumberNotification, "lastIP" => $db_lastIP,
+                "lastLogin" => $db_lastLogin, "permission" => $db_permission);
+        }
+
+        return $tmp;
+
+    }
 
 }
 

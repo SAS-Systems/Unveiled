@@ -97,8 +97,8 @@ class VideoFile extends File
         $size = (int)$this->getSize();
         $lat = (double)$this->getLat();
         $lng = (double)$this->getLng();
-        $public = (int)$this->isPublic();
-        $verified = (int)$this->isVerified();
+        $public = boolToInt($this->isPublic());
+        $verified = boolToInt($this->isVerified());
         $length = (int)$this->getLength();
 
         $query_stmt->bind_param('isssiiddiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $id);
@@ -116,24 +116,27 @@ class VideoFile extends File
         return true;
     }
 
-
-    public function create()
+    /**
+     *
+     */
+    public function create($user, $caption, $filename, $mediatype, $size=0, $lat=0.0, $lng=0.0, $public=false, $verified=false, $length=0)
     {
-
         global $dbConn;
 
-        $username = utf8_decode(strip_tags($username));
-        $password = crypt($dbConn->real_escape_string($password), $gvCryptSalt);
-
-        $query = "INSERT INTO user (username, email, email_notification_flag, mobile_number, mobile_number_notification_flag,
-permission, password, last_login, last_ip) VALUES (?,?,?,?,?,?,?,?,?)";
+        $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, length) VALUES (?,?,?,?,?,?,?,?,?,?)";
         $query_stmt = $dbConn->prepare($query);
 
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $now = time();
+        $caption = utf8_decode(strip_tags($caption));
+        $filename = utf8_decode(strip_tags($filename));
+        $mediatype = utf8_decode(strip_tags($mediatype));
+        $size = (int)$size;
+        $lat = (double)$lat;
+        $lng = (double)$lng;
+        $public = boolToInt($public);
+        $verified = boolToInt($verified);
+        $length = (int)$length;
 
-        $query_stmt->bind_param('ssiiiisis', $username, $email, $emailNotification, $mobileNumber,
-            $mobileNumberNotification, $permission, $password, $now, $ip);
+        $query_stmt->bind_param('ssssiddiii', $user->getId(), $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $length);
         $query_stmt->execute();
 
         if ($dbConn->affected_rows > 0) {
