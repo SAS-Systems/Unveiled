@@ -4,7 +4,7 @@ abstract class File
 {
 
     protected $id = -1;
-    protected $owner;
+    protected $owner = -1; //ID or object!!!
     protected $caption = "";
     protected $filename = "";
     protected $mediatype = "";
@@ -72,7 +72,14 @@ abstract class File
      */
     public function getOwner()
     {
-        return $this->owner;
+        if(is_int($this->owner)) {
+
+            return User::newFromId($this->owner);
+        }
+        else {
+
+            return $this->owner;
+        }
     }
 
     /**

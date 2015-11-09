@@ -52,7 +52,7 @@ class VideoFile extends File
             if ($row != null) {
 
                 $db_id = (int)$row->id;
-                $db_owner = User::newFromId((int)$row->owner_id);
+                $db_owner = (int)$row->owner_id;
                 $db_caption = utf8_encode($row->caption);
                 $db_filename = utf8_encode($row->filename);
                 $db_mediatype = utf8_encode($row->mediatype);
@@ -85,7 +85,13 @@ class VideoFile extends File
         global $dbConn;
 
         $id = (int)$this->getId();
-        $ownerId = (int)$this->getOwner()->getId();
+        //int object
+        if(is_int($this->owner)) {
+            $ownerId = (int)$this->owner;
+        }
+        else {
+            $ownerId = (int)$this->getOwner()->getId();
+        }
         $caption = utf8_decode(strip_tags($this->getCaption()));
         $filename = utf8_decode(strip_tags($this->getFilename()));
         $mediatype = utf8_decode(strip_tags($this->getMediatype()));
