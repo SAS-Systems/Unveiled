@@ -9,7 +9,7 @@ class VideoFile extends File
     /**
      * VideoFile constructor.
      * @param int $id
-     * @param int $ownerID
+     * @param User $ownerID
      * @param string $caption
      * @param string $filename
      * @param string $mediatype
@@ -21,10 +21,10 @@ class VideoFile extends File
      * @param bool $verified
      * @param int $lenth
      */
-    protected function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length)
+    public function __construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length)
     {
 
-        parent::__construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
+        parent::__construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
 
         $this->length = $length;
     }
@@ -52,7 +52,7 @@ class VideoFile extends File
             if ($row != null) {
 
                 $db_id = (int)$row->id;
-                $db_ownerId = (int)$row->owner_id;
+                $db_owner = User::newFromId((int)$row->owner_id);
                 $db_caption = utf8_encode($row->caption);
                 $db_filename = utf8_encode($row->filename);
                 $db_mediatype = utf8_encode($row->mediatype);
@@ -64,7 +64,7 @@ class VideoFile extends File
                 $db_verified = intToBool((int)$row->verified);
                 $db_length = (int)$row->length;
 
-                return new VideoFile($db_id, $db_ownerId, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length);
+                return new VideoFile($db_id, $db_owner, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length);
 
             } else {
 
@@ -84,12 +84,8 @@ class VideoFile extends File
     {
         global $dbConn;
 
-        $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
-                  public=?, verified=?, length=? WHERE id=? ";
-        $query_stmt = $dbConn->prepare($query);
-
         $id = (int)$this->getId();
-        $ownerId = (int)$this->getOwnerID();
+        $ownerId = (int)$this->getOwner()->getId();
         $caption = utf8_decode(strip_tags($this->getCaption()));
         $filename = utf8_decode(strip_tags($this->getFilename()));
         $mediatype = utf8_decode(strip_tags($this->getMediatype()));
@@ -101,19 +97,34 @@ class VideoFile extends File
         $verified = boolToInt($this->isVerified());
         $length = (int)$this->getLength();
 
-        $query_stmt->bind_param('isssiiddiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $id);
-        $query_stmt->execute();
+        //object exists in DB
+        if($this->existsInDB()) {
 
-        //Logg all MySQL errors
-        if ($dbConn->error != "") {
+            $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
+                      public=?, verified=?, length=? WHERE id=? ";
+            $query_stmt = $dbConn->prepare($query);
 
-            //Log error
-            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+            $query_stmt->bind_param('isssiiddiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $id);
+            $query_stmt->execute();
 
-            return false;
+            //Logg all MySQL errors
+            if ($dbConn->error != "") {
+
+                //Log error
+                errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+
+                return false;
+            }
+            else {
+
+                return true;
+            }
+
         }
+        else {
 
-        return true;
+
+        }
     }
 
     /**
@@ -172,6 +183,18 @@ class VideoFile extends File
     public function setLength($length)
     {
         $this->length = $length;
+    }
+
+    public function existsInDB() {
+
+        if($this->id > 0) {
+
+            return true;
+        }
+        else {
+
+            return false;
+        }
     }
 
 }

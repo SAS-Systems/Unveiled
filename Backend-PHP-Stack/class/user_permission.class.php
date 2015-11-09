@@ -21,7 +21,7 @@ class UserPermission
      * UserPermission constructor.
      * @param int $level
      */
-    public function __construct($level)
+    public function __construct($level=0)
     {
         $this->level = $level;
     }
@@ -47,7 +47,7 @@ class UserPermission
         return $this->level;
     }
 
-    public function isAllowed($user = new User()) {
+    public function isAllowed($user) {
 
         if($user->getPermission()->getLevel() >= $this->level) {
 

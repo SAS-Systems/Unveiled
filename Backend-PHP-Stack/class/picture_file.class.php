@@ -14,7 +14,7 @@ class PictureFile extends File
     /**
      * PictureFile constructor.
      * @param int $id
-     * @param int $ownerID
+     * @param User $owner
      * @param string $caption
      * @param string $filename
      * @param string $mediatype
@@ -27,9 +27,9 @@ class PictureFile extends File
      * @param int $height
      * @param int $width
      */
-    protected function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $height, $width)
+    public function __construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $height, $width)
     {
-        parent::__construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
+        parent::__construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
 
         $this->height = $height;
         $this->width = $width;
@@ -59,7 +59,7 @@ class PictureFile extends File
             if ($row != null) {
 
                 $db_id = (int)$row->id;
-                $db_ownerId = (int)$row->owner_id;
+                $db_owner = User::newFromId((int)$row->owner_id);
                 $db_caption = utf8_encode($row->caption);
                 $db_filename = utf8_encode($row->filename);
                 $db_mediatype = utf8_encode($row->mediatype);
@@ -72,7 +72,7 @@ class PictureFile extends File
                 $db_height = (int)$row->height;
                 $db_width = (int)$row->width;
 
-                return new PictureFile($db_id, $db_ownerId, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_height, $db_width);
+                return new PictureFile($db_id, $db_owner, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_height, $db_width);
 
             } else {
 
@@ -97,7 +97,7 @@ class PictureFile extends File
         $query_stmt = $dbConn->prepare($query);
 
         $id = (int)$this->getId();
-        $ownerId = (int)$this->getOwnerID();
+        $ownerId = (int)$this->getOwner()->getId();
         $caption = utf8_decode(strip_tags($this->getCaption()));
         $filename = utf8_decode(strip_tags($this->getFilename()));
         $mediatype = utf8_decode(strip_tags($this->getMediatype()));
@@ -200,7 +200,16 @@ class PictureFile extends File
         $this->width = $width;
     }
 
+    public function existsInDB() {
 
+        if($this->id > 0) {
 
+            return true;
+        }
+        else {
+
+            return false;
+        }
+    }
 
 }

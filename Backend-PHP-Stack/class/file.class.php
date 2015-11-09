@@ -4,7 +4,7 @@ abstract class File
 {
 
     protected $id = -1;
-    protected $ownerID = -1;
+    protected $owner;
     protected $caption = "";
     protected $filename = "";
     protected $mediatype = "";
@@ -18,7 +18,7 @@ abstract class File
     /**
      * File constructor.
      * @param int $id
-     * @param int $ownerID
+     * @param User $owner
      * @param string $caption
      * @param string $filename
      * @param string $mediatype
@@ -29,10 +29,10 @@ abstract class File
      * @param bool $public
      * @param bool $verified
      */
-    protected function __construct($id, $ownerID, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
+    public function __construct($id, User $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
     {
         $this->id = $id;
-        $this->ownerID = $ownerID;
+        $this->owner = $owner;
         $this->caption = $caption;
         $this->filename = $filename;
         $this->mediatype = $mediatype;
@@ -68,18 +68,22 @@ abstract class File
     }
 
     /**
-     * @return int
+     * @return User
      */
-    public function getOwnerID()
+    public function getOwner()
     {
-        return $this->ownerID;
-    }/**
- * @param int $ownerID
- */
-    public function setOwnerID($ownerID)
+        return $this->owner;
+    }
+
+    /**
+     * @param User $owner
+     */
+    public function setOwner($owner)
     {
-        $this->ownerID = $ownerID;
-    }/**
+        $this->owner = $owner;
+    }
+
+    /**
  * @return string
  */
     public function getCaption()

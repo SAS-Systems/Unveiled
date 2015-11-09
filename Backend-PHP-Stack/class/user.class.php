@@ -11,7 +11,7 @@ class User
     private $token = "";
     private $lastIP = "";
     private $lastLogin = 0; //Timestamp
-    private $permission = new UserPermission(0);
+    private $permission;
 
     /**
      * User constructor.
@@ -39,7 +39,7 @@ class User
     }
 
 
-    public static function NewFromToken($id, $token)
+    public static function newFromToken($id, $token)
     {
         global $dbConn;
 
@@ -83,7 +83,7 @@ class User
 
     }
 
-    public static function NewFromSession()
+    public static function newFromSession()
     {
 
         if (isset($_COOKIE["loginID"]) && $_COOKIE["loginID"] != '' && isset($_COOKIE["loginToken"]) && $_COOKIE["loginToken"] != '') {
@@ -96,7 +96,7 @@ class User
         }
     }
 
-    public static function NewFromId($id)
+    public static function newFromId($id)
     {
         global $dbConn;
 
@@ -145,7 +145,7 @@ class User
      * @param $password string crypted
      * @return User Object or null
      */
-    public static function NewFromLogin($email, $password)
+    public static function newFromLogin($email, $password)
     {
         global $dbConn;
         global $gvCryptSalt;
@@ -368,7 +368,6 @@ class User
     public function flushDB()
     {
         global $dbConn;
-        global $gvCryptSalt;
 
         $id = (int)$this->id;
         $username = utf8_decode(strip_tags($this->username));
@@ -424,7 +423,7 @@ class User
 
 
     }
-    
+
     public function setSession()
     {
 
@@ -520,7 +519,6 @@ class User
         }
 
         return $tmp;
-
     }
 
 }
