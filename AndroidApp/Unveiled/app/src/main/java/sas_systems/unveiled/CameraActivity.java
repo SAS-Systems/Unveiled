@@ -3,14 +3,9 @@ package sas_systems.unveiled;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.SurfaceHolder;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -19,6 +14,7 @@ import net.majorkernelpanic.streaming.SessionBuilder;
 import net.majorkernelpanic.streaming.audio.AudioQuality;
 import net.majorkernelpanic.streaming.gl.SurfaceView;
 import net.majorkernelpanic.streaming.rtsp.RtspClient;
+import net.majorkernelpanic.streaming.video.VideoQuality;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -41,12 +37,13 @@ public class CameraActivity extends Activity implements RtspClient.Callback,
         super.onCreate(savedInstanceState);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_camera);
 
         mSurfaceView = (SurfaceView) findViewById(R.id.surface);
+        mSurfaceView.setRotation(new Float(90.0));
 
         mSurfaceView.getHolder().addCallback(this);
 
@@ -148,7 +145,9 @@ public class CameraActivity extends Activity implements RtspClient.Callback,
                 .setAudioEncoder(SessionBuilder.AUDIO_NONE)
                 .setAudioQuality(new AudioQuality(8000, 16000))
                 .setVideoEncoder(SessionBuilder.VIDEO_H264)
-                .setSurfaceView(mSurfaceView).setPreviewOrientation(0)
+                .setVideoQuality(new VideoQuality(1920, 1080, 64, 500000))
+//                .setVideoQuality(VideoQuality.determineClosestSupportedResolution(...))
+                .setSurfaceView(mSurfaceView).setPreviewOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
                 .setCallback(this).build();
 
         // Configures the RTSP client
