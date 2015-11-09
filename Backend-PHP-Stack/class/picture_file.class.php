@@ -92,10 +92,6 @@ class PictureFile extends File
     {
         global $dbConn;
 
-        $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
-                  public=?, verified=?, height=?, width=? WHERE id=? ";
-        $query_stmt = $dbConn->prepare($query);
-
         $id = (int)$this->getId();
         $ownerId = (int)$this->getOwner()->getId();
         $caption = utf8_decode(strip_tags($this->getCaption()));
@@ -110,52 +106,46 @@ class PictureFile extends File
         $height = (int)$this->getHeight();
         $width = (int)$this->getWidth();
 
-        $query_stmt->bind_param('isssiiddiiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $height, $width, $id);
-        $query_stmt->execute();
+        //object exists in DB
+        if ($this->existsInDB()) {
 
-        //Logg all MySQL errors
-        if ($dbConn->error != "") {
+            $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
+                      public=?, verified=?, height=?, width=? WHERE id=? ";
+            $query_stmt = $dbConn->prepare($query);
 
-            //Log error
-            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+            $query_stmt->bind_param('isssiiddiiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $height, $width, $id);
+            $query_stmt->execute();
 
-            return false;
-        }
+            //Logg all MySQL errors
+            if ($dbConn->error != "") {
 
-        return true;
-    }
+                //Log error
+                errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
 
-    /**
-     * create a ne entry in DB
-     */
-    public function create($user, $caption, $filename, $mediatype, $size=0, $lat=0.0, $lng=0.0, $public=false, $verified=false, $height=0, $width=0)
-    {
-        global $dbConn;
-
-        $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, height, width) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-        $query_stmt = $dbConn->prepare($query);
-
-        $caption = utf8_decode(strip_tags($caption));
-        $filename = utf8_decode(strip_tags($filename));
-        $mediatype = utf8_decode(strip_tags($mediatype));
-        $size = (int)$size;
-        $lat = (double)$lat;
-        $lng = (double)$lng;
-        $public = boolToInt($public);
-        $verified = boolToInt($verified);
-        $height = (int)$height;
-        $width = (int)$width;
-
-        $query_stmt->bind_param('ssssiddiiii', $user->getId(), $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $height, $width);
-        $query_stmt->execute();
-
-        if ($dbConn->affected_rows > 0) {
-
-            return self::NewFromId($dbConn->insert_id);
+                return false;
+            } else {
+                return true;
+            }
         } else {
 
-            return null;
+            $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, height, width) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+            $query_stmt = $dbConn->prepare($query);
+
+            $query_stmt->bind_param('isssiddiiii', $ownerId, $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $height, $width);
+            $query_stmt->execute();
+
+            if ($dbConn->affected_rows > 0) {
+
+                $this->id = $dbConn->insert_id;
+
+                return true;
+            } else {
+
+                return false;
+            }
         }
+
+
     }
 
     /**
@@ -200,13 +190,13 @@ class PictureFile extends File
         $this->width = $width;
     }
 
-    public function existsInDB() {
+    public function existsInDB()
+    {
 
-        if($this->id > 0) {
+        if ($this->id > 0) {
 
             return true;
-        }
-        else {
+        } else {
 
             return false;
         }

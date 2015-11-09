@@ -98,7 +98,7 @@ class VideoFile extends File
         $length = (int)$this->getLength();
 
         //object exists in DB
-        if($this->existsInDB()) {
+        if ($this->existsInDB()) {
 
             $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
                       public=?, verified=?, length=? WHERE id=? ";
@@ -123,41 +123,24 @@ class VideoFile extends File
         }
         else {
 
+            $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, length) VALUES (?,?,?,?,?,?,?,?,?,?)";
+            $query_stmt = $dbConn->prepare($query);
 
+            $query_stmt->bind_param('isssiddiii', $ownerId, $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $length);
+            $query_stmt->execute();
+
+            if ($dbConn->affected_rows > 0) {
+
+                $this->id = $dbConn->insert_id;
+
+                return true;
+            } else {
+
+                return false;
+            }
         }
     }
 
-    /**
-     * create a ne entry in DB
-     */
-    public function create($user, $caption, $filename, $mediatype, $size=0, $lat=0.0, $lng=0.0, $public=false, $verified=false, $length=0)
-    {
-        global $dbConn;
-
-        $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, length) VALUES (?,?,?,?,?,?,?,?,?,?)";
-        $query_stmt = $dbConn->prepare($query);
-
-        $caption = utf8_decode(strip_tags($caption));
-        $filename = utf8_decode(strip_tags($filename));
-        $mediatype = utf8_decode(strip_tags($mediatype));
-        $size = (int)$size;
-        $lat = (double)$lat;
-        $lng = (double)$lng;
-        $public = boolToInt($public);
-        $verified = boolToInt($verified);
-        $length = (int)$length;
-
-        $query_stmt->bind_param('ssssiddiii', $user->getId(), $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $length);
-        $query_stmt->execute();
-
-        if ($dbConn->affected_rows > 0) {
-
-            return self::NewFromId($dbConn->insert_id);
-        } else {
-
-            return null;
-        }
-    }
 
     /**
      * return all files from user
