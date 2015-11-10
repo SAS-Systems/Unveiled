@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">UnveiledApp</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="main_camera">Camera</string>
+    <string name="main_upload">Upload</string>
 </resources>

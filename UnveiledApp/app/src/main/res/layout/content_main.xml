@@ -12,8 +12,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="main_"
-        android:id="@+id/button"
+        android:text="@string/main_camera"
+        android:id="@+id/bt_camera"
         android:layout_marginTop="69dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -21,9 +21,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="@string/main_upload"
         android:id="@+id/button2"
         android:layout_marginTop="36dp"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/bt_camera"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
