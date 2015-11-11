@@ -1,5 +1,6 @@
 # Notes:
 #  - you can skip a build by adding [ci skip] to the commit message 
+#
 
 # see http://about.travis-ci.org/docs/user/languages/php/
 language: php
