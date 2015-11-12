@@ -10,10 +10,13 @@ cd Backend-PHP-Stack
 case "$BRANCH" in
 	'Backend-PHP-Stack')
 		FOLDER = 'php'
+		;;
 #	'someBranch' | 'otherBranch')
 #		FOLDER = 'common/folder/for/both/branchs'
+#		;;
 	*)
 		FOLDER = 'test/php'
+		;;
 esac
 
 # iterate over files and upload them with curl
