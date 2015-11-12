@@ -10,4 +10,12 @@
         android:fragment="de.systemgrid.sas.unveiledapp.SettingsActivity$DataSyncPreferenceFragment"
         android:title="@string/pref_header_data_sync" android:icon="@drawable/ic_sync_black_24dp" />
 
+    <header
+        android:fragment="de.systemgrid.sas.unveiledapp.SettingsActivity$VideoPreferenceFragment"
+        android:title="@string/pref_header_video" android:icon="@drawable/ic_sync_black_24dp" />
+
+    <header
+        android:fragment="de.systemgrid.sas.unveiledapp.SettingsActivity$PicturePreferenceFragment"
+        android:title="@string/pref_header_picture" android:icon="@drawable/ic_sync_black_24dp" />
+
 </preference-headers>
