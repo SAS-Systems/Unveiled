@@ -9,19 +9,19 @@ cd Backend-PHP-Stack
 #   --> extend if necessary <--
 case "$BRANCH" in
 	'Backend-PHP-Stack')
-		FOLDER = "php"
+		PATH = "php"
 		;;
 #	'someBranch' | 'otherBranch')
-#		FOLDER = "common/folder/for/both/branchs"
+#		PATH = "common/folder/for/both/branches"
 #		;;
 	*)
-		FOLDER = "test/php"
+		PATH = "test/php"
 		;;
 esac
 
 # iterate over files and upload them with curl
 for FILE in $(find . -type f)
 do
-	printf "\nupload $FILE to server at $FOLDER/$FILE";
-	curl --ftp-create-dirs -T "$FILE" -u $FTP_USER:$FTP_PASSWORD "$FTP_URL/$FOLDER/$FILE";
+	printf "\nupload $FILE to server at $PATH/$FILE";
+	curl --ftp-create-dirs -T "$FILE" -u $FTP_USER:$FTP_PASSWORD "$FTP_URL/$PATH/$FILE";
 done; # file
