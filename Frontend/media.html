@@ -19,9 +19,41 @@
 
     <!-- Coverflow library Rain Flipster-->
     <link href="jquery.flipster.min.css" rel="stylesheet" type="text/css" />
-
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="jquery.min.js"></script>
     <script src="jquery.flipster.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script>
+        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
+        function initialize()
+        {
+            var mapProp = {
+                center:myCenter,
+                zoom:10,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            var marker=new google.maps.Marker({
+                position:myCenter,
+                animation:google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);
+
+            var infowindow = new google.maps.InfoWindow({
+                content: 'Latitude: ' +51.508742+ '<br>Longitude: ' +-0.120850
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </head>
 
 <body>
@@ -58,7 +90,7 @@
 
 <div id="coverflow" style="padding-top: 100px">
     <ul class="flip-items">
-        <li data-flip-title="Red">
+        <li data-flip-title="Red" id="1">
             <img src="pictures/text1.gif">
         </li>
         <li data-flip-title="Razzmatazz" data-flip-category="Purples">
@@ -91,10 +123,65 @@
     </ul>
 </div>
 </div>
+
+
+<div class="container marketing">
+
+<div class="row featurette">
+        <h2 class="featurette-heading" style="float: right">Properties<span class="text-muted"></span></h2>
+        <p class="lead">
+            <table width="100%">
+            <tr><td><div id="googleMap" style="width:500px;height:380px;border-radius: 10px"></div></td>
+                <td ><form class="form-horizontal" role="form">
+                    <div class="form-group" style="margin-bottom: 35px;">
+                        <label class="control-label col-sm-2" for="date">Date</label>
+                        <div class="col-sm-8" style="float: right">
+                            <input type="text" class="form-control pull-right" id="date"  disabled >
+                            <script>
+
+                                $.getJSON('videoproperties.json', function(data) {
+                                $("#date").val(data.video[0].date);
+                                    $("#size").val(data.video[0].sizes);
+                                    $("#length").val(data.video[0].lengths);
+                                    $("#resl").val(data.video[0].resolutions);
+                                });
+
+                                 </script>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 35px;">
+                        <label class="control-label col-sm-2" for="size">Size</label>
+                        <div class="col-sm-8" style="float: right">
+                            <input type="text" class="form-control" id="size"  disabled >
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 35px;">
+                        <label class="control-label col-sm-2" for="length">Length</label>
+                        <div class="col-sm-8" style="float: right">
+                            <input type="text" class="form-control" id="length"  disabled >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="resl">Resolution</label>
+                        <div class="col-sm-8" style="float: right">
+                            <input type="text" class="form-control" id="resl"  disabled >
+                        </div>
+                    </div>
+
+                    </form>
+
+                </td>
+            </tr>
+            </table>
+        <hr class="featurette-divider">
+        </p>
+
+</div>
+</div>
 <script>
     var coverflow = $("#coverflow").flipster();
 </script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 </body>
 </html>

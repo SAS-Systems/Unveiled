@@ -4,9 +4,17 @@
 
 /**
 $(document).ready(function(){
-    $("").click(function(){forward()});
+    $("#changePassword").click(function(){openDialog()});
 })
 
-function forward (){
+function openDialog (){
+    alert("Hallo");
+    BootstrapDialog.confirm('Hi Apple, are you sure?', function(result){
+        if(result) {
+            alert('Yup.');
+        }else {
+            alert('Nope.');
+        }
+    });
 
-}*/
+}**/
