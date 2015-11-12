@@ -23,6 +23,7 @@ branches:
     - Backend-PHP-Stack
     - travisTest
 
+# update composer to newest version (optional)
 before_install:
    - /home/travis/.phpenv/versions/5.5/bin/composer self-update
 
@@ -34,31 +35,22 @@ install: true
 # skip build (only for testing!!!)
 script: true
 
-# use curl to deploy to our server
-# $FTP_USER, $FTP_PASSWORD and $FTP_URL are enrypted env-variables
+# use our own script to deploy to our server
 after_success:
-#for debugging only:
-#   - sh deploy.sh
-   
-########## doesn't work ################################################
-#   - 'find Backend-PHP-Stack -type f -exec "curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/{}"'
-#   - 'curl --ftp-create-dirs -T "Backend-PHP-Stack/config.inc.php" -u $FTP_USER:$FTP_PASSWORD "$FTP_URL/test/"'
-#   - "curl --ftp-create-dirs -T Backend-PHP-Stack/index.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
-#   - "curl --ftp-create-dirs -T Backend-PHP-Stack/webstart.inc.php -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
-#   - "curl --ftp-create-dirs -T 'Backend-PHP-Stack/{config.inc.php,index.php,webstart.inc.php}' -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/"
-#   - "curl --ftp-create-dirs -T 'Backend-PHP-Stack/class/{error_log.class.php,file.class.php,globalfunctions.function.php,message.class.php,message.class.php,picture_file.class.php,user.class.php,video_file.class.php}' -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/class/"
+   - sh deploy.sh
   
 #after_failure:
 
 #before_deploy:
 
-# let travis skip the cleanup process after the build
-deploy:
+# !!-- bash doesen't find this script therefore we will do this in the after_success hook --!!
+# let travis skip the cleanup process after the build and deploy
+#deploy:
 #   skip_cleanup: true
-   provider: script
-   script: deploy.sh
-   on:
-      branch: $BRANCH
+#   provider: script
+#   script: deploy.sh
+#   on:
+#      branch: $BRANCH
 
 #after_deploy:
 

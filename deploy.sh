@@ -5,7 +5,8 @@
 #########################################
 
 # branch-dependent folder:
-#   --> extend if necessary <--
+# $BRANCH is specified as a env-variable in the .travis.yml
+#   --> extend this if necessary <--
 case "$BRANCH" in
 	'Backend-PHP-Stack')
 		PFAD="php"
@@ -23,5 +24,6 @@ cd Backend-PHP-Stack
 for FILE in $(find . -type f)
 do
 	printf "\nupload $FILE to server at $PFAD/$FILE";
+	# $FTP_USER, $FTP_PASSWORD and $FTP_URL are enrypted env-variables
 	curl --ftp-create-dirs -T "$FILE" -u $FTP_USER:$FTP_PASSWORD "$FTP_URL/$PFAD/$FILE";
 done; # file
