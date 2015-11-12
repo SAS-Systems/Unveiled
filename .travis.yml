@@ -38,7 +38,7 @@ script: true
 # $FTP_USER, $FTP_PASSWORD and $FTP_URL are enrypted env-variables
 after_success:
 #for debugging only:
-   - sh deploy.sh
+#   - sh deploy.sh
    
 ########## doesn't work ################################################
 #   - 'find Backend-PHP-Stack -type f -exec "curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/{}"'
@@ -53,10 +53,10 @@ after_success:
 #before_deploy:
 
 # let travis skip the cleanup process after the build
-#deploy:
+deploy:
 #   skip_cleanup: true
-#   provider: script
-#   script: deploy.sh
+   provider: script
+   script: deploy.sh
 #   on:
 #      branch: $BRANCH
 
