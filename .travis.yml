@@ -39,7 +39,7 @@ script: true
 after_success:
 #for debugging only:
    - ls -ll 
-   - for file in Backend-PHP-Stack/* do	curl --ftp-create-dirs -T $file -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/; done;
+   - sh deploy.sh
    
 ########## doesn't work ################################################
 #   - 'find Backend-PHP-Stack -type f -exec "curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD $FTP_URL/test/{}"'
