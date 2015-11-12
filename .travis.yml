@@ -38,7 +38,6 @@ script: true
 # $FTP_USER, $FTP_PASSWORD and $FTP_URL are enrypted env-variables
 after_success:
 #for debugging only:
-   - ls -ll 
    - sh deploy.sh
    
 ########## doesn't work ################################################

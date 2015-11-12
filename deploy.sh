@@ -23,5 +23,5 @@ cd Backend-PHP-Stack
 for FILE in $(find . -type f)
 do
 	printf "\nupload $FILE to server at $PFAD/$FILE";
-#	curl --ftp-create-dirs -T "$FILE" -u $FTP_USER:$FTP_PASSWORD "$FTP_URL/$PFAD/$FILE";
+	curl --ftp-create-dirs -T "$FILE" -u $FTP_USER:$FTP_PASSWORD "$FTP_URL/$PFAD/$FILE";
 done; # file
