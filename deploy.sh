@@ -8,13 +8,13 @@
 #   --> extend if necessary <--
 case "$BRANCH" in
 	'Backend-PHP-Stack')
-		PFAD = "php"
+		PFAD="php"
 		;;
 #	'someBranch' | 'otherBranch')
 #		PFAD = "common/folder/for/both/branches"
 #		;;
 	*)
-		PFAD = "test/php"
+		PFAD="test/php"
 		;;
 esac
 
