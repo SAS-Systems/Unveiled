@@ -14,7 +14,7 @@ php:
 env:
 #   - DB=mysql
 # the branch which schould be deployed
-   - BRANCH=travisTest
+   - BRANCH=Backend-PHP-Stack
 
 
 # only build these branches (RegEx is also valid, eg. /^deploy.*$/):
