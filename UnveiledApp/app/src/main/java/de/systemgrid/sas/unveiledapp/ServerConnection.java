@@ -23,7 +23,7 @@ public class ServerConnection {
 
         return false;
     }
-    
+
     public static boolean testConnection() {
 
         return false;

@@ -35,33 +35,36 @@
         <item>-1</item>
     </string-array>
 
+
     <!--settings for Data & Sync -->
     <string name="pref_header_data_sync">Server-Verbindung</string>
 
-    <string name="pref_title_sync_frequency">Sync frequency</string>
-    <string-array name="pref_sync_frequency_titles">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_sync_frequency_values">
-        <item>15</item>
-        <item>30</item>
-        <item>60</item>
-        <item>180</item>
-        <item>360</item>
-        <item>-1</item>
-    </string-array>
+    <string name="pref_title_server_fqdn">Server Host</string>
+    <string name="pref_title_server_port">Server Port</string>
+    <string name="pref_default_server_fqdn">sas.systemgrid.de</string>
+    <string name="pref_default_server_port">9999</string>
 
-    <string name="pref_title_system_sync_settings">System sync settings</string>
 
     <!-- Settings for video -->
     <string name="pref_header_video">Video/Aufnahme</string>
 
+    <string name="pref_title_video_resolution">Video Auflösung</string>
+    <string-array name="pref_video_resolution">
+        <item>1080p FULL HD</item>
+        <item>720p HD</item>
+        <item>480p VGA</item>
+    </string-array>
+    <string-array name="pref_video_resolution_values">
+        <item>1080</item>
+        <item>720</item>
+        <item>480</item>
+    </string-array>
+
+
     <!-- Settings for picture -->
     <string name="pref_header_picture">Bild-Upload</string>
+
+    <string name="pref_title_picture_save">Local speichern</string>
+    <string name="pref_description_picture_save">Bilder die über die App geschossen werden, werden im localen Bilderverzeichnis des Smartphones gespeichert</string>
 
 </resources>
