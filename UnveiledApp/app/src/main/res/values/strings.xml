@@ -1,10 +1,14 @@
 <resources>
-    <string name="app_name">Unveiled</string>
+    <string name="app_name">UnveiledApp</string>
     <string name="action_settings">Einstellung</string>
     <string name="title_activity_profile">Profil</string>
-    <string name="main_camera">Kamera</string>‚
-    <string name="main_upload">Datei-Upload</string>
+    <string name="title_activity_camera">Kamera</string>
+    <string name="title_activity_upload_file">Datei-Upload</string>
     <string name="title_activity_settings">Einstellung</string>
+
+    <!-- Strings related to Main -->
+    <string name="main_camera">Kamera</string>
+    <string name="main_upload">Datei-Upload</string>
 
     <!-- Strings related to Settings -->
 
