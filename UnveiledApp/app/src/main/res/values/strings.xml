@@ -49,6 +49,9 @@
     <string name="pref_default_acc_email">hansmeyer@systemgrid.de</string>
     <string name="pref_default_acc_password">abcdef</string>
 
+    <string name="pref_toast_login_success">Verbindungsdaten korrekt.</string>
+    <string name="pref_toast_login_failed">Keine Verbindung möglich!</string>
+
 
     <!-- Settings for video -->
     <string name="pref_header_video">Video/Aufnahme</string>

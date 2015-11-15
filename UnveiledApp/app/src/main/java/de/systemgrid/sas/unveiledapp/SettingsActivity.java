@@ -19,6 +19,7 @@ import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -51,7 +52,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
@@ -60,7 +61,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     /**
      * {@inheritDoc}
@@ -114,6 +115,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 // simple string representation.
                 preference.setSummary(stringValue);
             }
+
             return true;
         }
     };
@@ -209,6 +211,16 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
             if (id == android.R.id.home) {
+
+                //Test Connection
+                if (ServerConnection.testConnection()) {
+
+                    Toast.makeText(getActivity(), this.getString(R.string.pref_toast_login_success), Toast.LENGTH_LONG).show();
+                } else {
+
+                    Toast.makeText(getActivity(), this.getString(R.string.pref_toast_login_failed), Toast.LENGTH_LONG).show();
+                }
+
                 startActivity(new Intent(getActivity(), SettingsActivity.class));
                 return true;
             }
