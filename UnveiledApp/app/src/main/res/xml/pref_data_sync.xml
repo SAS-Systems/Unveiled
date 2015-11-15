@@ -20,4 +20,24 @@
         android:singleLine="true"
         android:maxLines="1" />
 
+    <EditTextPreference
+        android:key="acc_email"
+        android:title="@string/pref_title_acc_email"
+        android:defaultValue="@string/pref_default_acc_email"
+        android:selectAllOnFocus="true"
+        android:inputType="textEmailAddress"
+        android:capitalize="none"
+        android:singleLine="true"
+        android:maxLines="1" />
+
+    <EditTextPreference
+        android:key="acc_password"
+        android:title="@string/pref_title_acc_password"
+        android:defaultValue="@string/pref_default_acc_password"
+        android:selectAllOnFocus="true"
+        android:inputType="textPassword"
+        android:capitalize="none"
+        android:singleLine="true"
+        android:maxLines="1" />
+
 </PreferenceScreen>

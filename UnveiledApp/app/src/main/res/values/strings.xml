@@ -41,8 +41,13 @@
 
     <string name="pref_title_server_fqdn">Server Host</string>
     <string name="pref_title_server_port">Server Port</string>
+    <string name="pref_title_acc_email">Account Email</string>
+    <string name="pref_title_acc_password">Account Passwort</string>
+
     <string name="pref_default_server_fqdn">sas.systemgrid.de</string>
     <string name="pref_default_server_port">9999</string>
+    <string name="pref_default_acc_email">hansmeyer@systemgrid.de</string>
+    <string name="pref_default_acc_password">abcdef</string>
 
 
     <!-- Settings for video -->
