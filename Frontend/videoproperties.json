@@ -1,3 +1,7 @@
 {"video":[
-  {"id":"1","resolutions":"1080p", "longitude":"51.508742","latitude":"-0.120850","lengths":"15:00min","sizes":"20MB","date":"11.11.2015"}
+  {"id":"1","resolutions":"1080p", "longitude":"51.508742","latitude":"-0.120850","lengths":"15:00min","sizes":"20MB","date":"11.11.2015","image":"pictures/text1.gif"},
+  {"id":"2","resolutions":"1180p", "longitude":"51.508742","latitude":"-0.120850","lengths":"15:00min","sizes":"21MB","date":"11.11.2015","image":"pictures/text2.gif"},
+  {"id":"3","resolutions":"1280p", "longitude":"51.508742","latitude":"-0.120850","lengths":"15:00min","sizes":"22MB","date":"11.11.2015","image":"pictures/text3.gif"},
+  {"id":"4","resolutions":"1380p", "longitude":"51.508742","latitude":"-0.120850","lengths":"15:00min","sizes":"23MB","date":"11.11.2015","image":"pictures/text4.gif"}
+
 ]}
