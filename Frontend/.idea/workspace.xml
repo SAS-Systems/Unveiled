@@ -24,8 +24,8 @@
       <file leaf-file-name="media.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/media.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2058823">
-              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="53" />
+            <state vertical-scroll-proportion="-20.588236">
+              <caret line="116" column="141" selection-start-line="116" selection-start-column="141" selection-end-line="116" selection-end-column="141" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -57,8 +57,8 @@
       <file leaf-file-name="ng-coverflow.utils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ng-coverflow.utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.793103">
-              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+            <state vertical-scroll-proportion="-20.689655">
+              <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
       <file leaf-file-name="angularController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angularController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47995418">
-              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.63001144">
+              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -87,8 +87,8 @@
       <file leaf-file-name="videoproperties.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/videoproperties.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2058823">
-              <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+            <state vertical-scroll-proportion="-0.7352941">
+              <caret line="1" column="83" selection-start-line="1" selection-start-column="83" selection-end-line="1" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/ng-coverflow.templates.js" />
         <option value="$PROJECT_DIR$/ng-coverflow.js" />
         <option value="$PROJECT_DIR$/ng-coverflow.utils.js" />
-        <option value="$PROJECT_DIR$/angularController.js" />
         <option value="$PROJECT_DIR$/media.html" />
+        <option value="$PROJECT_DIR$/angularController.js" />
       </list>
     </option>
   </component>
@@ -539,22 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ng-coverflow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.620689">
-          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-coverflow.utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.793103">
-          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testmodel.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029797377">
@@ -563,18 +547,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ng-coverflow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.620689">
+          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng-coverflow.templates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/videoproperties.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2058823">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+        <state vertical-scroll-proportion="-0.7352941">
+          <caret line="1" column="83" selection-start-line="1" selection-start-column="83" selection-end-line="1" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng-coverflow.utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.689655">
+          <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/media.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2058823">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="53" />
+        <state vertical-scroll-proportion="-20.588236">
+          <caret line="116" column="141" selection-start-line="116" selection-start-column="141" selection-end-line="116" selection-end-column="141" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -592,18 +600,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ng-coverflow.templates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angularController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47995418">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.63001144">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
           <folding />
         </state>
       </provider>

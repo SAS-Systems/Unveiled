@@ -25,38 +25,7 @@
     <script src="ng-coverflow.utils.js"></script>
     <script src="angularController.js"></script>
     <script src="controller.js"></script>
-    <script>
-        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
-
-        function initialize()
-        {
-            var mapProp = {
-                center:myCenter,
-                zoom:10,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-            var marker=new google.maps.Marker({
-                position:myCenter,
-                animation:google.maps.Animation.BOUNCE
-            });
-
-            marker.setMap(map);
-
-            var infowindow = new google.maps.InfoWindow({
-                content: 'Latitude: ' +51.508742+ '<br>Longitude: ' +-0.120850
-            });
-
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map,marker);
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-</head>
+    </head>
 <body ng-app="app">
 <!-- Navigation Bar -->
 <div class="navbar-wrapper">
@@ -133,19 +102,19 @@
                     <div class="form-group" style="margin-bottom: 35px;">
                         <label class="control-label col-sm-2" for="size">Size</label>
                         <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="size"  disabled >
+                            <input type="text" class="form-control" id="size"  disabled value="{{currentItem.targetScope._currentItem.__resolutions}}">
                         </div>
                     </div>
                     <div class="form-group" style="margin-bottom: 35px;">
                         <label class="control-label col-sm-2" for="length">Length</label>
                         <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="length"  disabled >
+                            <input type="text" class="form-control" id="length"  disabled value="{{currentItem.targetScope._currentItem.__lengths}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="resl">Resolution</label>
                         <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="resl"  disabled >
+                            <input type="text" class="form-control" id="resl"  disabled value="{{currentItem.targetScope._currentItem.__sizes}}">
                         </div>
                     </div>
 
@@ -159,9 +128,6 @@
 
 </div>
 </div>
-<!--script>
-    var coverflow = $("#coverflow").flipster();
-</script-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 </body>
