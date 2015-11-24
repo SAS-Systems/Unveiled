@@ -1,0 +1,12 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="video_resolution"
+        android:title="@string/pref_title_video_resolution"
+        android:entries="@array/pref_video_resolution"
+        android:entryValues="@array/pref_video_resolution_values"
+        android:defaultValue="720"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+</PreferenceScreen>
