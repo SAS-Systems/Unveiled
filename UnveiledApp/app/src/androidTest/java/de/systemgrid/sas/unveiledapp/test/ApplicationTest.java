@@ -1,4 +1,4 @@
-package de.systemgrid.sas.unveiledapp;
+package de.systemgrid.sas.unveiledapp.test;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
