@@ -164,3 +164,13 @@ body {
 .modal-body .form-horizontal .col-sm-offset-2 {
   margin-left: 15px;
 }
+
+.modal-header, h4, .close {
+  background-color: #007AB7;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+.modal-footer {
+  background-color: #f9f9f9;
+}

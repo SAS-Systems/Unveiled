@@ -20,7 +20,7 @@
                 console.log('Item ' + item.title + ' was clicked');
                 console.log($rootScope.currentItem);
                 console.log($rootScope.currentItem.targetScope._currentItem.__date);
-                console.log($scope.selectIndex);
+                console.log($rootScope.currentItem.targetScope.selectedIndex);
             };
 
 
@@ -62,3 +62,9 @@ function initialize()
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal("toggle");
+    });
+});
