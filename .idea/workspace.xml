@@ -114,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.14545454">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -551,7 +551,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448718547761</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="first REST API test">
+      <created>1448718837697</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1448718837697</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1159,7 +1165,7 @@
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14545454">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding />
         </state>
       </provider>
