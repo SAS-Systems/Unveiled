@@ -1,12 +1,22 @@
 /**
- * Created by D062427 on 04.11.2015.
+ * Created by D062427 on 11.11.2015.
  */
 
-/**
-$(document).ready(function(){
-    $("").click(function(){forward()});
-})
+/** Angular controller **/
+(function() {
+    var myApp = angular.module('myApp', []);
 
-function forward (){
+    myApp.controller('CoverflowController', ['$scope', '$log','$http', function($scope, $log, $http) {
+        $log.log("hallo");
+        var controller = this;
+        var videos = [];
 
-}*/
+        $http.get('videoproperties.json').success(function(data){
+            controller.videos = data;
+            $log.log("loaded videoproperties.json");
+        });
+        $log.log("was");
+    }]);
+})();
+
+

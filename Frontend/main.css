@@ -150,3 +150,27 @@ body {
 .fa-font{
   color:#fff !important;
 }
+
+/*Dialog CSS*/
+
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+  width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+  text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+  margin-left: 15px;
+}
+
+.modal-header, .close {
+ background-color: #007AB7;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+.modal-footer {
+  background-color: #f9f9f9;
+}
