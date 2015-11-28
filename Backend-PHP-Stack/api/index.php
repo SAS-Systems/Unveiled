@@ -12,7 +12,9 @@ $app->post('/user', function () use($app) {
 
     $userData = json_decode($app->request->post('data'));
 
-    $username = $userData->username;
+    var_dump($userData);
+
+    /*$username = $userData->username;
     $email = $userData->email;
     $password = User::generatePassword($userData->password);
     $ip = $_SERVER['REMOTE_ADDR'];;
@@ -23,7 +25,7 @@ $app->post('/user', function () use($app) {
         $message = Message::newFromCode("A001", SYSTEM_LANGUAGE);
 
         echo json_encode(array ("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-    }
+    }*/
 });
 
 
