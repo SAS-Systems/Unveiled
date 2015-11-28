@@ -52,3 +52,6 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'vend
 require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'globalfunctions.function.php');
 
 ///////////////////////////////////////////////////////////////////////////
+
+
+define("SYSTEM_LANGUAGE", "DE");

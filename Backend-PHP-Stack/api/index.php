@@ -8,15 +8,26 @@ require_once('../webstart.inc.php');
 $app = new \Slim\Slim();
 
 
-$app->get('/hello/:name', function ($name) {
+$app->post('/user', function () {
 
-    echo "Hello, " . $name;
+    $request = Slim::getInstance()->request();
+    $userData = json_decode($request->getBody());
+
+    $username = $userData->username;
+    $email = $userData->email;
+    $password = User::generatePassword($userData->password);
+    $ip = $_SERVER['REMOTE_ADDR'];;
+
+    $user = new User(-1, $username, $email, true, $password, "", $ip, time(), new UserPermission());
+    if($user->flushDB()) {
+
+        $message = Message::newFromCode("A001", SYSTEM_LANGUAGE);
+
+        echo json_encode(array ("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    }
 });
 
 
-$app->get('/test', function () {
 
-    echo "Hello, ";
-});
 
 $app->run();
