@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/.htaccess" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
     </list>
@@ -84,8 +83,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09090909">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.018181818">
+              <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -560,7 +559,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448720035935</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="second REST API test">
+      <created>1448722501249</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1448722501249</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -624,7 +629,8 @@
     <MESSAGE value="lazy loading for owner of file class" />
     <MESSAGE value="testcommit" />
     <MESSAGE value="first REST API test" />
-    <option name="LAST_COMMIT_MESSAGE" value="first REST API test" />
+    <MESSAGE value="second REST API test" />
+    <option name="LAST_COMMIT_MESSAGE" value="second REST API test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1159,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09090909">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.018181818">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
           <folding />
         </state>
       </provider>
