@@ -32,7 +32,7 @@ class Message
         $this->language = $language;
     }
 
-    public function newFromCode($code, $language) {
+    public static function newFromCode($code, $language) {
         global $dbConn;
 
         $code = $dbConn->real_escape_string( $code );
