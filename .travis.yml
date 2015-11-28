@@ -1,11 +1,57 @@
-language: php
-php:
-  - 5.5
-  - 5.6
+# Notes:
+#  - you can skip a build by adding [ci skip] to the commit message 
+#
 
-  env:
-    global:
-      - "FTP_USER=user"
-      - "FTP_PASSWORD=password"
-  after_success:
-      "curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD ftp://sitename.com/directory/myfile"
+# see http://about.travis-ci.org/docs/user/languages/php/
+language: php
+
+# test for these PHP versions and environments
+php:
+#   - 5.5
+   - 5.6
+#   - 7.0
+
+env:
+#   - DB=mysql
+# the branch which schould be deployed
+   - BRANCH=Backend-PHP-Stack
+
+
+# only build these branches (RegEx is also valid, eg. /^deploy.*$/):
+branches:
+  only:
+    - Backend-PHP-Stack
+    - travisTest
+
+# update composer to newest version (optional)
+before_install:
+   - /home/travis/.phpenv/versions/5.5/bin/composer self-update
+
+# skip installation step
+install: true
+
+#before_script:
+
+# skip build (only for testing!!!)
+script: true
+
+# use our own script to deploy to our server
+after_success:
+   - sh deploy.sh
+  
+#after_failure:
+
+#before_deploy:
+
+# !!-- bash doesen't find this script therefore we will do this in the after_success hook --!!
+# let travis skip the cleanup process after the build and deploy
+#deploy:
+#   skip_cleanup: true
+#   provider: script
+#   script: deploy.sh
+#   on:
+#      branch: $BRANCH
+
+#after_deploy:
+
+#after_script:
