@@ -9,7 +9,7 @@ set_time_limit ( 999 );
 //Config File
 
 //require_once( __DIR__.DIRECTORY_SEPARATOR.'config.inc.php' );
-require_once( '../../../config.inc.php' );
+require_once( '../config.inc.php' );
 
 ///////////////////////////////////////////////////////////////////////////
 
