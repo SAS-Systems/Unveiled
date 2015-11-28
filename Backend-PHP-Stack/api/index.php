@@ -10,7 +10,7 @@ $app = new \Slim\Slim();
 
 $app->post('/user', function () {
 
-    $request = Slim::getInstance()->request();
+    $request = \Slim\Slim::getInstance()->request();
     $userData = json_decode($request->getBody());
 
     $username = $userData->username;
