@@ -8,10 +8,9 @@ require_once('../webstart.inc.php');
 $app = new \Slim\Slim();
 
 
-$app->post('/user', function () {
+$app->post('/user', function () use($app) {
 
-    $request = \Slim\Slim::getInstance()->request();
-    $userData = json_decode($request->getBody());
+    $userData = json_decode($app->request->post('data'));
 
     $username = $userData->username;
     $email = $userData->email;
