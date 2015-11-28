@@ -409,6 +409,15 @@ class User
             $query_stmt->bind_param('ssisssii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission);
             $query_stmt->execute();
 
+            //Logg all MySQL errors
+            if ($dbConn->error != "") {
+
+                //Log error
+                errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+
+                return false;
+            }
+
             if ($dbConn->affected_rows > 0) {
 
                 $this->setId((int)$dbConn->insert_id);
