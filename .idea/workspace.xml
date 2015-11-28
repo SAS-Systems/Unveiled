@@ -59,12 +59,12 @@
       <file leaf-file-name="message.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6545454">
-              <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.4181818">
+              <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
               <folding>
-                <marker date="1448733101000" expanded="true" signature="868:925" placeholder="SELECT * FRO..message..." />
-                <marker date="1448733101000" expanded="true" signature="868:937" placeholder="SELECT * FRO..message..." />
-                <marker date="1448733101000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
+                <marker date="1448733403000" expanded="true" signature="868:926" placeholder="SELECT * FRO..message..." />
+                <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..message..." />
+                <marker date="1448733403000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
               </folding>
             </state>
           </provider>
@@ -373,12 +373,6 @@
       <option name="number" value="Default" />
       <updated>1446826513033</updated>
     </task>
-    <task id="LOCAL-00008" summary="added globalfunctions">
-      <created>1446998612008</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1446998612008</updated>
-    </task>
     <task id="LOCAL-00009" summary="implemented: VideoFile-&gt;newFromId">
       <created>1446999015165</created>
       <option name="number" value="00009" />
@@ -667,7 +661,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448732564416</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="bug fixed in Message class">
+      <created>1448733123094</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1448733123094</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -708,7 +708,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="4. try gitignore" />
     <MESSAGE value="added globalfunctions" />
     <MESSAGE value="implemented: VideoFile-&gt;newFromId" />
     <MESSAGE value="implemented: PictureFile-&gt;newFromId" />
@@ -733,7 +732,8 @@
     <MESSAGE value="require bug fixed" />
     <MESSAGE value="implement postUser" />
     <MESSAGE value="bug fixed in User class" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed in User class" />
+    <MESSAGE value="bug fixed in Message class" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed in Message class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -757,9 +757,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
-            <marker date="1448733101000" expanded="true" signature="868:925" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733101000" expanded="true" signature="868:937" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733101000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:926" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
           </folding>
         </state>
       </provider>
@@ -863,9 +863,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
-            <marker date="1448733101000" expanded="true" signature="868:925" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733101000" expanded="true" signature="868:937" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733101000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:926" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
           </folding>
         </state>
       </provider>
@@ -1258,12 +1258,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6545454">
-          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.4181818">
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
           <folding>
-            <marker date="1448733101000" expanded="true" signature="868:925" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733101000" expanded="true" signature="868:937" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733101000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:926" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
           </folding>
         </state>
       </provider>

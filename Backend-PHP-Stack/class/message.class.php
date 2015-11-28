@@ -13,7 +13,7 @@ class Message
     private $code = "";
     private $type = "";
     private $msg = "";
-    private $language= "";
+    private $language = "";
 
     /**
      * message constructor.
@@ -32,34 +32,34 @@ class Message
         $this->language = $language;
     }
 
-    public static function newFromCode($code, $language) {
+    public static function newFromCode($code, $language)
+    {
         global $dbConn;
 
-        $code = $dbConn->real_escape_string( $code );
-        $language = $dbConn->real_escape_string( $language );
+        $code = $dbConn->real_escape_string($code);
+        $language = $dbConn->real_escape_string($language);
 
 
-        $res = $dbConn->query( "SELECT * FROM message WHERE code = '$code' AND language = '$language'" );
+        $res = $dbConn->query("SELECT * FROM messages WHERE code = '$code' AND language = '$language'");
         $row = $res->fetch_object();
 
         //Logg all MySQL errors
-        if( $dbConn->error != "" ) {
+        if ($dbConn->error != "") {
 
             //Log error
-            errorLog::newEntry( "MySQL error: ".$dbConn->error , 2, __FILE__, __CLASS__, __FUNCTION__ );
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
         }
 
-        if( $row != null ) {
+        if ($row != null) {
 
-            $db_id = (int) $row->id;
-            $db_code = utf8_encode( $row->code );
-            $db_type = utf8_encode( $row->type );
-            $db_msg = utf8_encode( $row->msg );
-            $db_language = utf8_encode( $row->language );
+            $db_id = (int)$row->id;
+            $db_code = utf8_encode($row->code);
+            $db_type = utf8_encode($row->type);
+            $db_msg = utf8_encode($row->msg);
+            $db_language = utf8_encode($row->language);
 
             return new Message($db_id, $db_code, $db_type, $db_msg, $db_language);
-        }
-        else {
+        } else {
 
             return null;
         }
@@ -109,9 +109,10 @@ class Message
      * converts the message to an HTML statment
      * @return string
      */
-    public function toHTML() {
+    public function toHTML()
+    {
 
-        return '<div class="message>"'.$this->getMsg().'</div>';
+        return '<div class="message>"' . $this->getMsg() . '</div>';
     }
 
 }
