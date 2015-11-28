@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -372,12 +371,6 @@
       <option name="number" value="Default" />
       <updated>1446826513033</updated>
     </task>
-    <task id="LOCAL-00006" summary="3. try gitignore">
-      <created>1446996627107</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1446996627107</updated>
-    </task>
     <task id="LOCAL-00007" summary="4. try gitignore">
       <created>1446996714163</created>
       <option name="number" value="00007" />
@@ -666,7 +659,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448732178318</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="bug fixed in User class">
+      <created>1448732445793</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1448732445793</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
