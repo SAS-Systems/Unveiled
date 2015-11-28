@@ -10,7 +10,7 @@ $app = new \Slim\Slim();
 
 $app->post('/user', function () use($app) {
 
-    var_dump($app->request->post());
+    var_dump($app->request->post("data"));
 
     $userData = json_decode($app->request->post('data'));
 
