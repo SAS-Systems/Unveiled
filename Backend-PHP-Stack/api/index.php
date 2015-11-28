@@ -1,15 +1,10 @@
 <?php
 
-use Phalcon\Mvc\Micro;
+$app = new \Slim\Slim();
 
-$app = new Micro();
-
-// Retrieves all robots
-$app->get('/test', function () {
-
-
-
-    echo "test erfolgreich";
+$app->get('/hello/:name', function ($name) {
+    
+    echo "Hello, " . $name;
 });
 
-$app->handle();
+$app->run();
