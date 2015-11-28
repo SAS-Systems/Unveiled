@@ -377,7 +377,7 @@ class User
         $token = $this->token;
         $lastIP = $this->lastIP;
         $lastLogin = (int)$this->lastLogin;
-        $permission = (int)$this->permission;
+        $permission = $this->permission->getLevel();
 
         //object exists in DB
         if($this->existsInDB()) {
