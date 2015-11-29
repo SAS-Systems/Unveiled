@@ -64,3 +64,21 @@ function sendSSEMessageId($content, $event, $retry, $id)
     echo "data:" . $content . "\n\n";
     flush();
 }
+
+/**
+ * detects JSON Parsing erros
+ * @return Message or null
+ */
+function JSONerrorCatch() {
+
+    switch(json_last_error()) {
+        case JSON_ERROR_DEPTH:
+            return Message::newFromCode("P001", SYSTEM_LANGUAGE);
+        case JSON_ERROR_CTRL_CHAR:
+            return Message::newFromCode("P002", SYSTEM_LANGUAGE);
+        case JSON_ERROR_SYNTAX:
+            return Message::newFromCode("P003", SYSTEM_LANGUAGE);
+        case JSON_ERROR_NONE:
+            return null;
+    }
+}

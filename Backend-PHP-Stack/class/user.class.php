@@ -83,7 +83,7 @@ class User
 
     }
 
-    public static function newFromSession()
+    public static function newFromCookie()
     {
 
         if (isset($_COOKIE["loginID"]) && $_COOKIE["loginID"] != '' && isset($_COOKIE["loginToken"]) && $_COOKIE["loginToken"] != '') {
@@ -141,19 +141,19 @@ class User
     /**
      *Login the User with email and password.
      *!!Session not will be set!!!
-     * @param $email string
-     * @param $password string crypted
+     * @param $username string
+     * @param $password string uncrypted
      * @return User Object or null
      */
-    public static function newFromLogin($email, $password)
+    public static function newFromLogin($username, $password)
     {
         global $dbConn;
         global $gvCryptSalt;
 
-        $email = $dbConn->real_escape_string($email);
+        $username = $dbConn->real_escape_string($username);
         $password = $dbConn->real_escape_string($password);
 
-        $res = $dbConn->query("SELECT * FROM user WHERE email = '$email'");
+        $res = $dbConn->query("SELECT * FROM user WHERE username = '$username'");
         $row = $res->fetch_object();
 
         //Logg all MySQL errors
@@ -352,6 +352,8 @@ class User
         return false;
     }
 
+
+
     public function existsInDB() {
 
         if($this->id > 0) {
@@ -433,7 +435,7 @@ class User
 
     }
 
-    public function setSession()
+    public function setCookie()
     {
 
         if ($this->token != '') {
@@ -443,7 +445,7 @@ class User
         }
     }
 
-    public static function unsetSession()
+    public static function unsetCookie()
     {
 
         setcookie("loginID", "", time() - 100, "/");
