@@ -111,11 +111,28 @@ $app->get('/user/:id', function ($id) use ($app) {
         return;
     }
 
+    //id(int) or me
+    if ($id != "me") {
 
-    if (is_int($id)) {
+        $id = (int)$id;
 
+        //user has the permission
+        $userPermission = new UserPermission(3);
+        if($userPermission->isAllowed($user)) {
 
+            $requestUser = User::newFromId($id);
 
+            $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
+                "userData" => array("id" => $requestUser->getId(), "username" => $requestUser->getUsername(),
+                    "email" => $requestUser->getEmail(), "emailNotification" => $requestUser->isEmailNotification())));
+        }
+        else {
+
+            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            return;
+        }
 
     } else {
 
