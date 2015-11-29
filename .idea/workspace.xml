@@ -2,47 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/angularController.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/angularController.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/contact.html" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/contact.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/controller.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/index.html" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/main.css" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/main.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/media.html" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/media.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ng-coverflow.css" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ng-coverflow.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ng-coverflow.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ng-coverflow.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ng-coverflow.templates.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ng-coverflow.templates.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ng-coverflow.utils.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ng-coverflow.utils.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ngToast-animations.css" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ngToast-animations.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ngToast-animations.min.css" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ngToast-animations.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ngToast.css" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ngToast.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ngToast.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ngToast.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ngToast.min.css" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ngToast.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/ngToast.min.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/ngToast.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/binoculars.png" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/binoculars.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/earth.jpg" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/earth.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/logo_prototype.png" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/logo_prototype.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/settings.png" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/settings.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/smartphone.png" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/smartphone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text1.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text1.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text10.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text10.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text11.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text11.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text12.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text12.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text13.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text13.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text14.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text14.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text2.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text2.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text3.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text3.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text4.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text4.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text5.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text5.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text6.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text6.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text7.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text7.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text8.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text8.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/pictures/text9.gif" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text9.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/profile.html" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/profile.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/settings.html" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/settings.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/testmodel.json" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/testmodel.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/toast_controller.js" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/toast_controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Frontend/videoproperties.json" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/videoproperties.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,73 +39,120 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="earth.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/earth.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="user.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1448804598000" expanded="true" signature="1347:1388" placeholder="SELECT * FRO..user..." />
+                <marker date="1448804598000" expanded="true" signature="2960:2995" placeholder="SELECT * FRO..user..." />
+                <marker date="1448804598000" expanded="true" signature="4543:4584" placeholder="SELECT * FRO..user..." />
+                <marker date="1448804598000" expanded="true" signature="9111:9264" placeholder="UPDATE `user..." />
+                <marker date="1448804598000" expanded="true" signature="9874:10008" placeholder="INSERT INTO user..." />
+                <marker date="1448804598000" expanded="true" signature="11882:11910" placeholder="SELECT * FRO..user..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text1.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text1.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="picture_file.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-63.125">
+              <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+              <folding>
+                <marker date="1447062622000" expanded="true" signature="1145:1180" placeholder="SELECT * FRO..file..." />
+                <marker date="1447062622000" expanded="true" signature="3446:3619" placeholder="UPDATE file ..." />
+                <marker date="1447062622000" expanded="true" signature="4232:4369" placeholder="INSERT INTO user..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text2.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text2.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="message.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="19.041666">
+              <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+              <folding>
+                <marker date="1448733403000" expanded="true" signature="868:926" placeholder="SELECT * FRO..message..." />
+                <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..message..." />
+                <marker date="1448733403000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text3.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text3.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="globalfunctions.function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-41.25">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text4.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text4.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="file.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="98.416664">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text5.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text5.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="error_log.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/error_log.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding>
+                <marker date="1448735012000" expanded="true" signature="176:281" placeholder="INSERT INTO error_log..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text6.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text6.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.875">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text7.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text7.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="RouteGroup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/RouteGroup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="9.041667">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text8.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text8.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="webstart.inc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.3060686">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text9.gif" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text9.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="user_permission.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.208334">
+              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -166,17 +181,17 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/error_log.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/.htaccess" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/index.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
       </list>
     </option>
   </component>
@@ -219,6 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,7 +295,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webinterface" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Slim" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,7 +341,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -345,7 +364,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1053" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Unveiled-Documentation/Bilder/UML-PHP-Stack_new.png" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend-PHP-Stack" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
@@ -358,155 +377,6 @@
       <recent name="$PROJECT_DIR$/Backend-PHP-Stack/lib" />
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/class/error_log.class.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/database.sql</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/media.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/.idea/.name</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/.idea/Frontend.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/.idea/encodings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/angularController.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/contact.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/controller.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/main.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ng-coverflow.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ng-coverflow.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ng-coverflow.templates.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ng-coverflow.utils.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ngToast-animations.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ngToast-animations.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ngToast.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ngToast.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ngToast.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/ngToast.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/pictures/earth.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/profile.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/settings.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/testmodel.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/toast_controller.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/videoproperties.json</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/jquery.flipster.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/jquery.flipster.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Frontend/jquery.min.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -548,12 +418,6 @@
       <created>1446826513033</created>
       <option name="number" value="Default" />
       <updated>1446826513033</updated>
-    </task>
-    <task id="LOCAL-00010" summary="implemented: PictureFile-&gt;newFromId">
-      <created>1446999278625</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1446999278625</updated>
     </task>
     <task id="LOCAL-00011" summary="implemented: VideoFile-&gt;flushDB">
       <created>1447001144991</created>
@@ -843,33 +707,40 @@
       <option name="project" value="LOCAL" />
       <updated>1448733412937</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="load webinterface to server dir">
+      <created>1448735136407</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1448735136407</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14536741" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14696486" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08740895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15712799" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08722741" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -884,7 +755,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added globalfunctions" />
     <MESSAGE value="implemented: VideoFile-&gt;newFromId" />
     <MESSAGE value="implemented: PictureFile-&gt;newFromId" />
     <MESSAGE value="implemented: VideoFile-&gt;flushDB" />
@@ -909,27 +779,14 @@
     <MESSAGE value="implement postUser" />
     <MESSAGE value="bug fixed in User class" />
     <MESSAGE value="bug fixed in Message class" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed in Message class" />
+    <MESSAGE value="load webinterface to server dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="load webinterface to server dir" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1111112">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/44da7e07-f95a-4821-9ef3-104e8dece541/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ec4a41f5-3462-45d6-aeed-1273128ba3fe/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.016611295">
@@ -1008,13 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/error_log.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://PHP/\errorLog">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1041,34 +891,6 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-          <folding>
-            <marker date="1447062622000" expanded="true" signature="1145:1180" placeholder="SELECT * FRO..file..." />
-            <marker date="1447062622000" expanded="true" signature="3446:3619" placeholder="UPDATE file ..." />
-            <marker date="1447062622000" expanded="true" signature="4232:4369" placeholder="INSERT INTO user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,7 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,75 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-57.5">
-          <caret line="97" column="75" selection-start-line="97" selection-start-column="75" selection-end-line="97" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-168.75">
-          <caret line="270" column="14" selection-start-line="270" selection-start-column="14" selection-end-line="270" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.625">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-353.75">
-          <caret line="949" column="51" selection-start-line="949" selection-start-column="51" selection-end-line="949" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <marker date="1448733403000" expanded="true" signature="868:926" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..message..." />
-            <marker date="1448733403000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1232,7 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1248,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,7 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1264,7 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1272,7 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1280,7 +1022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,9 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1298,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1306,7 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,7 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,7 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1374,6 +1108,139 @@
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text9.gif">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="309.04166">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1448804541000" expanded="true" signature="972:1007" placeholder="SELECT * FRO..file..." />
+            <marker date="1448804541000" expanded="true" signature="3185:3349" placeholder="UPDATE file ..." />
+            <marker date="1448804541000" expanded="true" signature="3975:4103" placeholder="INSERT INTO user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.208334">
+          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1448804598000" expanded="true" signature="1347:1388" placeholder="SELECT * FRO..user..." />
+            <marker date="1448804598000" expanded="true" signature="2960:2995" placeholder="SELECT * FRO..user..." />
+            <marker date="1448804598000" expanded="true" signature="4543:4584" placeholder="SELECT * FRO..user..." />
+            <marker date="1448804598000" expanded="true" signature="9111:9264" placeholder="UPDATE `user..." />
+            <marker date="1448804598000" expanded="true" signature="9874:10008" placeholder="INSERT INTO user..." />
+            <marker date="1448804598000" expanded="true" signature="11882:11910" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-63.125">
+          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+          <folding>
+            <marker date="1447062622000" expanded="true" signature="1145:1180" placeholder="SELECT * FRO..file..." />
+            <marker date="1447062622000" expanded="true" signature="3446:3619" placeholder="UPDATE file ..." />
+            <marker date="1447062622000" expanded="true" signature="4232:4369" placeholder="INSERT INTO user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="19.041666">
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+          <folding>
+            <marker date="1448733403000" expanded="true" signature="868:926" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..message..." />
+            <marker date="1448733403000" expanded="true" signature="868:940" placeholder="SELECT * FRO..message..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-41.25">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="98.416664">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/error_log.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <marker date="1448735012000" expanded="true" signature="176:281" placeholder="INSERT INTO error_log..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/RouteGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.041667">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3060686">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

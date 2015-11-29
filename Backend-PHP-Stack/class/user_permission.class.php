@@ -83,6 +83,4 @@ class UserPermission
                 break;
         }
     }
-
-
 }

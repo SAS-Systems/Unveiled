@@ -27,6 +27,4 @@ $app->post('/user', function () use($app) {
 });
 
 
-
-
 $app->run();
