@@ -114,7 +114,7 @@ $app->get('/user/:id', function ($id) use ($app) {
 
     if (is_int($id)) {
 
-        
+
 
 
     } else {
