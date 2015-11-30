@@ -27,8 +27,8 @@ $app->post('/user', function () use ($app) {
         return;
     }
 
-    $username = $userData->username;
-    $email = $userData->email;
+    $username = strip_tags($userData->username);
+    $email = strip_tags($userData->email);
     $password = User::generatePassword($userData->password);
     $ip = $_SERVER['REMOTE_ADDR'];;
 
@@ -142,6 +142,115 @@ $app->get('/user/:id', function ($id) use ($app) {
                 "emailNotification" => $user->isEmailNotification())));
     }
 
+
+});
+
+$app->put('/user/:id', function ($id) use ($app) {
+
+    $user = User::newFromCookie();
+
+    //user has to be logged in
+    if ($user == null) {
+
+        $message = Message::newFromCode("A005", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $userData = json_decode($app->request->post('data'));
+
+    //catch JSON errors
+    if ($message = JSONerrorCatch() != null) {
+
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    //all parameter exists
+    if(!(isset($userData->username) && isset($userData->email) && isset($userData->emailNotification))) {
+
+        $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $username = strip_tags($userData->username);
+    $email = strip_tags($userData->email);
+    $emailNotification = (bool)$userData->emailNotification;
+
+    //id(int) or me
+    if ($id != "me") {
+
+        $id = (int)$id;
+
+        //user has the permission
+        $userPermission = new UserPermission(3);
+        if($userPermission->isAllowed($user)) {
+
+            $requestUser = User::newFromId($id);
+
+            $requestUser->setUsername($username);
+            $requestUser->setEmail($email);
+            $requestUser->setEmailNotification($emailNotification);
+
+            if($requestUser->flushDB()) {
+
+                $message = Message::newFromCode("A009", SYSTEM_LANGUAGE);
+                echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            }
+            else {
+
+                $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
+                echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            }
+
+        }
+        else {
+
+            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            return;
+        }
+
+    }
+    else {
+
+        $user->setUsername($username);
+        $user->setEmail($email);
+        $user->setEmailNotification($emailNotification);
+
+        if($user->flushDB()) {
+
+            $message = Message::newFromCode("A009", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        }
+        else {
+
+            $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        }
+    }
+
+});
+
+$app->put('/user/getAll', function () use ($app) {
+
+    $user = User::newFromCookie();
+
+    //user has to be logged in
+    if ($user == null) {
+
+        $message = Message::newFromCode("A005", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    //user has the permission
+    $userPermission = new UserPermission(3);
+    if($userPermission->isAllowed($user)) {
+
+
+    }
 
 });
 
