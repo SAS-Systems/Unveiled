@@ -8,14 +8,18 @@ Feature: Settings
   @wip
   Scenario Outline: change connection settings
     Given I have a SettingsActivity
-    And I press <entry>
-    And I type <value>
-    Then I should see <value> on the display
+    When I press Connection Settings
+    And I press "<entry>"
+    And I type "<value>"
+    And I press OK
+    Then I should see "<value>" on the display
 
     Examples:
       | entry        | value |
       | Server Host  | 192.168.2.1 |
       | Server Port  | 50000       |
+      | Mail         | test@mail.de|
+      | Password     | secretpw    |
 
 #  @wip
 #  Scenario: change picture upload to instant upload
