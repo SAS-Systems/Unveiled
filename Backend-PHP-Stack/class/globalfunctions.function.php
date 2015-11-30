@@ -82,3 +82,14 @@ function JSONerrorCatch() {
             return null;
     }
 }
+
+/**
+ * @param $time
+ * @return bool|string
+ */
+function timestampToString($time) {
+
+    $time = (int)$time;
+
+    return date("H:i:s d.m.Y", $time);
+}

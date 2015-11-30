@@ -233,7 +233,7 @@ $app->put('/user/:id', function ($id) use ($app) {
 
 });
 
-$app->put('/user/getAll', function () use ($app) {
+$app->get('/allUser', function () use ($app) {
 
     $user = User::newFromCookie();
 
@@ -249,7 +249,24 @@ $app->put('/user/getAll', function () use ($app) {
     $userPermission = new UserPermission(3);
     if($userPermission->isAllowed($user)) {
 
+        $tmpUserData = array();
 
+        // @TODO: Paging
+        foreach (User::getAll(999) as $tmpUser) {
+
+            $tmpUserData[] = array ("id" => $tmpUser->getId(), "username" => $tmpUser->getUsername(),
+                "email" => $tmpUser->getEmail(), "lastLogin" => timestampToString($tmpUser->getLastLogin()),
+                "permission" => $tmpUser->getPermission()->toString());
+        }
+
+        $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(), "users" => $tmpUserData));
+    }
+    else {
+
+        $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
     }
 
 });

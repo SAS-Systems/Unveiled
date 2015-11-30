@@ -486,14 +486,16 @@ class User
         return crypt($pwd, $gvCryptSalt);
     }
 
-
-    public static function listAll($format = false, $limit = 99)
+    /**
+     * get Array with all User
+     * @param int $limit
+     * @return array User
+     */
+    public static function getAll($limit = 99)
     {
         global $dbConn;
 
         $limit = (int)$limit;
-
-
         $res = $dbConn->query("SELECT * FROM user LIMIT 0, " . $limit);
 
         //Logg all MySQL errors
@@ -510,23 +512,16 @@ class User
             $db_id = (int)$row->id;
             $db_username = utf8_encode($row->username);
             $db_email = $row->email;
-            $db_emailNotification = (int)$row->email_notification_flag;
+            $db_emailNotification = intToBool((int)$row->email_notification_flag);
+            $db_password = $row->password;
+            $db_token = $row->token;
             $db_lastIP = $row->last_ip;
+            $db_lastLogin = (int)$row->last_login;
+            $db_permission = new UserPermission((int)$row->permission);
 
+            $user = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
 
-            if ($format) {
-
-                $db_lastLogin = date("H:i:s d.m.Y", $row->last_login);
-                $db_permission = User::convertPerssionCode($row->permission);
-
-            } else {
-
-                $db_lastLogin = (int)$row->last_login;
-                $db_permission = (int)$row->permission;
-            }
-
-            $tmp[] = array("id" => $db_id, "username" => $db_username, "email" => $db_email, "emailNotification" => $db_emailNotification,
-                "lastIP" => $db_lastIP, "lastLogin" => $db_lastLogin, "permission" => $db_permission);
+            $tmp[] = $user;
         }
 
         return $tmp;

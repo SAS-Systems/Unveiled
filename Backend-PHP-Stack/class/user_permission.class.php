@@ -56,6 +56,11 @@ class UserPermission
         return false;
     }
 
+    public function toString() {
+
+        return self::convertPerssionCode($this->level);
+    }
+
 
     public static function convertPerssionCode($level)
     {
