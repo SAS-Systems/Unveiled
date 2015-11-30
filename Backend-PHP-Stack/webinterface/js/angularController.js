@@ -13,7 +13,6 @@
                 itemFactory({ title:'Item 6', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text6.gif', date:'06.07.2019',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'16:00min',sizes:'24MB'}),
                 itemFactory({ title:'Item 7', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text7.gif', date:'06.07.2018',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'17:00min',sizes:'23MB'}),
                 itemFactory({ title:'Item 8', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text8.gif', date:'06.07.2017',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'18:00min',sizes:'22MB'}),
-                itemFactory({ title:'Item 9', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text9.gif', date:'06.07.2016',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'19:00min',sizes:'21MB'})
             ];
 
             $scope.itemClickHandler = function (item) {
