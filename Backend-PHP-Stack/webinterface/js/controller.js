@@ -43,7 +43,7 @@ $(document).ready(function(){
         var username = $("#usrname").val();
         var password = $("#psw").val();
 
-        $.post("../api/login",
+        $.post("../api/user/login",
             {
                 username:username,password:password
             },
