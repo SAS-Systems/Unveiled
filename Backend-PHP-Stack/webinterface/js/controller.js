@@ -40,12 +40,12 @@ $(document).ready(function(){
     });
 
     $("#loginBtn").click(function(){
-        var username =$("#usrname");
-        var password =$("#psw");
+        var username = $("#usrname");
+        var password = $("#psw");
 
         $.post("../api/login",
             {
-                username:"username",password:"password"
+                username:username,password:password
             },
             function(data,status)
             {
