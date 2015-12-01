@@ -18,7 +18,6 @@
         $log.log("was");
     }]);
 })();**/
-loadNavbar = function () {
     if (($.cookie("loginToken")) !== undefined) {
         $("#userMenu").css("visibility", "visible");
         $("#loginPage").css("visibility", "hidden");
@@ -26,7 +25,6 @@ loadNavbar = function () {
     else {
         $("#userMenu").css("visibility", "hidden");
     }
-}();
 
 $(document).ready(function(){
     $("#myBtn").click(function(){
@@ -47,10 +45,10 @@ $(document).ready(function(){
             {
                 username:username,password:password
             },
-            function(data,status)
+            function(data)
             {
                 console.log(data);
-                console.log(status);
+
             }
         );
 
