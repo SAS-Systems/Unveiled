@@ -50,7 +50,7 @@ $(document).ready(function(){
                 console.log(data);
 
             }
-        );
+        ).fail(function(){console.log("bub")});
 
     });
 
