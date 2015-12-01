@@ -249,7 +249,7 @@ $app->get('/allUser', function () use ($app) {
     $userPermission = new UserPermission(3);
     if($userPermission->isAllowed($user)) {
 
-        $tmpUserData = array();
+        $tmpUserData = array();x
 
         // @TODO: Paging
         foreach (User::getAll(999) as $tmpUser) {
