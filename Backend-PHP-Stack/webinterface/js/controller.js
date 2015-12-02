@@ -44,10 +44,14 @@ $(document).ready(function(){
         var request = $.ajax({
             url:"../api/user/login",
             method: "POST",
-            data:{username:username,password:password}
+            data:{username:username,password:password},
+            success: function(result){
+                console.log(result);
+            }
+
         });
 
-        console.log(request);
+
 
     $("#logoutPage").click(function(){
         $("#userMenu").css("visibility","hidden");
