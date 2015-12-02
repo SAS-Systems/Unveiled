@@ -33,7 +33,7 @@ class VideoFile extends File
      * creates a new object of this class using id
      * @param int $id
      */
-    public function newFromId($id)
+    public static function newFromId($id)
     {
         global $dbConn;
 
@@ -184,6 +184,52 @@ class VideoFile extends File
 
             return false;
         }
+    }
+
+    /**
+     * get Array with all VideoFiles from the current user
+     * @param int $limit
+     * @return array User
+     */
+    public static function getAll($limit = 99, User $user)
+    {
+        global $dbConn;
+
+        $userId = (int)$user->getId();
+
+        $limit = (int)$limit;
+        $res = $dbConn->query("SELECT * FROM file WHERE owner_id = ".$userId." LIMIT 0, " . $limit);
+
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
+
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+        }
+
+        $tmp = array();
+
+        while ($row = $res->fetch_object()) {
+
+            $db_id = (int)$row->id;
+            $db_owner = (int)$row->owner_id;
+            $db_caption = utf8_encode($row->caption);
+            $db_filename = utf8_encode($row->filename);
+            $db_mediatype = utf8_encode($row->mediatype);
+            $db_uploadedAt = (int)$row->uploaded_at;
+            $db_size = (int)$row->size;
+            $db_lat = (float)$row->lat;
+            $db_lng = (float)$row->lng;
+            $db_public = intToBool((int)$row->public);
+            $db_verified = intToBool((int)$row->verified);
+            $db_length = (int)$row->length;
+
+            $video = new VideoFile($db_id, $db_owner, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length);
+
+            $tmp[] = $video;
+        }
+
+        return $tmp;
     }
 
 }
