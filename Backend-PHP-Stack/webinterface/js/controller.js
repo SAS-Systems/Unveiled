@@ -41,23 +41,19 @@ $(document).ready(function(){
         var username = $("#usrname").val();
         var password = $("#psw").val();
 
-        $.post("../api/user/login",
-            {
-                username:username,password:password
-            },
-            function(data)
-            {
-                console.log(data);
+        var request = $.ajax({
+            url:"../api/user/login",
+            method: "POST",
+            data:{username:username,password:password}
+        });
 
-            }
-        ).fail(function(){console.log("bub")});
-
-    });
+        console.log(request);
 
     $("#logoutPage").click(function(){
         $("#userMenu").css("visibility","hidden");
-        $("#loginPage").css("visibility","visible")
+        $("#loginPage").css("visibility","visible");
     });
 
+});
 });
 
