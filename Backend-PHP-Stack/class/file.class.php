@@ -29,7 +29,7 @@ abstract class File
      * @param bool $public
      * @param bool $verified
      */
-    public function __construct($id, User $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
+    public function __construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
     {
         $this->id = $id;
         $this->owner = $owner;
@@ -77,7 +77,7 @@ abstract class File
     /**
      * @param User $owner
      */
-    public function setOwner($owner)
+    public function setOwner(User $owner)
     {
         $this->owner = $owner;
     }

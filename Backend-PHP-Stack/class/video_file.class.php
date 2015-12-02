@@ -187,16 +187,18 @@ class VideoFile extends File
     }
 
     /**
-     * get Array with all VideoFiles
+     * get Array with all VideoFiles from the current user
      * @param int $limit
      * @return array User
      */
-    public static function getAll($limit = 99)
+    public static function getAll($limit = 99, User $user)
     {
         global $dbConn;
 
+        $userId = (int)$user->getId();
+
         $limit = (int)$limit;
-        $res = $dbConn->query("SELECT * FROM file LIMIT 0, " . $limit);
+        $res = $dbConn->query("SELECT * FROM file WHERE owner_id = ".$userId." LIMIT 0, " . $limit);
 
         //Logg all MySQL errors
         if ($dbConn->error != "") {
