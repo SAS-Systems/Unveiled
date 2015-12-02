@@ -274,11 +274,9 @@ $app->get('/file/:id', function ($id) use ($app) {
             $tmpFilesData = array();
 
             // @TODO: Paging
-            foreach (VideoFiles::getAll(999) as $tmpUser) {
+            foreach (VideoFiles::getAll(999) as $tmpFile) {
 
-                $tmpUserData[] = array("id" => $tmpUser->getId(), "username" => $tmpUser->getUsername(),
-                    "email" => $tmpUser->getEmail(), "lastLogin" => timestampToString($tmpUser->getLastLogin()),
-                    "permission" => $tmpUser->getPermission()->toString());
+                $tmpUserData[] = array("id" => $tmpFile->getId(), "title" => $tmpFile->getId(), "imageUrl" => $tmpFile->getId(), );
             }
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
