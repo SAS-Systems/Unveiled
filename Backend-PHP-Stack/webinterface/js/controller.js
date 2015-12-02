@@ -18,15 +18,19 @@
         $log.log("was");
     }]);
 })();**/
+loadNavbar = function () {
     if (($.cookie("loginToken")) !== undefined) {
         $("#userMenu").css("visibility", "visible");
+
         $("#loginPage").css("visibility", "hidden");
     }
     else {
         $("#userMenu").css("visibility", "hidden");
     }
+};
 
 $(document).ready(function(){
+
     $("#myBtn").click(function(){
         $("#myModal").modal("toggle");
     });
@@ -37,27 +41,43 @@ $(document).ready(function(){
             message: 'message'});
     });
 
-    $("#loginBtn").click(function(){
-        var username = $("#usrname").val();
-        var password = $("#psw").val();
+        $("#loginBtn").click(function(){
+            var username = $("#usrname").val();
+            var password = $("#psw").val();
+            var data = {"username":username,"password":password};
+            $.ajax({
+                url:"../api/user/login",
+                method: "POST",
+                data: data,
+                success: function(result){
+                    var res = JSON.parse(result);
+                    if(res.error ===0){
+                    loadNavbar();
+                    $("#myModal").modal("toggle");
+                        $.toaster({ priority:'success',
+                            title:'Success',
+                            message: res.errorMsg});
+                    }
+                    else{
+                        $.toaster({ priority:'success',
+                            title: res.error,
+                            message: res.errorMsg});
 
-        var request = $.ajax({
-            url:"../api/user/login",
-            method: "POST",
-            data:{username:username,password:password},
-            success: function(result){
-                console.log(result);
-            }
-
+                    }
+                },
+                error: function(error){
+                    $.toaster({ priority:'success',
+                        title:error.status,
+                        message: 'OOps seems like the server has some problems'});
+                }
+            });
         });
-
-
 
     $("#logoutPage").click(function(){
         $("#userMenu").css("visibility","hidden");
         $("#loginPage").css("visibility","visible");
     });
 
-});
+
 });
 
