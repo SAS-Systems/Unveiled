@@ -235,7 +235,7 @@ abstract class File
 
         $filename = explode(".", $this->filename);
 
-        return $gvFileThumbPath . $filename[0];
+        return $gvFileThumbPath . $filename[0] . "jpg";
     }
 
     /**
