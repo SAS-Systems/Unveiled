@@ -10,27 +10,18 @@ $app = new \Slim\Slim();
 
 $app->post('/user', function () use ($app) {
 
-    $userData = json_decode($app->request->post('data'));
-
-    //catch JSON errors
-    if ($message = JSONerrorCatch() != null) {
-
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-        return;
-    }
+    $username = strip_tags($app->request->post('username'));
+    $email = strip_tags($app->request->post('email'));
+    $password = User::generatePassword($app->request->post('password'));
+    $ip = $_SERVER['REMOTE_ADDR'];;
 
     //all parameter exists
-    if (!(isset($userData->username) && isset($userData->email) && isset($userData->password))) {
+    if ($username == null || $email == null || $password == null) {
 
         $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
     }
-
-    $username = strip_tags($userData->username);
-    $email = strip_tags($userData->email);
-    $password = User::generatePassword($userData->password);
-    $ip = $_SERVER['REMOTE_ADDR'];;
 
     $user = new User(-1, $username, $email, true, $password, "", $ip, time(), new UserPermission());
     if ($user->flushDB()) {
@@ -47,25 +38,16 @@ $app->post('/user', function () use ($app) {
 
 $app->post('/user/login', function () use ($app) {
 
-    $userData = json_decode($app->request->post('data'));
-
-    //catch JSON errors
-    if ($message = JSONerrorCatch() != null) {
-
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-        return;
-    }
+    $username = $app->request->post('username');
+    $password = $app->request->post('password');
 
     //all parameter exists
-    if (!(isset($userData->username) && isset($userData->password))) {
+    if ($username == null || $password == null) {
 
         $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
     }
-
-    $username = $userData->username;
-    $password = $userData->password;
 
     $user = User::newFromLogin($username, $password);
 
@@ -181,26 +163,17 @@ $app->put('/user/:id', function ($id) use ($app) {
         return;
     }
 
-    $userData = json_decode($app->request->post('data'));
-
-    //catch JSON errors
-    if ($message = JSONerrorCatch() != null) {
-
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-        return;
-    }
+    $username = strip_tags($app->request->post('username'));
+    $email = strip_tags($app->request->post('email'));
+    $emailNotification = (bool)$app->request->post('emailNotification');
 
     //all parameter exists
-    if (!(isset($userData->username) && isset($userData->email) && isset($userData->emailNotification))) {
+    if ($username == null || $email == null || $emailNotification == null) {
 
         $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
     }
-
-    $username = strip_tags($userData->username);
-    $email = strip_tags($userData->email);
-    $emailNotification = (bool)$userData->emailNotification;
 
     //id(int) or me
     if ($id == "me") {
