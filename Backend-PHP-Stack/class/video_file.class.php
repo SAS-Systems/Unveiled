@@ -33,7 +33,7 @@ class VideoFile extends File
      * creates a new object of this class using id
      * @param int $id
      */
-    public function newFromId($id)
+    public static function newFromId($id)
     {
         global $dbConn;
 

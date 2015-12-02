@@ -44,13 +44,6 @@ abstract class File
         $this->verified = $verified;
     }
 
-
-    /*
-     * creates a new object of this class using id
-     * @param int $id
-     */
-    abstract public function newFromId($id);
-
     /*
      * write the data into DB
      */

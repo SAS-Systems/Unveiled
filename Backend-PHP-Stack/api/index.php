@@ -112,28 +112,14 @@ $app->get('/user/:id', function ($id) use ($app) {
     }
 
     //id(int) or me
-    if ($id != "me") {
+    if ($id == "me") {
 
-        $id = (int)$id;
+        $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
+            "userData" => array("id" => $user->getId(), "username" => $user->getUsername(), "email" => $user->getEmail(),
+                "emailNotification" => $user->isEmailNotification())));
 
-        //user has the permission
-        $userPermission = new UserPermission(3);
-        if ($userPermission->isAllowed($user)) {
-
-            $requestUser = User::newFromId($id);
-
-            $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
-            echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
-                "userData" => array("id" => $requestUser->getId(), "username" => $requestUser->getUsername(),
-                    "email" => $requestUser->getEmail(), "emailNotification" => $requestUser->isEmailNotification())));
-        } else {
-
-            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
-            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-            return;
-        }
-
-    } elseif ($id != "all") {
+    } elseif ($id == "all") {
 
         //user has the permission
         $userPermission = new UserPermission(3);
@@ -159,10 +145,25 @@ $app->get('/user/:id', function ($id) use ($app) {
         }
     } else {
 
-        $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
-            "userData" => array("id" => $user->getId(), "username" => $user->getUsername(), "email" => $user->getEmail(),
-                "emailNotification" => $user->isEmailNotification())));
+        $id = (int)$id;
+
+        //user has the permission
+        $userPermission = new UserPermission(3);
+        if ($userPermission->isAllowed($user)) {
+
+            $requestUser = User::newFromId($id);
+
+            $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
+                "userData" => array("id" => $requestUser->getId(), "username" => $requestUser->getUsername(),
+                    "email" => $requestUser->getEmail(), "emailNotification" => $requestUser->isEmailNotification())));
+        } else {
+
+            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            return;
+        }
+
     }
 
 
@@ -202,38 +203,7 @@ $app->put('/user/:id', function ($id) use ($app) {
     $emailNotification = (bool)$userData->emailNotification;
 
     //id(int) or me
-    if ($id != "me") {
-
-        $id = (int)$id;
-
-        //user has the permission
-        $userPermission = new UserPermission(3);
-        if ($userPermission->isAllowed($user)) {
-
-            $requestUser = User::newFromId($id);
-
-            $requestUser->setUsername($username);
-            $requestUser->setEmail($email);
-            $requestUser->setEmailNotification($emailNotification);
-
-            if ($requestUser->flushDB()) {
-
-                $message = Message::newFromCode("A009", SYSTEM_LANGUAGE);
-                echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-            } else {
-
-                $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
-                echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-            }
-
-        } else {
-
-            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
-            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-            return;
-        }
-
-    } else {
+    if ($id == "me") {
 
         $user->setUsername($username);
         $user->setEmail($email);
@@ -248,6 +218,50 @@ $app->put('/user/:id', function ($id) use ($app) {
             $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         }
+
+    } else {
+
+        $id = (int)$id;
+
+        //user has the permission
+        $userPermission = new UserPermission(3);
+        if ($userPermission->isAllowed($user)) {
+
+            $requestUser = User::newFromId($id);
+
+            //User exists
+            if($requestUser != null) {
+
+                $requestUser->setUsername($username);
+                $requestUser->setEmail($email);
+                $requestUser->setEmailNotification($emailNotification);
+
+                if ($requestUser->flushDB()) {
+
+                    $message = Message::newFromCode("A009", SYSTEM_LANGUAGE);
+                    echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+                } else {
+
+                    $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
+                    echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+                    return;
+                }
+
+            }
+            else {
+
+                $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
+                echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+                return;
+            }
+
+        } else {
+
+            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            return;
+        }
+
     }
 
 });
@@ -265,7 +279,7 @@ $app->get('/file/:id', function ($id) use ($app) {
     }
 
 
-    if ($id != "all") {
+    if ($id == "all") {
 
         //user has the permission
         $userPermission = new UserPermission(3);
@@ -274,9 +288,11 @@ $app->get('/file/:id', function ($id) use ($app) {
             $tmpFilesData = array();
 
             // @TODO: Paging
-            foreach (VideoFiles::getAll(999) as $tmpFile) {
+            foreach (VideoFile::getAll(999) as $tmpFile) {
 
-                $tmpUserData[] = array("id" => $tmpFile->getId(), "title" => $tmpFile->getId(), "imageUrl" => $tmpFile->getId(), );
+                $tmpUserData[] = array("id" => $tmpFile->getId(), "title" => $tmpFile->getId(), "imageUrl" => $tmpFile->getTumbURI(),
+                    "date" => $tmpFile->getUploadedAt(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
+                    "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize());
             }
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
@@ -289,10 +305,26 @@ $app->get('/file/:id', function ($id) use ($app) {
         }
     } else {
 
-        $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
-            "userData" => array("id" => $user->getId(), "username" => $user->getUsername(), "email" => $user->getEmail(),
-                "emailNotification" => $user->isEmailNotification())));
+        $id = (int)$id;
+
+        $tmpFile = VideoFile::newFromId($id);
+
+        //File exists
+        if($tmpFile != null) {
+
+            $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
+                "fileData" => array("id" => $tmpFile->getId(), "title" => $tmpFile->getId(), "imageUrl" => $tmpFile->getTumbURI(),
+                    "date" => $tmpFile->getUploadedAt(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
+                    "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize())));
+
+        }
+        else {
+
+            $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            return;
+        }
     }
 
 

@@ -5,7 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +37,8 @@
             <file leaf-file-name="angularController.js" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/angularController.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.50884956">
-                    <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.48672566">
+                    <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
                     <folding />
                   </state>
                 </provider>
@@ -57,33 +58,47 @@
       <file leaf-file-name="video_file.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.208334">
-              <caret line="226" column="28" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="28" />
+            <state vertical-scroll-proportion="-20.0">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
               <folding>
-                <marker date="1449050354000" expanded="true" signature="972:1007" placeholder="SELECT * FRO..file..." />
-                <marker date="1449050354000" expanded="true" signature="3185:3349" placeholder="UPDATE file ..." />
-                <marker date="1449050354000" expanded="true" signature="3975:4103" placeholder="INSERT INTO user..." />
-                <marker date="1449050354000" expanded="true" signature="5374:5402" placeholder="SELECT * FRO..file..." />
+                <marker date="1449051772000" expanded="true" signature="979:1014" placeholder="SELECT * FRO..file..." />
+                <marker date="1449051772000" expanded="true" signature="3192:3356" placeholder="UPDATE file ..." />
+                <marker date="1449051772000" expanded="true" signature="3982:4110" placeholder="INSERT INTO user..." />
+                <marker date="1449051772000" expanded="true" signature="5381:5409" placeholder="SELECT * FRO..file..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="picture_file.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
+              <folding>
+                <marker date="1449051782000" expanded="true" signature="1152:1187" placeholder="SELECT * FRO..file..." />
+                <marker date="1449051782000" expanded="true" signature="3453:3626" placeholder="UPDATE file ..." />
+                <marker date="1449051782000" expanded="true" signature="4239:4376" placeholder="INSERT INTO user..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.375">
-              <caret line="286" column="65" selection-start-line="286" selection-start-column="65" selection-end-line="286" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.64426875">
+              <caret line="290" column="30" selection-start-line="290" selection-start-column="30" selection-end-line="290" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="file.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5256917">
-              <caret line="237" column="7" selection-start-line="237" selection-start-column="7" selection-end-line="237" selection-end-column="7" />
+            <state vertical-scroll-proportion="101.5">
+              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -124,7 +139,6 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/error_log.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/.htaccess" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
@@ -133,10 +147,11 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/controller.js" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/index.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
       </list>
     </option>
   </component>
@@ -493,12 +508,6 @@
       <option name="number" value="Default" />
       <updated>1446826513033</updated>
     </task>
-    <task id="LOCAL-00020" summary="testchange for server CI test">
-      <created>1447008213806</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1447008213806</updated>
-    </task>
     <task id="LOCAL-00021" summary="testchange for server CI test">
       <created>1447008251857</created>
       <option name="number" value="00021" />
@@ -787,7 +796,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449050726670</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="added getTubURI and getURI to class File">
+      <created>1449051168459</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1449051168459</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -795,7 +810,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15495208" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15495208" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -829,7 +844,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented: getAllFilesFromUser" />
     <MESSAGE value="better code smell" />
     <MESSAGE value="testchange for server CI test" />
     <MESSAGE value="change the flushDB method and added UserPermission class" />
@@ -854,7 +868,8 @@
     <MESSAGE value="added REST API allUser" />
     <MESSAGE value="bug fixed" />
     <MESSAGE value="change config file: added file path" />
-    <option name="LAST_COMMIT_MESSAGE" value="change config file: added file path" />
+    <MESSAGE value="added getTubURI and getURI to class File" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getTubURI and getURI to class File" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1032,13 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-63.125">
-          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="19.041666">
@@ -1204,27 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.208334">
-          <caret line="226" column="28" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="28" />
-          <folding>
-            <marker date="1449050354000" expanded="true" signature="972:1007" placeholder="SELECT * FRO..file..." />
-            <marker date="1449050354000" expanded="true" signature="3185:3349" placeholder="UPDATE file ..." />
-            <marker date="1449050354000" expanded="true" signature="3975:4103" placeholder="INSERT INTO user..." />
-            <marker date="1449050354000" expanded="true" signature="5374:5402" placeholder="SELECT * FRO..file..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/angularController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50884956">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.5">
@@ -1233,18 +1220,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/angularController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.375">
-          <caret line="286" column="65" selection-start-line="286" selection-start-column="65" selection-end-line="286" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.48672566">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <marker date="1449051772000" expanded="true" signature="979:1014" placeholder="SELECT * FRO..file..." />
+            <marker date="1449051772000" expanded="true" signature="3192:3356" placeholder="UPDATE file ..." />
+            <marker date="1449051772000" expanded="true" signature="3982:4110" placeholder="INSERT INTO user..." />
+            <marker date="1449051772000" expanded="true" signature="5381:5409" placeholder="SELECT * FRO..file..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
+          <folding>
+            <marker date="1449051782000" expanded="true" signature="1152:1187" placeholder="SELECT * FRO..file..." />
+            <marker date="1449051782000" expanded="true" signature="3453:3626" placeholder="UPDATE file ..." />
+            <marker date="1449051782000" expanded="true" signature="4239:4376" placeholder="INSERT INTO user..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5256917">
-          <caret line="237" column="7" selection-start-line="237" selection-start-column="7" selection-end-line="237" selection-end-column="7" />
+        <state vertical-scroll-proportion="101.5">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64426875">
+          <caret line="290" column="30" selection-start-line="290" selection-start-column="30" selection-end-line="290" selection-end-column="30" />
           <folding />
         </state>
       </provider>
