@@ -45,7 +45,7 @@ $(document).ready(function(){
         var email = $("#email").val();
         var data = {"username":username,"email":email,"password":password};
         $.ajax({
-            url:"../api/user/login",
+            url:"../api/user",
             method: "POST",
             data: data,
             success: function(result){
