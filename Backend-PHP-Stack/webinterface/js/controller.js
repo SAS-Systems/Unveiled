@@ -23,11 +23,13 @@
 loadNavbar = function () {
     if (($.cookie("loginToken")) !== undefined) {
         $("#userMenu").css("visibility", "visible");
-
         $("#loginPage").css("visibility", "hidden");
+        $("#mediaPage").css("visibility", "visible");
     }
     else {
         $("#userMenu").css("visibility", "hidden");
+        $("#mediaPage").css("visibility", "hidden");
+        $("#loginPage").css("visibility", "visible");
     }
 };
 
@@ -61,14 +63,14 @@ $(document).ready(function(){
                         message: res.errorMsg});
                 }
                 else{
-                    $.toaster({ priority:'success',
+                    $.toaster({ priority:'danger',
                         title: res.error,
                         message: res.errorMsg});
 
                 }
             },
             error: function(error){
-                $.toaster({ priority:'success',
+                $.toaster({ priority:'danger',
                     title:error.status,
                     message: 'OOps seems like the server has some problems'});
             }
@@ -76,11 +78,31 @@ $(document).ready(function(){
     });
 
     $("#logoutPage").click(function(){
-        $("#userMenu").css("visibility","hidden");
-        $("#loginPage").css("visibility","visible");
-        $.toaster({ priority:'success',
-            title:'Success',
-            message: 'Your now logged out'});
+        $.ajax({
+            url:"../api/user/logout",
+            method: "POST",
+            success: function(result){
+                var res = JSON.parse(result);
+                if(res.error ===0){
+                    loadNavbar();
+                    if(res.errorType === 'S')
+                    $.toaster({ priority:'success',
+                        title:'success',
+                        message: res.errorMsg});
+                }
+                else{
+                    $.toaster({ priority:'danger',
+                        title: res.error,
+                        message: res.errorMsg});
+
+                }
+            },
+            error: function(error){
+                $.toaster({ priority:'danger',
+                    title:error.status,
+                    message: 'OOps seems like the server has some problems'});
+            }
+        });
     });
 
 

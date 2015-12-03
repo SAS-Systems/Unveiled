@@ -181,3 +181,7 @@ body {
   margin-top: 8px;
   visibility: hidden;
 }
+
+#mediaPage{
+  visibility: hidden;
+}
