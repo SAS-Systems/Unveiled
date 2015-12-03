@@ -40,9 +40,35 @@ $(document).ready(function(){
     });
 
     $("#signupBtn").click(function(){
-        $.toaster({ priority:'success',
-            title:'Success',
-            message: 'message'});
+        var username = $("#username").val();
+        var password = $("#passw").val();
+        var email = $("#email").val();
+        var data = {"username":username,"email":email,"password":password};
+        $.ajax({
+            url:"../api/user/login",
+            method: "POST",
+            data: data,
+            success: function(result){
+                var res = JSON.parse(result);
+                if(res.error ===0){
+                    $("#mySignUp").modal("toggle");
+                    $.toaster({ priority:'success',
+                        title:'Success',
+                        message: res.errorMsg});
+                }
+                else{
+                    $.toaster({ priority:'danger',
+                        title: res.error,
+                        message: res.errorMsg});
+
+                }
+            },
+            error: function(error){
+                $.toaster({ priority:'danger',
+                    title:error.status,
+                    message: 'OOps seems like the server has some problems'});
+            }
+        });
     });
 
     $("#loginBtn").click(function(){
