@@ -32,7 +32,7 @@ var ApiAdapter = {
             data: data,
             success: function(result){
                 var res = JSON.parse(result);
-                if(res.error ===0){
+                if(res.error === 0){
                     suc(res);
                 }
                 else{

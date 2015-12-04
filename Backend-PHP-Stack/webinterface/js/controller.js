@@ -50,13 +50,13 @@ $(document).ready(function(){
                 function(result) {
                     $("#mySignUp").modal("toggle");
                     $.toaster({ priority:'success',
-                        title:'Success',
-                        message: result.errorMsg});
+                                title:'Success',
+                                message: result.errorMsg});
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                        title: error.error + ': OOps seems like the server has some problems',
-                        message: error.errorMsg});
+                                title: error.error + ': OOps seems like the server has some problems',
+                                message: error.errorMsg});
                 }
             );
         });
@@ -72,13 +72,13 @@ $(document).ready(function(){
                     loadNavbar();
                     $("#myModal").modal("toggle");
                     $.toaster({ priority:'success',
-                        title:'Success',
-                        message: result.errorMsg});
+                                title:'Success',
+                                message: result.errorMsg});
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                        title: error.error + ': OOps seems like the server has some problems',
-                        message: error.errorMsg});
+                                title: error.error + ': OOps seems like the server has some problems',
+                                message: error.errorMsg});
                 }
             );
         });
@@ -89,13 +89,13 @@ $(document).ready(function(){
                     loadNavbar();
                     if(result.errorType === 'S')
                         $.toaster({ priority:'success',
-                            title:'success',
-                            message: result.errorMsg});
+                                    title:'success',
+                                    message: result.errorMsg});
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                        title: error.error + ': OOps seems like the server has some problems',
-                        message: error.errorMsg});
+                                title: error.error + ': OOps seems like the server has some problems',
+                                message: error.errorMsg});
                 }
             );
         });
