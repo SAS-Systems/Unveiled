@@ -87,6 +87,18 @@ $(document).ready(function(){
                     $.toaster({ priority:'success',
                         title:'Success',
                         message: res.errorMsg});
+
+                 $.ajax({
+                    url:"../api/user/me",
+                    method: "GET",
+                    success: function(result){
+                        var res = JSON.parse(result);
+                         if(res.error ===0){
+                             $("#usernameField").val(username);
+                         }
+                    }
+                 })
+
                 }
                 else{
                     $.toaster({ priority:'danger',
