@@ -11,6 +11,9 @@ case "$BRANCH" in
 	'Backend-PHP-Stack')
 		PFAD="php"
 		;;
+	'apiAdapter')
+		PFAD="adapterTest"
+		;;
 #	'someBranch' | 'otherBranch')
 #		PFAD = "common/folder/for/both/branches"
 #		;;

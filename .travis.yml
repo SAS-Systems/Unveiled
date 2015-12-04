@@ -14,14 +14,14 @@ php:
 env:
 #   - DB=mysql
 # the branch which schould be deployed
-   - BRANCH=Backend-PHP-Stack
+   - BRANCH=apiAdapter
 
 
 # only build these branches (RegEx is also valid, eg. /^deploy.*$/):
 branches:
   only:
     - Backend-PHP-Stack
-    - travisTest
+    - apiAdapter
 
 # update composer to newest version (optional)
 before_install:

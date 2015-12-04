@@ -34,103 +34,71 @@ loadNavbar = function () {
 };
 
 $(document).ready(function(){
+    $.getScript('js/apiAdapter.js', function() {
+        $("#myBtn").click(function(){
+            $("#myModal").modal("toggle");
+        });
 
-    $("#myBtn").click(function(){
-        $("#myModal").modal("toggle");
-    });
+        $("#signupBtn").click(function(){
+            var data = {
+                "username": $("#username").val(),
+                "email": $("#email").val(),
+                "password": $("#passw").val()
+            };
 
-    $("#signupBtn").click(function(){
-        var username = $("#username").val();
-        var password = $("#passw").val();
-        var email = $("#email").val();
-        var data = {"username":username,"email":email,"password":password};
-        $.ajax({
-            url:"../api/user",
-            method: "POST",
-            data: data,
-            success: function(result){
-                var res = JSON.parse(result);
-                if(res.error ===0){
+            ApiAdapter.doPost("user", data,
+                function(result) {
                     $("#mySignUp").modal("toggle");
                     $.toaster({ priority:'success',
                         title:'Success',
-                        message: res.errorMsg});
-                }
-                else{
+                        message: result.errorMsg});
+                },
+                function(error){
                     $.toaster({ priority:'danger',
-                        title: res.error,
-                        message: res.errorMsg});
-
+                        title: error.error + ': OOps seems like the server has some problems',
+                        message: error.errorMsg});
                 }
-            },
-            error: function(error){
-                $.toaster({ priority:'danger',
-                    title:error.status,
-                    message: 'OOps seems like the server has some problems'});
-            }
+            );
         });
-    });
 
-    $("#loginBtn").click(function(){
-        var username = $("#usrname").val();
-        var password = $("#psw").val();
-        var data = {"username":username,"password":password};
-        $.ajax({
-            url:"../api/user/login",
-            method: "POST",
-            data: data,
-            success: function(result){
-                var res = JSON.parse(result);
-                if(res.error ===0){
+        $("#loginBtn").click(function(){
+            var data = {
+                "username": $("#usrname").val(),
+                "password": $("#psw").val()
+            };
+
+            ApiAdapter.doPost("user/login", data,
+                function(result) {
                     loadNavbar();
                     $("#myModal").modal("toggle");
                     $.toaster({ priority:'success',
                         title:'Success',
-                        message: res.errorMsg});
-                }
-                else{
+                        message: result.errorMsg});
+                },
+                function(error){
                     $.toaster({ priority:'danger',
-                        title: res.error,
-                        message: res.errorMsg});
-
+                        title: error.error + ': OOps seems like the server has some problems',
+                        message: error.errorMsg});
                 }
-            },
-            error: function(error){
-                $.toaster({ priority:'danger',
-                    title:error.status,
-                    message: 'OOps seems like the server has some problems'});
-            }
+            );
         });
-    });
 
-    $("#logoutPage").click(function(){
-        $.ajax({
-            url:"../api/user/logout",
-            method: "POST",
-            success: function(result){
-                var res = JSON.parse(result);
-                if(res.error ===0){
+        $("#logoutPage").click(function(){
+            ApiAdapter.doPost("user/logout", null,
+                function(result) {
                     loadNavbar();
-                    if(res.errorType === 'S')
-                    $.toaster({ priority:'success',
-                        title:'success',
-                        message: res.errorMsg});
-                }
-                else{
+                    if(result.errorType === 'S')
+                        $.toaster({ priority:'success',
+                            title:'success',
+                            message: result.errorMsg});
+                },
+                function(error){
                     $.toaster({ priority:'danger',
-                        title: res.error,
-                        message: res.errorMsg});
-
+                        title: error.error + ': OOps seems like the server has some problems',
+                        message: error.errorMsg});
                 }
-            },
-            error: function(error){
-                $.toaster({ priority:'danger',
-                    title:error.status,
-                    message: 'OOps seems like the server has some problems'});
-            }
+            );
         });
     });
-
-
 });
 
