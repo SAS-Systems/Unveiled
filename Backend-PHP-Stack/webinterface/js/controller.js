@@ -94,7 +94,7 @@ $(document).ready(function(){
                     success: function(result){
                         var res = JSON.parse(result);
                          if(res.error ===0){
-                             $("#usernameField").val(username);
+                             $("#usernameField").val(res.username);
                          }
                     }
                  })
