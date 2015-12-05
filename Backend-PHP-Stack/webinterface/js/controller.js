@@ -74,7 +74,7 @@ $(document).ready(function(){
                     $.toaster({ priority:'success',
                                 title:'Success',
                                 message: result.errorMsg});
-                    $("#usernameField").val(data.username);
+                    $("#usernameField").text(data.username);
                 },
                 function(error){
                     $.toaster({ priority:'danger',
