@@ -33,6 +33,16 @@ loadNavbar = function () {
     }
 };
 
+
+loadAdminSettings = function () {
+    if (($.cookie("loginAdmin")) === true) {
+        $("#deleteUser").css("visibility", "visible");
+    }
+    else {
+        $("#deleteUser").css("visibility", "hidden");
+    }
+};
+
 $(document).ready(function(){
     $.getScript('js/apiAdapter.js', function() {
         $("#myBtn").click(function(){
@@ -52,6 +62,7 @@ $(document).ready(function(){
                     $.toaster({ priority:'success',
                                 title:'Success',
                                 message: result.errorMsg});
+
                 },
                 function(error){
                     $.toaster({ priority:'danger',
@@ -70,6 +81,7 @@ $(document).ready(function(){
             ApiAdapter.doPost("user/login", data,
                 function(result) {
                     loadNavbar();
+                    loadAdminSettings();
                     $("#myModal").modal("toggle");
                     $.toaster({ priority:'success',
                                 title:'Success',

@@ -4,7 +4,7 @@
             $scope.selectedIndex = 0;
 
             $scope.items = [
-                itemFactory({ title:'Item 0', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text10.gif', date:'12.08.2015',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'15:00min',sizes:'20MB'}),
+                itemFactory({ title:'Item 0', subtitle:'Subtitle', imageUrl:'/webinterface/pictures/text10.gif', date:'12.08.2015',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'15:00min',sizes:'20MB'}),
                 itemFactory({ title:'Item 1', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text1.gif', date:'06.07.2014',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'14:00min',sizes:'29MB'}),
                 itemFactory({ title:'Item 2', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text2.gif', date:'06.07.2013',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'13:00min',sizes:'28MB'}),
                 itemFactory({ title:'Item 3', subtitle:'Subtitle', imageUrl:'/ng-coverflow/Frontend/pictures/text3.gif', date:'06.07.2012',resolutions:'1080p', longitude:'51.508742',latitude:'-0.120850',lengths:'12:00min',sizes:'27MB'}),

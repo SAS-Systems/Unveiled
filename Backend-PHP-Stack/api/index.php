@@ -13,7 +13,7 @@ $app->post('/user', function () use ($app) {
     $username = strip_tags($app->request->post('username'));
     $email = strip_tags($app->request->post('email'));
     $password = User::generatePassword($app->request->post('password'));
-    $ip = $_SERVER['REMOTE_ADDR'];;
+    $ip = $_SERVER['REMOTE_ADDR'];
 
     //all parameter exists
     if ($username == null || $email == null || $password == null) {
@@ -188,7 +188,7 @@ $app->put('/user/:id', function ($id) use ($app) {
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         } else {
 
-            $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
+            $message = Message::newFromCode("A002", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         }
 
@@ -302,6 +302,5 @@ $app->get('/file/:id', function ($id) use ($app) {
 
 
 });
-
 
 $app->run();
