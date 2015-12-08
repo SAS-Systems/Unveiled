@@ -268,6 +268,11 @@ class User
             $emailToken = self::generateToken(999);
             $this->setEmailVerified(false);
             $this->setEmailToken($emailToken);
+
+            //send verification mail
+            if(EmailService::isValid($email)) {
+                EmailService::sendEmailVerification($this->username, $email, $emailToken);
+            }
         }
 
         $this->email = $email;
@@ -500,6 +505,11 @@ class User
             if ($dbConn->affected_rows > 0) {
 
                 $this->setId((int)$dbConn->insert_id);
+
+                //send verification mail
+                if(EmailService::isValid($email)) {
+                    EmailService::sendEmailVerification($username, $email, $emailToken);
+                }
 
                 return true;
             } else {
