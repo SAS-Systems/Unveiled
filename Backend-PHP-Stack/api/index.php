@@ -23,7 +23,7 @@ $app->post('/user', function () use ($app) {
         return;
     }
 
-    $user = new User(-1, $username, $email, true, $password, "", $ip, time(), new UserPermission());
+    $user = new User(-1, $username, $email, true, false, "", $password, "", $ip, time(), new UserPermission(), true);
     if ($user->flushDB()) {
 
         $message = Message::newFromCode("A001", SYSTEM_LANGUAGE);
@@ -116,8 +116,8 @@ $app->get('/user/:id', function ($id) use ($app) {
             foreach (User::getAll(999) as $tmpUser) {
 
                 $tmpUserData[] = array("id" => $tmpUser->getId(), "username" => $tmpUser->getUsername(),
-                    "email" => $tmpUser->getEmail(), "lastLogin" => timestampToString($tmpUser->getLastLogin()),
-                    "permission" => $tmpUser->getPermission()->toString());
+                    "email" => $tmpUser->getEmail(), "emailVerified" => $tmpUser->isEmailVerified(), "lastLogin" => timestampToString($tmpUser->getLastLogin()),
+                    "permission" => $tmpUser->getPermission()->toString(), "active" => $tmpUser->isActive());
             }
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
@@ -168,10 +168,11 @@ $app->put('/user/:id', function ($id) use ($app) {
 
     $username = strip_tags($app->request->post('username'));
     $email = strip_tags($app->request->post('email'));
-    $emailNotification = (bool)$app->request->post('emailNotification');
+    $emailNotification = strToBool($app->request->post('emailNotification'));
+    $permission = (int)$app->request->post('permission');
 
     //all parameter exists
-    if ($username == null || $email == null || $emailNotification == null) {
+    if (!($username != null || $email != null || $emailNotification != null || $permission != null)) {
 
         $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
@@ -181,9 +182,9 @@ $app->put('/user/:id', function ($id) use ($app) {
     //id(int) or me
     if ($id == "me") {
 
-        $user->setUsername($username);
-        $user->setEmail($email);
-        $user->setEmailNotification($emailNotification);
+        if ($username != null) $user->setUsername($username);
+        if ($email != null) $user->setEmail($email);
+        if ($emailNotification != null) $user->setEmailNotification($emailNotification);
 
         if ($user->flushDB()) {
 
@@ -206,15 +207,15 @@ $app->put('/user/:id', function ($id) use ($app) {
             $requestUser = User::newFromId($id);
 
             //User exists
-            if($requestUser != null) {
+            if ($requestUser != null) {
 
-                $requestUser->setUsername($username);
-                $requestUser->setEmail($email);
-                $requestUser->setEmailNotification($emailNotification);
+                if ($username != null) $user->setUsername($username);
+                if ($email != null) $user->setEmail($email);
+                if ($emailNotification != null) $user->setEmailNotification($emailNotification);
 
-                if($permission = $app->request->post('permission') != null) {
+                //if isset permission
+                if ($permission != null) {
 
-                    $permission = (int)$permission;
                     $newPermission = new UserPermission($permission);
                     $requestUser->setPermission($newPermission);
                 }
@@ -230,8 +231,7 @@ $app->put('/user/:id', function ($id) use ($app) {
                     return;
                 }
 
-            }
-            else {
+            } else {
 
                 $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
                 echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
@@ -248,6 +248,47 @@ $app->put('/user/:id', function ($id) use ($app) {
     }
 
 });
+
+$app->put('/user/me/changepassword', function () use ($app) {
+
+    $user = User::newFromCookie();
+
+    //user has to be logged in
+    if ($user == null) {
+
+        $message = Message::newFromCode("A005", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $oldPassword = strip_tags($app->request->put('oldpassword'));
+    $newPassword = strip_tags($app->request->put('newpassword'));
+
+    //all parameter exists
+    if ($oldPassword == null || $newPassword == null) {
+
+        $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $oldPassword = User::generatePassword($oldPassword);
+    $newPassword = User::generatePassword($newPassword);
+
+    //old password ist correct
+    if ($user->setPassword($oldPassword, $newPassword)) {
+
+        $user->flushDB();
+
+        $message = Message::newFromCode("A009", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+
+    } else {
+        $message = Message::newFromCode("A012", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    }
+});
+
 
 $app->get('/file/:id', function ($id) use ($app) {
 
@@ -293,7 +334,7 @@ $app->get('/file/:id', function ($id) use ($app) {
         $tmpFile = VideoFile::newFromId($id);
 
         //File exists
-        if($tmpFile != null) {
+        if ($tmpFile != null) {
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
@@ -301,8 +342,7 @@ $app->get('/file/:id', function ($id) use ($app) {
                     "date" => $tmpFile->getUploadedAt(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
                     "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize())));
 
-        }
-        else {
+        } else {
 
             $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));

@@ -7,11 +7,14 @@ class User
     private $username = "";
     private $email = "";
     private $emailNotification = false; // Int
+    private $emailVerified = false;
+    private $emailToken = "";
     private $password = ""; //Crypt
     private $token = "";
     private $lastIP = "";
     private $lastLogin = 0; //Timestamp
     private $permission;
+    private $active = true;
 
     /**
      * User constructor.
@@ -19,23 +22,29 @@ class User
      * @param string $username
      * @param string $email
      * @param bool $emailNotification
+     * @param bool $emailVerified
+     * @param string $emailToken
      * @param string $password
      * @param string $token
      * @param string $lastIP
      * @param int $lastLogin
-     * @param UserPermission $permission
+     * @param $permission
+     * @param bool $active
      */
-    public function __construct($id, $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, UserPermission $permission)
+    public function __construct($id, $username, $email, $emailNotification, $emailVerified, $emailToken, $password, $token, $lastIP, $lastLogin, $permission, $active)
     {
         $this->id = $id;
         $this->username = $username;
         $this->email = $email;
         $this->emailNotification = $emailNotification;
+        $this->emailVerified = $emailVerified;
+        $this->emailToken = $emailToken;
         $this->password = $password;
         $this->token = $token;
         $this->lastIP = $lastIP;
         $this->lastLogin = $lastLogin;
         $this->permission = $permission;
+        $this->active = $active;
     }
 
 
@@ -64,13 +73,16 @@ class User
                 $db_username = utf8_encode($row->username);
                 $db_email = $row->email;
                 $db_emailNotification = intToBool((int)$row->email_notification_flag);
+                $db_emailVerified = intToBool((int)$row->email_verified);
+                $db_emailToken = $row->email_token;
                 $db_password = $row->password;
                 $db_token = $row->token;
                 $db_lastIP = $row->last_ip;
                 $db_lastLogin = (int)$row->last_login;
                 $db_permission = new UserPermission((int)$row->permission);
+                $db_active = intToBool((int)$row->acc_active);
 
-                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
+                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_emailVerified, $db_emailToken, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_active);
             } else {
 
                 return null;
@@ -118,13 +130,16 @@ class User
                 $db_username = utf8_encode($row->username);
                 $db_email = $row->email;
                 $db_emailNotification = intToBool((int)$row->email_notification_flag);
+                $db_emailVerified = intToBool((int)$row->email_verified);
+                $db_emailToken = $row->email_token;
                 $db_password = $row->password;
                 $db_token = $row->token;
                 $db_lastIP = $row->last_ip;
                 $db_lastLogin = (int)$row->last_login;
                 $db_permission = new UserPermission((int)$row->permission);
+                $db_active = intToBool((int)$row->acc_active);
 
-                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
+                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_emailVerified, $db_emailToken, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_active);
             } else {
 
                 return null;
@@ -169,15 +184,18 @@ class User
             $db_username = utf8_encode($row->username);
             $db_email = $row->email;
             $db_emailNotification = intToBool((int)$row->email_notification_flag);
+            $db_emailVerified = intToBool((int)$row->email_verified);
+            $db_emailToken = $row->email_token;
             $db_password = $row->password;
             $db_token = $row->token;
             $db_lastIP = $row->last_ip;
             $db_lastLogin = (int)$row->last_login;
             $db_permission = new UserPermission((int)$row->permission);
+            $db_active = intToBool((int)$row->acc_active);
 
             if (crypt($password, $gvCryptSalt) == $db_password) {
 
-                $u = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
+                $u = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_emailVerified, $db_emailToken, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_active);
 
                 $u->setToken(self::generateToken($db_id));
                 $u->setLastLogin(time());
@@ -244,6 +262,14 @@ class User
      */
     public function setEmail($email)
     {
+        //email has changed
+        if($email != $this->email) {
+
+            $emailToken = self::generateToken(999);
+            $this->setEmailVerified(false);
+            $this->setEmailToken($emailToken);
+        }
+
         $this->email = $email;
     }
 
@@ -352,15 +378,62 @@ class User
         return false;
     }
 
+    /**
+     * @return boolean
+     */
+    public function isEmailVerified()
+    {
+        return $this->emailVerified;
+    }
+
+    /**
+     * @param boolean $emailVerified
+     */
+    public function setEmailVerified($emailVerified)
+    {
+        $this->emailVerified = $emailVerified;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isActive()
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param boolean $active
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmailToken()
+    {
+        return $this->emailToken;
+    }
+
+    /**
+     * @param string $emailToken
+     */
+    public function setEmailToken($emailToken)
+    {
+        $this->emailToken = $emailToken;
+    }
 
 
-    public function existsInDB() {
+    public function existsInDB()
+    {
 
-        if($this->id > 0) {
+        if ($this->id > 0) {
 
             return true;
-        }
-        else {
+        } else {
 
             return false;
         }
@@ -375,19 +448,22 @@ class User
         $username = utf8_decode(strip_tags($this->username));
         $email = $this->email;
         $emailNotification = boolToInt($this->emailNotification);
+        $emailVerified = boolToInt($this->emailVerified);
+        $emailToken = $this->emailToken;
         $password = $this->password;
         $token = $this->token;
         $lastIP = $this->lastIP;
         $lastLogin = (int)$this->lastLogin;
         $permission = $this->permission->getLevel();
+        $active = boolToInt($this->active);
 
         //object exists in DB
-        if($this->existsInDB()) {
+        if ($this->existsInDB()) {
 
-            $query = "UPDATE `user` SET `username`=?, `email`=?, `email_notification_flag`=?, `password`=?, `token`=?, `last_ip`=?, `last_login`=?, `permission`=? WHERE `id`=? ";
+            $query = "UPDATE `user` SET `username`=?, `email`=?, `email_notification_flag`=?, `email_verified`=?, `email_token`=?, `password`=?, `token`=?, `last_ip`=?, `last_login`=?, `permission`=?, `acc_active`=? WHERE `id`=? ";
             $query_stmt = $dbConn->prepare($query);
 
-            $query_stmt->bind_param('ssisssiii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $id);
+            $query_stmt->bind_param('ssiissssiiii', $username, $email, $emailNotification, $emailVerified, $emailToken, $password, $token, $lastIP, $lastLogin, $permission, $active, $id);
             $query_stmt->execute();
 
             //Logg all MySQL errors
@@ -397,21 +473,22 @@ class User
                 errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
 
                 return false;
-            }
-            else {
+            } else {
 
                 return true;
             }
-        }
-        else {
+        } else {
 
-            $query = "INSERT INTO user (username, email, email_notification_flag, password, token, last_ip, last_login, permission) VALUES (?,?,?,?,?,?,?,?)";
+            //generate emailToken for new Email
+            $emailToken = self::generateToken(99);
+
+            $query = "INSERT INTO user (username, email, email_notification_flag, email_token, password, token, last_ip, last_login, permission) VALUES (?,?,?,?,?,?,?,?,?)";
             $query_stmt = $dbConn->prepare($query);
 
-            $query_stmt->bind_param('ssisssii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission);
+            $query_stmt->bind_param('ssissssii', $username, $email, $emailNotification, $emailToken, $password, $token, $lastIP, $lastLogin, $permission);
             $query_stmt->execute();
 
-            //Logg all MySQL errors
+            //Log all MySQL errors
             if ($dbConn->error != "") {
 
                 //Log error
@@ -425,8 +502,7 @@ class User
                 $this->setId((int)$dbConn->insert_id);
 
                 return true;
-            }
-            else {
+            } else {
 
                 return false;
             }
@@ -446,7 +522,7 @@ class User
 
             $adminPermission = new UserPermission(3);
 
-            if($adminPermission->isAllowed($this)) {
+            if ($adminPermission->isAllowed($this)) {
 
                 setcookie("loginAdmin", "true", time() + 86400, "/");
             }
@@ -523,13 +599,17 @@ class User
             $db_username = utf8_encode($row->username);
             $db_email = $row->email;
             $db_emailNotification = intToBool((int)$row->email_notification_flag);
+            $db_emailVerified = intToBool((int)$row->email_verified);
+            $db_emailToken = $row->email_token;
             $db_password = $row->password;
             $db_token = $row->token;
             $db_lastIP = $row->last_ip;
             $db_lastLogin = (int)$row->last_login;
             $db_permission = new UserPermission((int)$row->permission);
+            $db_active = intToBool((int)$row->acc_active);
 
-            $user = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission);
+            $user = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_emailVerified, $db_emailToken, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_active);
+
 
             $tmp[] = $user;
         }
