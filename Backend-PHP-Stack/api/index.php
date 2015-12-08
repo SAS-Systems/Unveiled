@@ -71,6 +71,9 @@ $app->post('/user/logout', function () use ($app) {
     if ($user != null) {
 
         $user->unsetCookie();
+        $user->setToken("");
+        $user->flushDB();
+
         $message = Message::newFromCode("A006", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     } else {
@@ -208,6 +211,13 @@ $app->put('/user/:id', function ($id) use ($app) {
                 $requestUser->setUsername($username);
                 $requestUser->setEmail($email);
                 $requestUser->setEmailNotification($emailNotification);
+
+                if($permission = $app->request->post('permission') != null) {
+
+                    $permission = (int)$permission;
+                    $newPermission = new UserPermission($permission);
+                    $requestUser->setPermission($newPermission);
+                }
 
                 if ($requestUser->flushDB()) {
 

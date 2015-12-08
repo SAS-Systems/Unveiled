@@ -46,7 +46,7 @@ class User
         $id = (int)$id;
         $token = $dbConn->real_escape_string($token);
 
-        if (self::isTokenValid($token, $id)) {
+        if ($token != "" && $id > 0 && self::isTokenValid($token, $id)) {
 
             $res = $dbConn->query("SELECT * FROM user WHERE token = '$token'");
             $row = $res->fetch_object();

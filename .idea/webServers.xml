@@ -5,7 +5,7 @@
       <webServer id="1e7bd8f6-5b05-4541-a8be-e5d5b3c27d88" name="Local" url="http://sas.systemgrid.de/unveiled">
         <fileTransfer host="sas.systemgrid.de" port="21" rootFolder="/var/www/html/unveiled/ftp" password="dfc9dfc6dfdfdfc8df9fdf9fdf9ddfeedfe2dff5dfd9dfcf" username="unveiled">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
