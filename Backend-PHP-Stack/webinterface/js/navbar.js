@@ -17,7 +17,7 @@ loadNavbar = function () {
 };
 
 loadAdminSettings = function () {
-    if (($.cookie("loginAdmin")) === true) {
+    if (($.cookie("loginAdmin")) === "true") {
         $("#deleteUser").css("visibility", "visible");
     }
     else {
@@ -29,4 +29,27 @@ $(document).ready(function(){
     loadNavbar();
 
     loadAdminSettings();
+
+ /*   $.getScript('js/apiAdapter.js', function() {
+        $("#logoutPage").click(function () {
+            ApiAdapter.doPost("user/logout", null,
+                function (result) {
+                    loadNavbar();
+                    if (result.errorType === 'S')
+                        $.toaster({
+                            priority: 'success',
+                            title: 'success',
+                            message: result.errorMsg
+                        });
+                },
+                function (error) {
+                    $.toaster({
+                        priority: 'danger',
+                        title: error.error + ': OOps seems like the server has some problems',
+                        message: error.errorMsg
+                    });
+                }
+            );
+        });
+    }); */
 });

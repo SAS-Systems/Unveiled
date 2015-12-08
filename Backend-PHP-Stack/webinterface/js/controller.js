@@ -66,7 +66,7 @@ $(document).ready(function(){
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                                title: error.error + ': OOps seems like the server has some problems',
+                                title: error.error,
                                 message: error.errorMsg});
                 }
             );
@@ -87,10 +87,11 @@ $(document).ready(function(){
                                 title:'Success',
                                 message: result.errorMsg});
                     $("#usernameField").text(data.username);
+                    console.log("YEAH");
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                                title: error.error + ': OOps seems like the server has some problems',
+                                title: error.error,
                                 message: error.errorMsg});
                 }
             );
@@ -107,7 +108,7 @@ $(document).ready(function(){
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                                title: error.error + ': OOps seems like the server has some problems',
+                                title: error.error,
                                 message: error.errorMsg});
                 }
             );

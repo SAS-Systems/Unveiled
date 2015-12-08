@@ -4,6 +4,7 @@
 
 $(document).ready(function(){
 
+
     $("#changeUsernameBtn").click(function(){
         var username;
         var email;
@@ -24,7 +25,10 @@ $(document).ready(function(){
                     username = res.username;
                     email = res.email;
                     eNotification = res.emailNotification;
-
+                    $("#usernameDialog").modal("toggle");
+                    $.toaster({ priority:'success',
+                        title:'Success',
+                        message: res.errorMsg});
 
                 }
             },
@@ -36,7 +40,9 @@ $(document).ready(function(){
                     "errorMsg":error.statusText,
                     "errorType": "E"
                 };
-                console.log(res);
+                $.toaster({ priority:'danger',
+                    title: error.error,
+                    message: error.errorMsg});
             }
 
 
@@ -47,6 +53,7 @@ $(document).ready(function(){
             var username;
             var email;
             var eNotification;
+            email = $("#inputNewMail").val();
             var data = {
                 "username": $("#inputUsrname").val(),
                 "email": $("#inputNewMail").val(),
@@ -63,6 +70,10 @@ $(document).ready(function(){
                         username = res.username;
                         email = res.email;
                         eNotification = res.emailNotification;
+                        $("#mailDialog").modal("toggle");
+                        $.toaster({ priority:'success',
+                            title:'Success',
+                            message: res.errorMsg});
 
                     }
                 },
@@ -74,15 +85,13 @@ $(document).ready(function(){
                         "errorMsg":error.statusText,
                         "errorType": "E"
                     };
-                    console.log(res);
+                    $.toaster({ priority:'danger',
+                        title: error.error,
+                        message: error.errorMsg});
                 }
 
 
             });
-
-
-
-
 
         });
 
