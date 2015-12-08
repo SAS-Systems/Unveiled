@@ -2,8 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/PHPMailerAutoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/class.phpmailer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/class.phpmaileroauth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/class.phpmaileroauthgoogle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/class.pop3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/class.smtp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/extras/EasyPeasyICS.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/extras/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/extras/htmlfilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/extras/ntlm_sasl_client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/get_oauth_token.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-am.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-az.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-be.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-bg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-br.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ca.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-cz.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-dk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-el.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-eo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-et.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-fa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-fi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-fo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-gl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-he.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-hr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-hu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-id.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ja.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ka.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ko.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-lt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-lv.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ms.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-nl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-no.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-pt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ro.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-se.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-sk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-sl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-sr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-tr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-uk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-vi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-zh.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/language/phpmailer.lang-zh_cn.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,68 +92,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="217" column="37" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="globalfunctions.function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5049505">
-              <caret line="471" column="35" selection-start-line="471" selection-start-column="35" selection-end-line="471" selection-end-column="35" />
-              <folding>
-                <marker date="1449600813000" expanded="true" signature="1691:1732" placeholder="SELECT * FRO..user..." />
-                <marker date="1449600813000" expanded="true" signature="3539:3574" placeholder="SELECT * FRO..user..." />
-                <marker date="1449600813000" expanded="true" signature="5372:5419" placeholder="SELECT * FRO..user..." />
-                <marker date="1449600813000" expanded="true" signature="11531:11737" placeholder="UPDATE `user..." />
-                <marker date="1449600813000" expanded="true" signature="12468:12617" placeholder="INSERT INTO user..." />
-                <marker date="1449600813000" expanded="true" signature="15156:15184" placeholder="SELECT * FRO..user..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="email_service.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
-              <caret line="11" column="80" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="media.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/media.html">
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/LICENSE">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="73" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/profile.html">
+      <file leaf-file-name="PHPMailerAutoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/PHPMailerAutoload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,42 +115,38 @@
       <file leaf-file-name="webstart.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.75">
-              <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+            <state vertical-scroll-proportion="-16.958334">
+              <caret line="54" column="121" selection-start-line="54" selection-start-column="121" selection-end-line="54" selection-end-column="121" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
+      <file leaf-file-name="email_service.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-              <folding>
-                <marker date="1448733403000" expanded="true" signature="868:938" placeholder="SELECT * FRO..messages..." />
-              </folding>
+            <state vertical-scroll-proportion="-20.958334">
+              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settingController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/settingController.js">
+      <file leaf-file-name="database.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/database.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#44#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/controller.js">
+      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.84822935">
+              <caret line="49" column="75" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -183,7 +192,6 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user_permission.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/index.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
@@ -198,9 +206,11 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/settingController.js" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/EmailService.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php" />
       </list>
     </option>
   </component>
@@ -286,6 +296,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Backend-PHP-Stack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unveiled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unveiled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend-PHP-Stack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unveiled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unveiled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend-PHP-Stack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHPMailer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -801,12 +851,6 @@
       <option name="number" value="Default" />
       <updated>1446826513033</updated>
     </task>
-    <task id="LOCAL-00030" summary="first REST API test">
-      <created>1448718547761</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1448718547761</updated>
-    </task>
     <task id="LOCAL-00031" summary="first REST API test">
       <created>1448718837697</created>
       <option name="number" value="00031" />
@@ -1095,7 +1139,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449599376196</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="bug fixed">
+      <created>1449600864558</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1449600864558</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1111,8 +1161,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15388711" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15388711" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1122,7 +1173,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1155,7 +1205,6 @@
     <MESSAGE value="added REST API getUserData" />
     <MESSAGE value="added REST API setUserData" />
     <MESSAGE value="added REST API allUser" />
-    <MESSAGE value="bug fixed" />
     <MESSAGE value="change config file: added file path" />
     <MESSAGE value="added getTubURI and getURI to class File" />
     <MESSAGE value="added REST API files/all" />
@@ -1163,73 +1212,14 @@
     <MESSAGE value="a lot of stuff" />
     <MESSAGE value="logout bug fixed" />
     <MESSAGE value="added new email Feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new email Feature" />
+    <MESSAGE value="bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/Http/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/Http/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/Http/Environment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/Http/RequestBody.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/earth.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text1.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text2.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text3.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text4.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text5.gif">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1350,13 +1340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1498,19 +1481,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.75">
-          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="11" column="80" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="80" />
-          <folding />
+        <state vertical-scroll-proportion="-26.625">
+          <caret line="483" column="13" selection-start-line="483" selection-start-column="13" selection-end-line="483" selection-end-column="13" />
+          <folding>
+            <marker date="1449600813000" expanded="true" signature="1691:1732" placeholder="SELECT * FRO..user..." />
+            <marker date="1449600813000" expanded="true" signature="3539:3574" placeholder="SELECT * FRO..user..." />
+            <marker date="1449600813000" expanded="true" signature="5372:5419" placeholder="SELECT * FRO..user..." />
+            <marker date="1449600813000" expanded="true" signature="11531:11737" placeholder="UPDATE `user..." />
+            <marker date="1449600813000" expanded="true" signature="12468:12617" placeholder="INSERT INTO user..." />
+            <marker date="1449600813000" expanded="true" signature="15156:15184" placeholder="SELECT * FRO..user..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1522,18 +1504,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5049505">
-          <caret line="471" column="35" selection-start-line="471" selection-start-column="35" selection-end-line="471" selection-end-column="35" />
-          <folding>
-            <marker date="1449600813000" expanded="true" signature="1691:1732" placeholder="SELECT * FRO..user..." />
-            <marker date="1449600813000" expanded="true" signature="3539:3574" placeholder="SELECT * FRO..user..." />
-            <marker date="1449600813000" expanded="true" signature="5372:5419" placeholder="SELECT * FRO..user..." />
-            <marker date="1449600813000" expanded="true" signature="11531:11737" placeholder="UPDATE `user..." />
-            <marker date="1449600813000" expanded="true" signature="12468:12617" placeholder="INSERT INTO user..." />
-            <marker date="1449600813000" expanded="true" signature="15156:15184" placeholder="SELECT * FRO..user..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/PHPMailer/PHPMailerAutoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.958334">
+          <caret line="54" column="121" selection-start-line="54" selection-start-column="121" selection-end-line="54" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.958334">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84822935">
+          <caret line="49" column="75" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
