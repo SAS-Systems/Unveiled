@@ -170,9 +170,10 @@ $app->put('/user/:id', function ($id) use ($app) {
     $email = strip_tags($app->request->post('email'));
     $emailNotification = strToBool($app->request->post('emailNotification'));
     $permission = (int)$app->request->post('permission');
+    $active = strToBool($app->request->post('active'));
 
     //all parameter exists
-    if (!($username != null || $email != null || $emailNotification != null || $permission != null)) {
+    if (!($username != null || $email != null || $emailNotification != null || $permission != null || $app->request->post('active') != null)) {
 
         $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
@@ -209,9 +210,10 @@ $app->put('/user/:id', function ($id) use ($app) {
             //User exists
             if ($requestUser != null) {
 
-                if ($username != null) $user->setUsername($username);
-                if ($email != null) $user->setEmail($email);
-                if ($emailNotification != null) $user->setEmailNotification($emailNotification);
+                if ($username != null) $requestUser->setUsername($username);
+                if ($email != null) $requestUser->setEmail($email);
+                if ($emailNotification != null) $requestUser->setEmailNotification($emailNotification);
+                if ($app->request->post('active') != null) $requestUser->setActive($active);
 
                 //if isset permission
                 if ($permission != null) {

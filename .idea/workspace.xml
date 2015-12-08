@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/EmailService.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +35,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.352941">
-              <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="217" column="37" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -58,15 +55,15 @@
       <file leaf-file-name="user.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25742576">
-              <caret line="271" column="36" selection-start-line="271" selection-start-column="36" selection-end-line="271" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.5049505">
+              <caret line="471" column="35" selection-start-line="471" selection-start-column="35" selection-end-line="471" selection-end-column="35" />
               <folding>
-                <marker date="1449599368000" expanded="true" signature="1691:1732" placeholder="SELECT * FRO..user..." />
-                <marker date="1449599368000" expanded="true" signature="3539:3574" placeholder="SELECT * FRO..user..." />
-                <marker date="1449599368000" expanded="true" signature="5372:5419" placeholder="SELECT * FRO..user..." />
-                <marker date="1449599368000" expanded="true" signature="11531:11737" placeholder="UPDATE `user..." />
-                <marker date="1449599368000" expanded="true" signature="12468:12617" placeholder="INSERT INTO user..." />
-                <marker date="1449599368000" expanded="true" signature="15156:15184" placeholder="SELECT * FRO..user..." />
+                <marker date="1449600813000" expanded="true" signature="1691:1732" placeholder="SELECT * FRO..user..." />
+                <marker date="1449600813000" expanded="true" signature="3539:3574" placeholder="SELECT * FRO..user..." />
+                <marker date="1449600813000" expanded="true" signature="5372:5419" placeholder="SELECT * FRO..user..." />
+                <marker date="1449600813000" expanded="true" signature="11531:11737" placeholder="UPDATE `user..." />
+                <marker date="1449600813000" expanded="true" signature="12468:12617" placeholder="INSERT INTO user..." />
+                <marker date="1449600813000" expanded="true" signature="15156:15184" placeholder="SELECT * FRO..user..." />
               </folding>
             </state>
           </provider>
@@ -200,9 +197,9 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/profile.html" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/settingController.js" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/EmailService.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
       </list>
     </option>
@@ -804,12 +801,6 @@
       <option name="number" value="Default" />
       <updated>1446826513033</updated>
     </task>
-    <task id="LOCAL-00029" summary="first REST API test">
-      <created>1448718132493</created>
-      <option name="number" value="00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1448718132493</updated>
-    </task>
     <task id="LOCAL-00030" summary="first REST API test">
       <created>1448718547761</created>
       <option name="number" value="00030" />
@@ -1098,7 +1089,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449598914445</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="added new email Feature">
+      <created>1449599376195</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1449599376196</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1509,14 +1506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.352941">
-          <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
@@ -1525,17 +1514,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="217" column="37" selection-start-line="217" selection-start-column="37" selection-end-line="217" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25742576">
-          <caret line="271" column="36" selection-start-line="271" selection-start-column="36" selection-end-line="271" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.5049505">
+          <caret line="471" column="35" selection-start-line="471" selection-start-column="35" selection-end-line="471" selection-end-column="35" />
           <folding>
-            <marker date="1449599368000" expanded="true" signature="1691:1732" placeholder="SELECT * FRO..user..." />
-            <marker date="1449599368000" expanded="true" signature="3539:3574" placeholder="SELECT * FRO..user..." />
-            <marker date="1449599368000" expanded="true" signature="5372:5419" placeholder="SELECT * FRO..user..." />
-            <marker date="1449599368000" expanded="true" signature="11531:11737" placeholder="UPDATE `user..." />
-            <marker date="1449599368000" expanded="true" signature="12468:12617" placeholder="INSERT INTO user..." />
-            <marker date="1449599368000" expanded="true" signature="15156:15184" placeholder="SELECT * FRO..user..." />
+            <marker date="1449600813000" expanded="true" signature="1691:1732" placeholder="SELECT * FRO..user..." />
+            <marker date="1449600813000" expanded="true" signature="3539:3574" placeholder="SELECT * FRO..user..." />
+            <marker date="1449600813000" expanded="true" signature="5372:5419" placeholder="SELECT * FRO..user..." />
+            <marker date="1449600813000" expanded="true" signature="11531:11737" placeholder="UPDATE `user..." />
+            <marker date="1449600813000" expanded="true" signature="12468:12617" placeholder="INSERT INTO user..." />
+            <marker date="1449600813000" expanded="true" signature="15156:15184" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
