@@ -22,15 +22,22 @@ function boolToInt($bool)
 function intToBool($int)
 {
 
-    if ($int == 0) {
+    if($int == 1) {
+
         return true;
-    } else if ($int == 1) {
-        return true;
-    } else {
-        return false;
     }
+
+    return false;
 }
 
+function strToBool($str) {
+
+    if($str == "True" || $str == "true") {
+
+        return true;
+    }
+    return false;
+}
 
 /**
  * send SSE message without id
