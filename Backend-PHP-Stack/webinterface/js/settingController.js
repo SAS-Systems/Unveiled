@@ -5,6 +5,20 @@
 $(document).ready(function(){
 
 
+    $.ajax({
+        url: "../api/user/me",
+        method: "GET",
+//        data: dataTest,
+        success: function(result){
+            var res = JSON.parse(result);
+            if(res.error === 0){
+                $("#usernameLabel").val(res.userData.username);
+                $("#emailLabel").val(res.userData.email);}
+        }
+    });
+
+
+
     $("#changeUsernameBtn").click(function(){
         var username;
         var email;

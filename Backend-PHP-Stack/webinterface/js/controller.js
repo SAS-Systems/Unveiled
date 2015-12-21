@@ -97,22 +97,28 @@ $(document).ready(function(){
             );
         });
 
-        $("#logoutPage").click(function(){
-            ApiAdapter.doPost("user/logout", null,
-                function(result) {
-                    loadNavbar();
-                    if(result.errorType === 'S')
-                        $.toaster({ priority:'success',
-                                    title:'success',
-                                    message: result.errorMsg});
-                },
-                function(error){
-                    $.toaster({ priority:'danger',
-                                title: error.error,
-                                message: error.errorMsg});
-                }
-            );
+        $("#browseMedia").click(function(){
+            if (($.cookie("loginToken")) === undefined) {
+                $.toaster({ priority:'danger',
+                    title: "Authentication Error",
+                    message: "You have to be logged in"});
+            }
+            else{
+                window.location.href = 'media.html';
+            }
         });
+
+        $("#settingIndex").click(function(){
+            if (($.cookie("loginToken")) === undefined) {
+                $.toaster({ priority:'danger',
+                    title: "Authentication Error",
+                    message: "You have to be logged in"});
+            }
+            else{
+                window.location.href = 'profile.html';
+            }
+        });
+
     });
 });
 

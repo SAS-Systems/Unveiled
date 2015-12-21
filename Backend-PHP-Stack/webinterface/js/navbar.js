@@ -29,27 +29,28 @@ $(document).ready(function(){
     loadNavbar();
 
     loadAdminSettings();
+    $.getScript('js/apiAdapter.js', function() {
 
- /*   $.getScript('js/apiAdapter.js', function() {
-        $("#logoutPage").click(function () {
+        $("#logoutPage").click(function(){
             ApiAdapter.doPost("user/logout", null,
-                function (result) {
+                function(result) {
                     loadNavbar();
-                    if (result.errorType === 'S')
-                        $.toaster({
-                            priority: 'success',
-                            title: 'success',
-                            message: result.errorMsg
-                        });
+                    if(result.errorType === 'S')
+                        var pageUrl = window.location.pathname;
+                    if(pageUrl.indexOf("index.html") < 0){
+                        window.location.href = 'index.html';
+                    }
+                    $.toaster({ priority:'success',
+                        title:'success',
+                        message: result.errorMsg});
                 },
-                function (error) {
-                    $.toaster({
-                        priority: 'danger',
-                        title: error.error + ': OOps seems like the server has some problems',
-                        message: error.errorMsg
-                    });
+                function(error){
+                    $.toaster({ priority:'danger',
+                        title: error.error,
+                        message: error.errorMsg});
                 }
             );
         });
-    }); */
+
+    });
 });
