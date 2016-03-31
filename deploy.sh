@@ -9,10 +9,10 @@
 #   --> extend this if necessary <--
 case "$BRANCH" in
 	'Backend-PHP-Stack')
-		PFAD="php"
+		PFAD="test/php"
 		;;
-	'apiAdapter')
-		PFAD="adapterTest"
+	'master')
+		PFAD="php"
 		;;
 #	'someBranch' | 'otherBranch')
 #		PFAD = "common/folder/for/both/branches"

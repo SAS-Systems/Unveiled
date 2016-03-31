@@ -1,5 +1,5 @@
 # Notes:
-#  - you can skip a build by adding [ci skip] to the commit message 
+#  - you can skip a build by adding [ci skip] to the commit message
 #
 
 # see http://about.travis-ci.org/docs/user/languages/php/
@@ -14,14 +14,14 @@ php:
 env:
 #   - DB=mysql
 # the branch which schould be deployed
-   - BRANCH=apiAdapter
+   - BRANCH=master
 
 
 # only build these branches (RegEx is also valid, eg. /^deploy.*$/):
 branches:
   only:
     - Backend-PHP-Stack
-    - apiAdapter
+    - master
 
 # update composer to newest version (optional)
 before_install:
@@ -38,7 +38,7 @@ script: true
 # use our own script to deploy to our server
 after_success:
    - sh deploy.sh
-  
+
 #after_failure:
 
 #before_deploy:
