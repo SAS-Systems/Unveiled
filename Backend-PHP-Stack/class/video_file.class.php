@@ -4,6 +4,7 @@ class VideoFile extends File
 {
 
     private $length = 0;
+    private $resolution = "";
 
 
     /**
@@ -21,12 +22,13 @@ class VideoFile extends File
      * @param bool $verified
      * @param int $lenth
      */
-    public function __construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length)
+    public function __construct($id, $owner, $caption, $filename, $fileURL, $thumbnailURL, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $resolution)
     {
 
-        parent::__construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
+        parent::__construct($id, $owner, $caption, $filename, $fileURL, $thumbnailURL, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
 
         $this->length = $length;
+        $this->resolution = $resolution;
     }
 
     /**
@@ -55,6 +57,8 @@ class VideoFile extends File
                 $db_owner = (int)$row->owner_id;
                 $db_caption = utf8_encode($row->caption);
                 $db_filename = utf8_encode($row->filename);
+                $db_file_url = utf8_encode($row->file_url);
+                $db_thumbnail_url = utf8_encode($row->thumbnail_url);
                 $db_mediatype = utf8_encode($row->mediatype);
                 $db_uploadedAt = (int)$row->uploaded_at;
                 $db_size = (int)$row->size;
@@ -63,8 +67,9 @@ class VideoFile extends File
                 $db_public = intToBool((int)$row->public);
                 $db_verified = intToBool((int)$row->verified);
                 $db_length = (int)$row->length;
+                $db_resolution = utf8_encode($row->resolution);
 
-                return new VideoFile($db_id, $db_owner, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length);
+                return new VideoFile($db_id, $db_owner, $db_caption, $db_filename, $db_file_url, $db_thumbnail_url, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length, $db_resolution);
 
             } else {
 
@@ -94,6 +99,8 @@ class VideoFile extends File
         }
         $caption = utf8_decode(strip_tags($this->getCaption()));
         $filename = utf8_decode(strip_tags($this->getFilename()));
+        $fileURL = utf8_decode(strip_tags($this->getFileURL()));
+        $thumbnailURL = utf8_decode(strip_tags($this->getThumbnailURL()));
         $mediatype = utf8_decode(strip_tags($this->getMediatype()));
         $uploadedAt = (int)$this->getUploadedAt();
         $size = (int)$this->getSize();
@@ -102,15 +109,16 @@ class VideoFile extends File
         $public = boolToInt($this->isPublic());
         $verified = boolToInt($this->isVerified());
         $length = (int)$this->getLength();
+        $resolution = utf8_decode(strip_tags($this->getResolution()));
 
         //object exists in DB
         if ($this->existsInDB()) {
 
-            $query = "UPDATE file SET owner_id=?, caption=?, filename=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
-                      public=?, verified=?, length=? WHERE id=? ";
+            $query = "UPDATE file SET owner_id=?, caption=?, filename=?, file_url=?, thumbnail_url=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
+                      public=?, verified=?, length=?, resolution=? WHERE id=? ";
             $query_stmt = $dbConn->prepare($query);
 
-            $query_stmt->bind_param('isssiiddiiii', $ownerId, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $id);
+            $query_stmt->bind_param('isssssiiddiiisi', $ownerId, $caption, $filename, $fileURL, $thumbnailURL, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $resolution, $id);
             $query_stmt->execute();
 
             //Logg all MySQL errors
@@ -129,10 +137,10 @@ class VideoFile extends File
         }
         else {
 
-            $query = "INSERT INTO user (owner_id, caption, filename, mediatype, size, lat, lng, public, verified, length) VALUES (?,?,?,?,?,?,?,?,?,?)";
+            $query = "INSERT INTO user (owner_id, caption, filename, file_url, thumbnail_url, mediatype, size, lat, lng, public, verified, length, resolution) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $query_stmt = $dbConn->prepare($query);
 
-            $query_stmt->bind_param('isssiddiii', $ownerId, $caption, $filename, $mediatype, $size, $lat, $lng, $public, $verified, $length);
+            $query_stmt->bind_param('isssssiddiiis', $ownerId, $caption, $filename, $fileURL, $thumbnailURL, $mediatype, $size, $lat, $lng, $public, $verified, $length, $resolution);
             $query_stmt->execute();
 
             if ($dbConn->affected_rows > 0) {
@@ -172,6 +180,22 @@ class VideoFile extends File
     public function setLength($length)
     {
         $this->length = $length;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResolution()
+    {
+        return $this->resolution;
+    }
+
+    /**
+     * @param string $resolution
+     */
+    public function setResolution($resolution)
+    {
+        $this->resolution = $resolution;
     }
 
     public function existsInDB() {
@@ -215,6 +239,8 @@ class VideoFile extends File
             $db_owner = (int)$row->owner_id;
             $db_caption = utf8_encode($row->caption);
             $db_filename = utf8_encode($row->filename);
+            $db_file_url = utf8_encode($row->file_url);
+            $db_thumbnail_url = utf8_encode($row->thumbnail_url);
             $db_mediatype = utf8_encode($row->mediatype);
             $db_uploadedAt = (int)$row->uploaded_at;
             $db_size = (int)$row->size;
@@ -223,13 +249,40 @@ class VideoFile extends File
             $db_public = intToBool((int)$row->public);
             $db_verified = intToBool((int)$row->verified);
             $db_length = (int)$row->length;
+            $db_resolution = utf8_encode($row->resolution);
 
-            $video = new VideoFile($db_id, $db_owner, $db_caption, $db_filename, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length);
+            $video = new VideoFile($db_id, $db_owner, $db_caption, $db_filename, $db_file_url, $db_thumbnail_url, $db_mediatype, $db_uploadedAt, $db_size, $db_lat, $db_lng, $db_public, $db_verified, $db_length, $db_resolution);
 
             $tmp[] = $video;
         }
 
         return $tmp;
+    }
+
+    /**
+     * delte this object and delete the db entry
+     */
+    public function delete() {
+        global $dbConn;
+
+        $id = (int)$this->getId();
+
+        $res = $dbConn->query("DELETE FROM file WHERE id=$id");
+
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
+
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+        }
+
+
+        if ($dbConn->affected_rows > 0) {
+
+            return true;
+        }
+
+        return false;
     }
 
 }

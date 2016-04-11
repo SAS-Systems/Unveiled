@@ -17,13 +17,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="js/controller.js"></script>
-    <script src="js/jquery.toaster.js"></script>
-    <script src="js/settingController.js"></script>
-    <script src="js/navbar.js"></script>
 </head>
 
 <body>
@@ -34,34 +27,22 @@
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">Unveiled</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse" style="position: relative">
+                <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li ><a href="index.html">Home</a></li>
-                        <li ><a href="http://unveiled.systemgrid.de/wp/blog/" >Blog</a></li>
-                        <!--li ><a href="contact.html">Contact</a></li-->
-                        <li id="loginPage"><a  data-toggle="modal" href="#myModal">Login</a></li>
-                        <li id="mediaPage"><a href="media.html">Media</a></li>
-                    </ul>
-                    <div  id="userMenu" class="btn-group dropdown">
-                        <a id="usernameField" class="btn btn-primary" href="#" style="background-color: #222; border-color: #5a5a5a"><i class="fa fa-user fa-fw"></i> </a>
-                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="background-color: #222; border-color: #5a5a5a">
-                            <span class="fa fa-caret-down"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="profile.html"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-                            <li id="deleteUser" class="deleteUserAccount"><a href="usermanagement.html"><i class="fa fa-trash-o fa-fw"></i> Maintain Users</a></li>
-                            <li class="divider"></li>
-                            <li><a id="logoutPage" data-toggle="alert" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
-                        </ul>
-
-                    </div>
-
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="http://unveiled.systemgrid.de/wp/blog/">Blog</a></li>
+                        <li class="active"><a href="profile.html">Profile</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -83,7 +64,7 @@
                                        style="font-size: large; color: white; margin-right: 20px;">Username</label>
 
                                 <div class="col-sm-6">
-                                    <input class="form-control" id="usernameLabel" type="text" value="Digister"
+                                    <input class="form-control" id="username" type="text" value="Max Mustermann"
                                            disabled>
                                 </div>
                             </div>
@@ -93,7 +74,7 @@
                                        style="font-size: large; color: white; margin-right: 20px;">Email</label>
 
                                 <div class="col-sm-6">
-                                    <input class="form-control" id="emailLabel" type="text" placeholder="digister@protonmail.com"
+                                    <input class="form-control" id="email" type="text" placeholder="test@mail.com"
                                            disabled>
                                 </div>
                             </div>
@@ -211,19 +192,34 @@
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <label  class="col-sm-2 control-label"
-                                    for="inputUsrname">Username</label>
+                                    for="inputPassword">Password</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control"
-                                       id="inputUsrname" placeholder="Username"/>
+                                <input type="password" class="form-control"
+                                       id="inputPassword" placeholder="Password"/>
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="inputPreviousMail" >Previous Mail</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control"
+                                       id="inputPreviousMail" placeholder="Mail"/>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label"
                                    for="inputNewMail" >New Mail</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control"
                                        id="inputNewMail" placeholder="Mail"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="inputRepeatMail" >Repeat Mail</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control"
+                                       id="inputRepeatMail" placeholder="Mail"/>
                             </div>
                         </div>
                     </form>
@@ -235,7 +231,7 @@
                             data-dismiss="modal">
                         Close
                     </button>
-                    <button id="changeMailbtn" type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary">
                         Save changes
                     </button>
                 </div>
@@ -272,10 +268,18 @@
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <label  class="col-sm-2 control-label"
-                                    for="inputEmail">Mail</label>
+                                    for="inputPassword">Mail</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control"
                                        id="inputEmail" placeholder="Mail"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"
+                                   for="inputPreviousMail" >Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control"
+                                       id="inputPasswordMail" placeholder="Password"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -294,7 +298,7 @@
                             data-dismiss="modal">
                         Close
                     </button>
-                    <button id="changeUsernameBtn" type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary">
                         Save changes
                     </button>
                 </div>
@@ -305,5 +309,7 @@
 
 
 </div><!-- /.row -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

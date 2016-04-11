@@ -13,7 +13,7 @@ $app->post('/user', function () use ($app) {
     $username = strip_tags($app->request->post('username'));
     $email = strip_tags($app->request->post('email'));
     $password = User::generatePassword($app->request->post('password'));
-    $ip = $_SERVER['REMOTE_ADDR'];
+    $ip = $_SERVER['REMOTE_ADDR'];;
 
     //all parameter exists
     if ($username == null || $email == null || $password == null) {
@@ -23,7 +23,7 @@ $app->post('/user', function () use ($app) {
         return;
     }
 
-    $user = new User(-1, $username, $email, true, false, "", $password, "", $ip, time(), new UserPermission(), true);
+    $user = new User(-1, $username, $email, true, $password, "", $ip, time(), new UserPermission());
     if ($user->flushDB()) {
 
         $message = Message::newFromCode("A001", SYSTEM_LANGUAGE);
@@ -71,9 +71,6 @@ $app->post('/user/logout', function () use ($app) {
     if ($user != null) {
 
         $user->unsetCookie();
-        $user->setToken("");
-        $user->flushDB();
-
         $message = Message::newFromCode("A006", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     } else {
@@ -116,8 +113,8 @@ $app->get('/user/:id', function ($id) use ($app) {
             foreach (User::getAll(999) as $tmpUser) {
 
                 $tmpUserData[] = array("id" => $tmpUser->getId(), "username" => $tmpUser->getUsername(),
-                    "email" => $tmpUser->getEmail(), "emailVerified" => $tmpUser->isEmailVerified(), "lastLogin" => timestampToString($tmpUser->getLastLogin()),
-                    "permission" => $tmpUser->getPermission()->toString(), "active" => $tmpUser->isActive());
+                    "email" => $tmpUser->getEmail(), "lastLogin" => timestampToString($tmpUser->getLastLogin()),
+                    "permission" => $tmpUser->getPermission()->toString());
             }
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
@@ -168,12 +165,10 @@ $app->put('/user/:id', function ($id) use ($app) {
 
     $username = strip_tags($app->request->post('username'));
     $email = strip_tags($app->request->post('email'));
-    $emailNotification = strToBool($app->request->post('emailNotification'));
-    $permission = (int)$app->request->post('permission');
-    $active = strToBool($app->request->post('active'));
+    $emailNotification = (bool)$app->request->post('emailNotification');
 
     //all parameter exists
-    if (!($username != null || $email != null || $emailNotification != null || $permission != null || $app->request->post('active') != null)) {
+    if ($username == null || $email == null || $emailNotification == null) {
 
         $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
@@ -183,9 +178,9 @@ $app->put('/user/:id', function ($id) use ($app) {
     //id(int) or me
     if ($id == "me") {
 
-        if ($username != null) $user->setUsername($username);
-        if ($email != null) $user->setEmail($email);
-        if ($emailNotification != null) $user->setEmailNotification($emailNotification);
+        $user->setUsername($username);
+        $user->setEmail($email);
+        $user->setEmailNotification($emailNotification);
 
         if ($user->flushDB()) {
 
@@ -193,7 +188,7 @@ $app->put('/user/:id', function ($id) use ($app) {
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         } else {
 
-            $message = Message::newFromCode("A002", SYSTEM_LANGUAGE);
+            $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         }
 
@@ -208,19 +203,11 @@ $app->put('/user/:id', function ($id) use ($app) {
             $requestUser = User::newFromId($id);
 
             //User exists
-            if ($requestUser != null) {
+            if($requestUser != null) {
 
-                if ($username != null) $requestUser->setUsername($username);
-                if ($email != null) $requestUser->setEmail($email);
-                if ($emailNotification != null) $requestUser->setEmailNotification($emailNotification);
-                if ($app->request->post('active') != null) $requestUser->setActive($active);
-
-                //if isset permission
-                if ($permission != null) {
-
-                    $newPermission = new UserPermission($permission);
-                    $requestUser->setPermission($newPermission);
-                }
+                $requestUser->setUsername($username);
+                $requestUser->setEmail($email);
+                $requestUser->setEmailNotification($emailNotification);
 
                 if ($requestUser->flushDB()) {
 
@@ -233,7 +220,8 @@ $app->put('/user/:id', function ($id) use ($app) {
                     return;
                 }
 
-            } else {
+            }
+            else {
 
                 $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
                 echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
@@ -250,47 +238,6 @@ $app->put('/user/:id', function ($id) use ($app) {
     }
 
 });
-
-$app->put('/user/me/changepassword', function () use ($app) {
-
-    $user = User::newFromCookie();
-
-    //user has to be logged in
-    if ($user == null) {
-
-        $message = Message::newFromCode("A005", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-        return;
-    }
-
-    $oldPassword = strip_tags($app->request->put('oldpassword'));
-    $newPassword = strip_tags($app->request->put('newpassword'));
-
-    //all parameter exists
-    if ($oldPassword == null || $newPassword == null) {
-
-        $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-        return;
-    }
-
-    $oldPassword = User::generatePassword($oldPassword);
-    $newPassword = User::generatePassword($newPassword);
-
-    //old password ist correct
-    if ($user->setPassword($oldPassword, $newPassword)) {
-
-        $user->flushDB();
-
-        $message = Message::newFromCode("A009", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-
-    } else {
-        $message = Message::newFromCode("A012", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-    }
-});
-
 
 $app->get('/file/:id', function ($id) use ($app) {
 
@@ -316,9 +263,9 @@ $app->get('/file/:id', function ($id) use ($app) {
             // @TODO: Paging
             foreach (VideoFile::getAll(999, $user) as $tmpFile) {
 
-                $tmpFilesData[] = array("id" => $tmpFile->getId(), "title" => $tmpFile->getId(), "imageUrl" => $tmpFile->getThumbURI(),
+                $tmpFilesData[] = array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "imageUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
                     "date" => $tmpFile->getUploadedAt(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
-                    "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize());
+                    "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize(), "resolution" => $tmpFile->getResolution());
             }
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
@@ -336,23 +283,54 @@ $app->get('/file/:id', function ($id) use ($app) {
         $tmpFile = VideoFile::newFromId($id);
 
         //File exists
-        if ($tmpFile != null) {
+        if($tmpFile != null) {
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
-                "fileData" => array("id" => $tmpFile->getId(), "title" => $tmpFile->getId(), "imageUrl" => $tmpFile->getThumbURI(),
+                "fileData" => array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "imageUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
                     "date" => $tmpFile->getUploadedAt(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
-                    "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize())));
+                    "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize(), "resolution" => $tmpFile->getResolution())));
 
-        } else {
+        }
+        else {
 
             $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
         }
     }
+});
 
+
+$app->delete('/file/:id', function ($id) use ($app) {
+
+    $user = User::newFromCookie();
+
+    //user has to be logged in
+    if ($user == null) {
+
+        $message = Message::newFromCode("A005", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $id = (int)$id;
+
+    $tmpFile = VideoFile::newFromId($id);
+
+    if($tmpFile->delete()) {
+
+        $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+
+        return;
+    }
+
+    $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
+    echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    return;
 
 });
+
 
 $app->run();

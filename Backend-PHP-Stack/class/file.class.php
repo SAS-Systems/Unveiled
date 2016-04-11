@@ -7,6 +7,8 @@ abstract class File
     protected $owner = -1; //ID or object!!!
     protected $caption = "";
     protected $filename = "";
+    protected $fileURL= "";
+    protected $thumbnailURL = "";
     protected $mediatype = "";
     protected $uploadedAt = 0; //timestamp
     protected $size = 0; //byte
@@ -18,9 +20,11 @@ abstract class File
     /**
      * File constructor.
      * @param int $id
-     * @param User $owner
+     * @param int $owner
      * @param string $caption
      * @param string $filename
+     * @param string $fileURL
+     * @param string $thumbnailURL
      * @param string $mediatype
      * @param int $uploadedAt
      * @param int $size
@@ -29,12 +33,14 @@ abstract class File
      * @param bool $public
      * @param bool $verified
      */
-    public function __construct($id, $owner, $caption, $filename, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
+    public function __construct($id, $owner, $caption, $filename, $fileURL, $thumbnailURL, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified)
     {
         $this->id = $id;
         $this->owner = $owner;
         $this->caption = $caption;
         $this->filename = $filename;
+        $this->fileURL = $fileURL;
+        $this->thumbnailURL = $thumbnailURL;
         $this->mediatype = $mediatype;
         $this->uploadedAt = $uploadedAt;
         $this->size = $size;
@@ -43,6 +49,7 @@ abstract class File
         $this->public = $public;
         $this->verified = $verified;
     }
+
 
     /*
      * write the data into DB
@@ -112,6 +119,38 @@ abstract class File
     public function setFilename($filename)
     {
         $this->filename = $filename;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileURL()
+    {
+        return $this->fileURL;
+    }
+
+    /**
+     * @param string $fileURL
+     */
+    public function setFileURL($fileURL)
+    {
+        $this->fileURL = $fileURL;
+    }
+
+    /**
+     * @return string
+     */
+    public function getThumbnailURL()
+    {
+        return $this->thumbnailURL;
+    }
+
+    /**
+     * @param string $thumbnailURL
+     */
+    public function setThumbnailURL($thumbnailURL)
+    {
+        $this->thumbnailURL = $thumbnailURL;
     }
 
     /**
@@ -231,11 +270,13 @@ abstract class File
      */
     public function getThumbURI()
     {
-        global $gvFileThumbPath;
+        /*global $gvFileThumbPath;
 
         $filename = explode(".", $this->filename);
 
-        return $gvFileThumbPath . $filename[0] . ".jpg";
+        return $gvFileThumbPath . $filename[0] . ".jpg";*/
+
+        return $this->getThumbnailURL();
     }
 
     /**
@@ -243,9 +284,11 @@ abstract class File
      */
     public function getURI()
     {
-        global $gvFilePath;
+        /*global $gvFilePath;
 
-        return $gvFilePath . $this->filename;
+        return $gvFilePath . $this->filename;*/
+
+        return $this->getFileURL();
     }
 
 }
