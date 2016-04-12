@@ -15,6 +15,7 @@
             }, function myError(response) {
                 console.log(response.statusText);
             });
+            currentItem = $rootScope;
 
 /*
             $scope.items = [

@@ -143,14 +143,18 @@
                                     <div class="modal-body">
 
                                         <form class="form-horizontal" role="form">
-                                            <!--div class="form-group">
-                                                <label  class="col-sm-2 control-label"
+                                            <div class="form-group">
+                                                <!--label  class="col-sm-2 control-label"
                                                         for="previousPassword">Previous Password</label>
-                                                <div class="col-sm-10">
+                                                <div-- class="col-sm-10">
                                                     <input type="password" class="form-control"
                                                            id="previousPassword" placeholder="Password"/>
-                                                </div
-                                            </div>Video stuff-->
+                                                </div-->
+                                                <video controls="true">
+                                                    <source src="{{currentItem.targetScope._currentItem.__file_url}}" type="{{currentItem.targetScope._currentItem.__media_type}}" />
+                                                </video>
+                                            </div>
+
                                         </form>
                                     </div>
 
