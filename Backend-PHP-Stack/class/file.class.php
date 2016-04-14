@@ -74,7 +74,7 @@ abstract class File
 
         if (is_int($this->owner)) {
 
-            return $this->owner;            
+            return $this->owner;
         } else {
 
             return $this->owner->getId();
@@ -197,6 +197,15 @@ abstract class File
     public function setUploadedAt($uploadedAt)
     {
         $this->uploadedAt = $uploadedAt;
+    }
+
+    /**
+     * Return Date as String
+     * @return bool|string
+     */
+    public function getUploadedAtStr() {
+
+        return date("m.d.y - G:i:s", (int)$this->uploadedAt);
     }
 
     /**
