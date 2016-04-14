@@ -432,7 +432,7 @@ class User
         //object exists in DB
         if($this->existsInDB()) {
 
-            $query = "UPDATE user SET username=?, email=?, email_notification_flag=?, password=?, token=?, last_ip=?, last_login=?, permission=?, acc_active=?, acc_approved=? WHERE `id`=? ";
+            $query = "UPDATE user SET username=?, email=?, email_notification_flag=?, password=?, token=?, last_ip=?, last_login=?, permission=?, acc_active=?, acc_approved=? WHERE id=?";
             $query_stmt = $dbConn->prepare($query);
 
             $query_stmt->bind_param('ssisssiiiii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $id);
@@ -575,6 +575,33 @@ class User
         }
 
         return $tmp;
+    }
+
+    /**
+     * !!!only for tests!!!
+     * delete this object and delete the db entry
+     */
+    public function delete() {
+        global $dbConn;
+
+        $id = (int)$this->getId();
+
+        $res = $dbConn->query("DELETE FROM user WHERE id=$id");
+
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
+
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+        }
+
+
+        if ($dbConn->affected_rows > 0) {
+
+            return true;
+        }
+
+        return false;
     }
 
 }

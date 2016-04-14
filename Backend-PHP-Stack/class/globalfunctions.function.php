@@ -31,6 +31,20 @@ function intToBool($int)
     }
 }
 
+/**
+ * @param $str
+ * @return bool
+ */
+function strToBool($str) {
+
+    if($str == "true") {
+
+        return true;
+    }
+
+    return false;
+}
+
 
 /**
  * send SSE message without id

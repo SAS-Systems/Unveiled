@@ -163,12 +163,14 @@ $app->put('/user/:id', function ($id) use ($app) {
         return;
     }
 
-    $username = strip_tags($app->request->params('username'));
-    $email = strip_tags($app->request->params('email'));
-    $emailNotification = (bool)$app->request->params('emailNotification');
+    $username = $app->request->params('username');
+    $email = $app->request->params('email');
+    $emailNotification = $app->request->params('emailNotification');
+    $accActive = $app->request->params('active');
+    $accApproved = $app->request->params('approved');
 
     //all parameter exists
-    if ($username == null || $email == null || $emailNotification == null) {
+    if (!($username != null || $email != null || $emailNotification != null || $accActive != null || $accApproved != null)) {
 
         $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
@@ -178,9 +180,9 @@ $app->put('/user/:id', function ($id) use ($app) {
     //id(int) or me
     if ($id == "me") {
 
-        $user->setUsername($username);
-        $user->setEmail($email);
-        $user->setEmailNotification($emailNotification);
+        if($username != null) $user->setUsername(strip_tags($username));
+        if($email != null) $user->setEmail(strip_tags($email));
+        if($emailNotification != null) $user->setEmailNotification(strToBool($emailNotification));
 
         if ($user->flushDB()) {
 
@@ -205,9 +207,11 @@ $app->put('/user/:id', function ($id) use ($app) {
             //User exists
             if($requestUser != null) {
 
-                $requestUser->setUsername($username);
-                $requestUser->setEmail($email);
-                $requestUser->setEmailNotification($emailNotification);
+                if($username != null)  $requestUser->setUsername(strip_tags($username));
+                if($email != null)  $requestUser->setEmail(strip_tags($email));
+                if($emailNotification != null)  $requestUser->setEmailNotification(strToBool($emailNotification));
+                if($accActive != null) $requestUser->setAccActive(strToBool($accActive));
+                if($accApproved != null) $requestUser->setAccApproved(strToBool($accApproved));
 
                 if ($requestUser->flushDB()) {
 
@@ -236,6 +240,32 @@ $app->put('/user/:id', function ($id) use ($app) {
         }
 
     }
+
+});
+
+$app->delete('/user/me', function ($id) use ($app) {
+
+    $user = User::newFromCookie();
+
+    //user has to be logged in
+    if ($user == null) {
+
+        $message = Message::newFromCode("A005", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    if($user->delete()) {
+
+        $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    //error if its not possible to delete
+    $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
+    echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    return;
 
 });
 
@@ -333,6 +363,11 @@ $app->delete('/file/:id', function ($id) use ($app) {
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
         }
+
+        //error if its not possible to delete
+        $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
 
     } else {
 
