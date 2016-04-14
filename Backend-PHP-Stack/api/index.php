@@ -243,7 +243,10 @@ $app->put('/user/:id', function ($id) use ($app) {
 
 });
 
-$app->delete('/user/me', function ($id) use ($app) {
+/**
+ * !!!only for functional tests!!!
+ */
+$app->delete('/user/me', function () use ($app) {
 
     $user = User::newFromCookie();
 

@@ -4,8 +4,6 @@
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/globalfunctions.function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,8 +83,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+            <state relative-caret-position="433">
+              <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -775,14 +773,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1446826513033</updated>
-      <workItem from="1460619390731" duration="8987000" />
-    </task>
-    <task id="LOCAL-00034" summary="second REST API test">
-      <created>1448722501249</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1448722501249</updated>
+      <workItem from="1460619390731" duration="9707000" />
     </task>
     <task id="LOCAL-00035" summary="second REST API test">
       <created>1448722717655</created>
@@ -1120,11 +1111,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460625530433</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="added PUT parameters to edit accActive and accApproved to API">
+      <created>1460628430462</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1460628430462</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8987000" />
+    <option name="totallyTimeSpent" value="9707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1166,7 +1164,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="second REST API test" />
     <MESSAGE value="added htaccess" />
     <MESSAGE value="next try REST" />
     <MESSAGE value="require bug fixed" />
@@ -1191,7 +1188,8 @@
     <MESSAGE value="added MailService" />
     <MESSAGE value="fixed bug with VideoFile::getResolution and permission management" />
     <MESSAGE value="fixed File:date bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed File:date bug" />
+    <MESSAGE value="added PUT parameters to edit accActive and accApproved to API" />
+    <option name="LAST_COMMIT_MESSAGE" value="added PUT parameters to edit accActive and accApproved to API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1567,8 +1565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+        <state relative-caret-position="433">
+          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
           <folding />
         </state>
       </provider>
