@@ -163,9 +163,9 @@ $app->put('/user/:id', function ($id) use ($app) {
         return;
     }
 
-    $username = strip_tags($app->request->post('username'));
-    $email = strip_tags($app->request->post('email'));
-    $emailNotification = (bool)$app->request->post('emailNotification');
+    $username = strip_tags($app->request->params('username'));
+    $email = strip_tags($app->request->params('email'));
+    $emailNotification = (bool)$app->request->params('emailNotification');
 
     //all parameter exists
     if ($username == null || $email == null || $emailNotification == null) {
@@ -254,10 +254,6 @@ $app->get('/file/:id', function ($id) use ($app) {
 
     if ($id == "all") {
 
-        //user has the permission
-        $userPermission = new UserPermission(3);
-        if ($userPermission->isAllowed($user)) {
-
             $tmpFilesData = array();
 
             // @TODO: Paging
@@ -270,12 +266,6 @@ $app->get('/file/:id', function ($id) use ($app) {
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(), "files" => $tmpFilesData));
-        } else {
-
-            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
-            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-            return;
-        }
     } else {
 
         $id = (int)$id;
@@ -283,18 +273,25 @@ $app->get('/file/:id', function ($id) use ($app) {
         $tmpFile = VideoFile::newFromId($id);
 
         //File exists
-        if($tmpFile != null) {
+        if($tmpFile == null) {
+
+            $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            return;
+        }
+
+        //user has the permission
+        $userPermission = new UserPermission(3);
+        if ($userPermission->isAllowed($user) || $user->getId() == $tmpFile->getOwnerId()) {
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
                 "fileData" => array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "imageUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
                     "date" => $tmpFile->getUploadedAt(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
                     "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize(), "resolution" => $tmpFile->getResolution())));
+        } else {
 
-        }
-        else {
-
-            $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
+            $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
         }
@@ -314,21 +311,35 @@ $app->delete('/file/:id', function ($id) use ($app) {
         return;
     }
 
+    //select file object
     $id = (int)$id;
-
     $tmpFile = VideoFile::newFromId($id);
 
-    if($tmpFile->delete()) {
+    //file exists
+    if($tmpFile == null) {
 
-        $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-
+        $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
     }
 
-    $message = Message::newFromCode("A011", SYSTEM_LANGUAGE);
-    echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-    return;
+    //user has the permission
+    $userPermission = new UserPermission(3);
+    if ($userPermission->isAllowed($user) || $user->getId() == $tmpFile->getOwnerId()) {
+
+        if($tmpFile->delete()) {
+
+            $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
+            echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+            return;
+        }
+
+    } else {
+
+        $message = Message::newFromCode("A008", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
 
 });
 

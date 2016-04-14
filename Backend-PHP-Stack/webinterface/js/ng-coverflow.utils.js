@@ -4,15 +4,15 @@
     ng.module('ng-coverflow.utils', [])
 
         .factory('ngCoverflowItemFactory', [ function () {
-            function NgCoveflowItem (title, subtitle, imageUrl, date,resolutions,lengths,sizes, longitude) {
+            function NgCoveflowItem (title, subtitle, imageUrl, date,resolution,length,size, lng) {
                 this.__title = title;
                 this.__subtitle = subtitle;
                 this.__imageUrl = imageUrl;
                 this.__date = date;
-                this.__resolutions = resolutions;
-                this.__lengths = lengths;
-                this.__sizes = sizes;
-                this.__longitude = longitude;
+                this.__resolution = resolution;
+                this.__length = length;
+                this.__size = size;
+                this.__lng = lng;
             }
 
             NgCoveflowItem.prototype = {
@@ -20,14 +20,14 @@
                 get subtitle() { return this.__subtitle; },
                 get imageUrl() { return this.__imageUrl; },
                 get date() { return this.__date; },
-                get resolutions() { return this.__resolutions;},
-                get lengths() { return this.__lengths;},
-                get sizes() { return this.__sizes;},
-                get longitude() {return this.__longitude;},
+                get resolution() { return this.__resolution;},
+                get length() { return this.__length;},
+                get size() { return this.__size;},
+                get lng() {return this.__lng;},
             };
 
             return function (data) {
-                return new NgCoveflowItem(data.title || '', data.subtitle || '', data.imageUrl || '', data.date || '', data.resolutions || '', data.lengths || '', data.sizes || '', data.longitude || '');
+                return new NgCoveflowItem(data.title || '', data.subtitle || '', data.imageUrl || '', data.date || '', data.resolution || '', data.length || '', data.size || '', data.lng || '');
             };
         } ])
 
@@ -50,17 +50,17 @@
                 get date() {
                     return this.__source[ this.__map.date || 'date' ];
                 },
-                get resolutions() {
-                    return this.__source[ this.__map.date || 'resolutions' ];
+                get resolution() {
+                    return this.__source[ this.__map.date || 'resolution' ];
                 },
-                get lengths() {
-                    return this.__source[ this.__map.date || 'lengths' ];
+                get length() {
+                    return this.__source[ this.__map.date || 'length' ];
                 },
-                get sizes() {
-                    return this.__source[ this.__map.date || 'sizes' ];
+                get size() {
+                    return this.__source[ this.__map.date || 'size' ];
                 },
-                get longitude() {
-                  return this.__source[ this.__map.longitude || 'longitude' ];
+                get lng() {
+                    return this.__source[ this.__map.lng || 'lng' ];
                 },
                 get source() {
                     return this.__source;

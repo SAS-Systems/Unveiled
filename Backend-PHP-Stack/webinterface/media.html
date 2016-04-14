@@ -13,18 +13,21 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
     <link href="css/ng-coverflow.css" rel="stylesheet">
     <!-- Coverflow library Rain Flipster-->
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/ng-coverflow.js"></script>
     <script src="js/ng-coverflow.templates.js"></script>
     <script src="js/ng-coverflow.utils.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/angularController.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/navbar.js"></script>
     </head>
 <body ng-app="app">
 <!-- Navigation Bar -->
@@ -38,16 +41,30 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">Unveiled</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse" style="position: relative">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="media.html">Media</a></li>
-                        <li><a href="http://unveiled.systemgrid.de/wp/blog/" >Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li ><a href="index.html">Home</a></li>
+                        <li ><a href="http://unveiled.systemgrid.de/wp/blog/" >Blog</a></li>
+                        <!--li ><a href="contact.html">Contact</a></li-->
+                        <li id="loginPage"><a  data-toggle="modal" href="#myModal">Login</a></li>
+                        <li class="active" id="mediaPage"><a href="media.html">Media</a></li>
+                    </ul>
+                    <div  id="userMenu" class="btn-group dropdown">
+                        <a id="usernameField" class="btn btn-primary" href="#" style="background-color: #222; border-color: #5a5a5a"><i class="fa fa-user fa-fw"></i> </a>
+                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="background-color: #222; border-color: #5a5a5a">
+                            <span class="fa fa-caret-down"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+                            <li id="deleteUser" class="deleteUserAccount"><a href="usermanagement.html"><i class="fa fa-trash-o fa-fw"></i> Maintain Users</a></li>
+                            <li class="divider"></li>
+                            <li><a id="logoutPage" data-toggle="alert" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+
+                    </div>
+
                     </ul>
                 </div>
             </div>
@@ -101,30 +118,57 @@
                     <div class="form-group" style="margin-bottom: 35px;">
                         <label class="control-label col-sm-2" for="size">Size</label>
                         <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="size"  disabled value="{{currentItem.targetScope._currentItem.__resolutions}}">
+                            <input type="text" class="form-control" id="size"  disabled value="{{currentItem.targetScope._currentItem.__size}}">
                         </div>
                     </div>
                     <div class="form-group" style="margin-bottom: 35px;">
                         <label class="control-label col-sm-2" for="length">Length</label>
                         <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="length"  disabled value="{{currentItem.targetScope._currentItem.__lengths}}">
+                            <input type="text" class="form-control" id="length"  disabled value="{{currentItem.targetScope._currentItem.__length}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="resl">Resolution</label>
                         <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="resl"  disabled value="{{currentItem.targetScope._currentItem.__sizes}}">
+                            <input type="text" class="form-control" id="resl"  disabled value="{{currentItem.targetScope._currentItem.__resolution}}">
                         </div>
                     </div>
 
                     </form>
+                    <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#videoPopup" style="float: right">Watch</a></p>
+                        <!-- Modal -->
+                        <div class="modal fade" id="videoPopup" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                    <div class="modal-body">
 
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <!--label  class="col-sm-2 control-label"
+                                                        for="previousPassword">Previous Password</label>
+                                                <div-- class="col-sm-10">
+                                                    <input type="password" class="form-control"
+                                                           id="previousPassword" placeholder="Password"/>
+                                                </div-->
+                                                <video controls="true">
+                                                    <source src="{{currentItem.targetScope._currentItem.__file_url}}" type="{{currentItem.targetScope._currentItem.__media_type}}" />
+                                                </video>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    <button id="downloadBtn" type="button" class="btn btn-primary btn-md" style="float: right; margin-right: 2%">Download</button>
+                    <button id="deleteBtn" type="button" class="btn btn-danger btn-md" style="float: right; margin-right: 2%">Delete</button>
                 </td>
             </tr>
             </table>
         <hr class="featurette-divider">
         </p>
-
+</div>
 </div>
 </div>
 

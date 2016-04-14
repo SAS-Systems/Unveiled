@@ -33,6 +33,16 @@ loadNavbar = function () {
     }
 };
 
+
+loadAdminSettings = function () {
+    if (($.cookie("loginAdmin")) === true) {
+        $("#deleteUser").css("visibility", "visible");
+    }
+    else {
+        $("#deleteUser").css("visibility", "hidden");
+    }
+};
+
 $(document).ready(function(){
     $.getScript('js/apiAdapter.js', function() {
         $("#myBtn").click(function(){
@@ -52,10 +62,11 @@ $(document).ready(function(){
                     $.toaster({ priority:'success',
                                 title:'Success',
                                 message: result.errorMsg});
+
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                                title: error.error + ': OOps seems like the server has some problems',
+                                title: error.error,
                                 message: error.errorMsg});
                 }
             );
@@ -70,36 +81,44 @@ $(document).ready(function(){
             ApiAdapter.doPost("user/login", data,
                 function(result) {
                     loadNavbar();
+                    loadAdminSettings();
                     $("#myModal").modal("toggle");
                     $.toaster({ priority:'success',
                                 title:'Success',
                                 message: result.errorMsg});
                     $("#usernameField").text(data.username);
+                    console.log("YEAH");
                 },
                 function(error){
                     $.toaster({ priority:'danger',
-                                title: error.error + ': OOps seems like the server has some problems',
+                                title: error.error,
                                 message: error.errorMsg});
                 }
             );
         });
 
-        $("#logoutPage").click(function(){
-            ApiAdapter.doPost("user/logout", null,
-                function(result) {
-                    loadNavbar();
-                    if(result.errorType === 'S')
-                        $.toaster({ priority:'success',
-                                    title:'success',
-                                    message: result.errorMsg});
-                },
-                function(error){
-                    $.toaster({ priority:'danger',
-                                title: error.error + ': OOps seems like the server has some problems',
-                                message: error.errorMsg});
-                }
-            );
+        $("#browseMedia").click(function(){
+            if (($.cookie("loginToken")) === undefined) {
+                $.toaster({ priority:'danger',
+                    title: "Authentication Error",
+                    message: "You have to be logged in"});
+            }
+            else{
+                window.location.href = 'media.html';
+            }
         });
+
+        $("#settingIndex").click(function(){
+            if (($.cookie("loginToken")) === undefined) {
+                $.toaster({ priority:'danger',
+                    title: "Authentication Error",
+                    message: "You have to be logged in"});
+            }
+            else{
+                window.location.href = 'profile.html';
+            }
+        });
+
     });
 });
 

@@ -182,6 +182,12 @@ body {
   visibility: hidden;
 }
 
-#mediaPage{
+#mediaPage, #deleteUser{
   visibility: hidden;
+}
+
+.listBtn {
+  float: right;
+  margin-top: -7px;
+  margin-right: 10px;
 }

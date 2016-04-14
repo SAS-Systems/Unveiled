@@ -53,4 +53,25 @@ $(document).ready(function(){
         });
 
     });
+
+    $("#deleteBtn").click(function(){
+        console.log(currentItem.currentItem.targetScope.selectedIndex);
+        $.ajax({
+            url: "../api/file/"+currentItem.currentItem.targetScope.selectedIndex,
+            type: "DELETE",
+            success: function(result){
+                var res = JSON.parse(result);
+
+                },
+            error: function(error){
+                var res = {
+                    "error": error.status,
+                    "errorMsg":error.statusText,
+                    "errorType": "E"
+                };
+            }
+
+
+        });
+    });
 });

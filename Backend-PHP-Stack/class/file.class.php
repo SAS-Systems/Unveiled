@@ -68,6 +68,20 @@ abstract class File
     }
 
     /**
+     * @return int
+     */
+    public function getOwnerId() {
+
+        if (is_int($this->owner)) {
+
+            return $this->owner;            
+        } else {
+
+            return $this->owner->getId();
+        }
+    }
+
+    /**
      * @return User
      */
     public function getOwner()
