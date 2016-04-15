@@ -243,6 +243,55 @@ $app->put('/user/:id', function ($id) use ($app) {
 
 });
 
+$app->put('/user/me/password', function () use ($app) {
+
+    $user = User::newFromCookie();
+
+    //user has to be logged in
+    if ($user == null) {
+
+        $message = Message::newFromCode("A005", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $oldPassword = $app->request->params('oldpwd');
+    $newPassword = $app->request->params('newpwd');
+
+    //all parameter exists
+    if ($oldPassword == null || $newPassword == null ) {
+
+        $message = Message::newFromCode("S001", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    //crypt passwords
+    $oldPassword = User::generatePassword($oldPassword);
+    $newPassword = User::generatePassword($newPassword);
+
+    //set new password
+    //is old password correct?
+    if($user->setPassword($oldPassword, $newPassword)) {
+
+        $message = Message::newFromCode("A012", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    if ($user->flushDB()) {
+
+        $message = Message::newFromCode("A009", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $message = Message::newFromCode("A010", SYSTEM_LANGUAGE);
+    echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    return;
+
+});
+
 /**
  * !!!only for functional tests!!!
  */
