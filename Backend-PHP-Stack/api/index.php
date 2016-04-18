@@ -341,7 +341,7 @@ $app->get('/file/:id', function ($id) use ($app) {
             // @TODO: Paging
             foreach (VideoFile::getAll(999, $user) as $tmpFile) {
 
-                $tmpFilesData[] = array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "imageUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
+                $tmpFilesData[] = array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "thumbnailUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
                     "date" => $tmpFile->getUploadedAt(), "dateStr" => $tmpFile->getUploadedAtStr(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
                     "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize(), "resolution" => $tmpFile->getResolution());
             }
@@ -368,7 +368,7 @@ $app->get('/file/:id', function ($id) use ($app) {
 
             $message = Message::newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
-                "fileData" => array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "imageUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
+                "fileData" => array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "thumbnailUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
                     "date" => $tmpFile->getUploadedAt(), "dateStr" => $tmpFile->getUploadedAtStr(), "lat" => $tmpFile->getLat(), "lng" => $tmpFile->getLng(),
                     "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize(), "resolution" => $tmpFile->getResolution())));
         } else {
