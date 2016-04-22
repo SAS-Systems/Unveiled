@@ -1,8 +1,13 @@
 (function (ng) {
-    ng.module('app', [ 'ng-coverflow', 'ng-coverflow.utils' ])
-        .controller('AppCtrl', [ '$scope', 'ngCoverflowItemFactory', '$rootScope','$http',  function ($scope, itemFactory, $rootScope,$http) {
+    ng.module('app', [ 'ng-coverflow', 'ng-coverflow.utils','ngVideo' ])
+        //.filter('trustUrl', function ($sce) {
+        //return function(url) {
+         //   return $sce.trustAsResourceUrl(url);
+       // };
+    //})
+        .controller('AppCtrl', [ '$scope', 'ngCoverflowItemFactory', '$rootScope','$http','video',  function ($scope, itemFactory, $rootScope,$http, video) {
             $scope.selectedIndex = 0;
-
+ 
             $http({
                 method : "GET",
                 url : "../api/file/all",
@@ -11,6 +16,7 @@
                 $scope.items=[];
                 for(var index in response.data.files){
                     $scope.items.push(itemFactory(response.data.files[index]));
+                    video.addSource('mp4',response.data.files[index].fileUrl);
                 };
             }, function myError(response) {
                 console.log(response.statusText);
@@ -45,12 +51,16 @@
 
 
         } ]);
+
+
 } (angular));
 
-var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
 
 function initialize()
 {
+    var myCenter=new google.maps.LatLng(currentItem.currentItem.targetScope._currentItem.__lat,currentItem.currentItem.targetScope._currentItem.__lng);
+
     var mapProp = {
         center:myCenter,
         zoom:10,
@@ -67,7 +77,7 @@ function initialize()
     marker.setMap(map);
 
     var infowindow = new google.maps.InfoWindow({
-        content: 'Latitude: ' +51.508742+ '<br>Longitude: ' +-0.120850
+        content: 'Latitude: ' +currentItem.currentItem.targetScope._currentItem.__lat+ '<br>Longitude: ' +currentItem.currentItem.targetScope._currentItem.__lng
     });
 
     google.maps.event.addListener(marker, 'click', function() {

@@ -53,16 +53,38 @@ $(document).ready(function(){
         });
 
     });
+    $("#downloadBtn").click(function() {
+  //      $("#downloadBtn").attr({
+    //        target: '_blank',
+         //   href: 'http://sas.systemgrid.de/unveiled/content/GoPro%20Best%20of%202015%20-%20The%20Year%20in%20Review.MP4'
+     //   });
+
+        url = currentItem.currentItem.targetScope._currentItem.__fileUrl;
+
+        // Create link.
+        a = document.createElement( "a" );
+        // Set link on DOM.
+        document.body.appendChild( a );
+        // Set link's visibility.
+        a.style = "display: none";
+        // Set href on link.
+        a.href = url;
+        // Set file name on link.
+        a.download = currentItem.currentItem.targetScope._currentItem.__title;
+
+        // Trigger click of link.
+        a.click();
+    });
 
     $("#deleteBtn").click(function(){
-        console.log(currentItem.currentItem.targetScope.selectedIndex);
+        console.log(currentItem.currentItem.targetScope._currentItem.__id);
         $.ajax({
-            url: "../api/file/"+currentItem.currentItem.targetScope.selectedIndex,
+            url: "../api/file/"+currentItem.currentItem.targetScope._currentItem.__id,
             type: "DELETE",
             success: function(result){
                 var res = JSON.parse(result);
 
-                },
+            },
             error: function(error){
                 var res = {
                     "error": error.status,

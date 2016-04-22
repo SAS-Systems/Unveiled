@@ -11,6 +11,8 @@
     <meta name="author" content="">
     <link rel="icon" href="pictures/logo_prototype.png">
 
+    <!-- ngVideo -->
+    <link rel="stylesheet" href="css/ng-video.css">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -22,13 +24,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="js/ngVideo/Controls.js"></script>
+    <script src="js/ngVideo/Bootstrap.js"></script>
+    <script src="js/ngVideo/FullScreen.js"></script>
+    <script src="js/ngVideo/Buffer.js"></script>
+    <script src="js/ngVideo/Feedback.js"></script>
+    <script src="js/ngVideo/Timeline.js"></script>
+    <script src="js/ngVideo/Volume.js"></script>
+
+
     <script src="js/ng-coverflow.js"></script>
     <script src="js/ng-coverflow.templates.js"></script>
     <script src="js/ng-coverflow.utils.js"></script>
     <script src="js/jquery.cookie.js"></script>
+    <script src="js/ng-video.min.js"></script>
     <script src="js/angularController.js"></script>
+    <!--script src="js/trustFilter.js"></script-->
     <script src="js/navbar.js"></script>
-    </head>
+
+</head>
 <body ng-app="app">
 <!-- Navigation Bar -->
 <div class="navbar-wrapper">
@@ -92,82 +107,144 @@
 
 <div class="container marketing">
 
-<div class="row featurette">
+    <div class="row featurette">
         <h2 class="featurette-heading" style="float: right">Properties<span class="text-muted"></span></h2>
         <p class="lead">
             <table width="100%">
-            <tr><td><div id="googleMap" style="width:500px;height:380px;border-radius: 10px"></div></td>
-                <td ><form class="form-horizontal" role="form">
-                    <div class="form-group" style="margin-bottom: 35px;">
-                        <label class="control-label col-sm-2" for="date">Date</label>
-                        <div class="col-sm-8" style="float: right">
+                <tr><td><div id="googleMap" style="width:500px;height:380px;border-radius: 10px"></div></td>
+                    <td ><form class="form-horizontal" role="form">
+                        <div class="form-group" style="margin-bottom: 35px;">
+                            <label class="control-label col-sm-2" for="date">Date</label>
+                            <div class="col-sm-8" style="float: right">
 
-                            <input type="text" class="form-control pull-right" id="date"  disabled value="{{currentItem.targetScope._currentItem.__date}}">
-                            <!--script>
+                                <input type="text" class="form-control pull-right" id="date"  disabled value="{{currentItem.targetScope._currentItem.__dateStr}}">
+                                <!--script>
 
-                                $.getJSON('videoproperties.json', function(data) {
-                                $("#date").val(data.video[0].date);
-                                    $("#size").val(data.video[0].sizes);
-                                    $("#length").val(data.video[0].lengths);
-                                    $("#resl").val(data.video[0].resolutions);
-                                });
+                                    $.getJSON('videoproperties.json', function(data) {
+                                    $("#date").val(data.video[0].date);
+                                        $("#size").val(data.video[0].sizes);
+                                        $("#length").val(data.video[0].lengths);
+                                        $("#resl").val(data.video[0].resolutions);
+                                    });
 
-                                 </script-->
-                        </div>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 35px;">
-                        <label class="control-label col-sm-2" for="size">Size</label>
-                        <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="size"  disabled value="{{currentItem.targetScope._currentItem.__size}}">
-                        </div>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 35px;">
-                        <label class="control-label col-sm-2" for="length">Length</label>
-                        <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="length"  disabled value="{{currentItem.targetScope._currentItem.__length}}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="resl">Resolution</label>
-                        <div class="col-sm-8" style="float: right">
-                            <input type="text" class="form-control" id="resl"  disabled value="{{currentItem.targetScope._currentItem.__resolution}}">
-                        </div>
-                    </div>
-
-                    </form>
-                    <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#videoPopup" style="float: right">Watch</a></p>
-                        <!-- Modal -->
-                        <div class="modal fade" id="videoPopup" tabindex="-1" role="dialog"
-                             aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                    <div class="modal-body">
-
-                                        <form class="form-horizontal" role="form">
-                                            <div class="form-group">
-                                                <!--label  class="col-sm-2 control-label"
-                                                        for="previousPassword">Previous Password</label>
-                                                <div-- class="col-sm-10">
-                                                    <input type="password" class="form-control"
-                                                           id="previousPassword" placeholder="Password"/>
-                                                </div-->
-                                                <video controls="true">
-                                                    <source src="{{currentItem.targetScope._currentItem.__file_url}}" type="{{currentItem.targetScope._currentItem.__media_type}}" />
-                                                </video>
-                                            </div>
-
-                                        </form>
-                                    </div>
-
-                                </div>
+                                     </script-->
                             </div>
                         </div>
-                    <button id="downloadBtn" type="button" class="btn btn-primary btn-md" style="float: right; margin-right: 2%">Download</button>
-                    <button id="deleteBtn" type="button" class="btn btn-danger btn-md" style="float: right; margin-right: 2%">Delete</button>
-                </td>
-            </tr>
-            </table>
-        <hr class="featurette-divider">
-        </p>
+                        <div class="form-group" style="margin-bottom: 35px;">
+                            <label class="control-label col-sm-2" for="size">Size</label>
+                            <div class="col-sm-8" style="float: right">
+                                <input type="text" class="form-control" id="size"  disabled value="{{currentItem.targetScope._currentItem.__size}}">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 35px;">
+                            <label class="control-label col-sm-2" for="length">Length</label>
+                            <div class="col-sm-8" style="float: right">
+                                <input type="text" class="form-control" id="length"  disabled value="{{currentItem.targetScope._currentItem.__length}}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="resl">Resolution</label>
+                            <div class="col-sm-8" style="float: right">
+                                <input type="text" class="form-control" id="resl"  disabled value="{{currentItem.targetScope._currentItem.__resolution}}">
+                            </div>
+                        </div>
+
+                    </form>
+        <p><a class="btn btn-primary" role="button" data-toggle="modal" data-target="#videoPopup" style="float: right">Watch</a></p>
+        <!-- Modal -->
+        <div class="modal fade" id="videoPopup" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-body">
+
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <section class="video" ng-video>
+                                <video vi-screen></video>
+                                <section vi-controls class="controls">
+                                    <span vi-controls-play title="Play" class="glyphicon glyphicon-play"></span>
+                                    <span vi-controls-pause title="Pause" class="glyphicon glyphicon-pause"></span>
+                                </section>
+                                <section class="full-screen">
+                                    <span title="Full Screen" vi-full-screen-toggle class="glyphicon glyphicon-fullscreen"></span>
+                                </section>
+
+                                <!-- Feedback Directive -->
+                                <section vi-feedback class="feedback">
+
+                                    <span class="buffering" ng-show="buffering">Buffering...</span>
+
+                                    <section class="loading" ng-show="loading">
+                                        Loading...
+                                    </section>
+
+                                    <!-- Volume Directive -->
+                                    <section vi-volume class="volume">
+
+                                        <div class="scale">
+                                            <div class="bar" style="width: {{volume * 100}}%"></div>
+                                        </div>
+
+                                        <span vi-volume-decrease title="Decrease Volume" class="decrease glyphicon glyphicon-minus"></span>
+                                        <span vi-volume-increase title="Increase Volume" class="increase glyphicon glyphicon-plus"></span>
+
+                                    </section>
+
+                                    <!-- Duration Directive -->
+                                    <section class="duration">
+                                        {{currentTime | number: 2}}s of {{duration | number: 2}}s
+                                        [{{percentagePlayed | number: 0}}%]
+                                    </section>
+
+                                    <section class="title">ngVideo</section>
+
+                                    <!-- Timeline Directive -->
+                                    <section class="timeline">
+                                        <input vi-timeline />
+                                    </section>
+
+                                    <!-- Buffer Directive -->
+                                    <section vi-buffer class="buffer"></section>
+
+                                    <section class="generic">
+                                        V{{volume}}
+                                        <span vi-messages>M{{messages.length}}</span>
+                                        R{{playbackRate}}
+                                        P{{playing ? 1 : 0}}
+                                        L{{loading ? 1 : 0}}
+                                        B{{buffered}}%
+                                        <a href="https://github.com/Wildhoney/ngVideo" target="_blank">
+                                            GitHub.com/Wildhoney/ngVideo
+                                        </a>
+                                    </section>
+
+                                </section>
+
+                            </section>
+
+                            <!--label  class="col-sm-2 control-label"
+                                    for="previousPassword">Previous Password</label>
+                            <div-- class="col-sm-10">
+                                <input type="password" class="form-control"
+                                       id="previousPassword" placeholder="Password"/>
+                            </div-->
+                            <!--video src="{{currentItem.currentItem.targetScope._currentItem.fileUrl | trustUrl}}"  controls></video-->
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <button id="downloadBtn" type="button" class="btn btn-primary btn-md" style="float: right; margin-right: 2%">Download</button>
+    <button id="deleteBtn" type="button" class="btn btn-danger btn-md" style="float: right; margin-right: 2%">Delete</button>
+    </td>
+    </tr>
+    </table>
+    <hr class="featurette-divider">
+    </p>
 </div>
 </div>
 </div>

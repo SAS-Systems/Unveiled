@@ -175,7 +175,7 @@
 
                     var updateCurrentItem = function () {
                         $timeout(function () {
-                            scope._currentItem = scope.items[scope.selectedIndex];
+                            scope._currentItem = scope.items[scope.selectedIndex]; 
                             scope.$emit('setcurrentItem',scope._currentItem);
                         });
                     };
