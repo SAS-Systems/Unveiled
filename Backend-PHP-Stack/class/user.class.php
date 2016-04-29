@@ -488,15 +488,12 @@ class User
 
         if ($this->token != '') {
 
-            $admin = false;
-            if($this->permission >= 3) {
-                $admin = true;
-            }
+            $p = new UserPermission(3);
 
             setcookie("loginID", $this->id, time() + 86400, "/");
             setcookie("loginToken", $this->token, time() + 86400, "/");
             setcookie("loginUsername", $this->username, time() + 86400, "/");
-            setcookie("loginAdmin", $admin, time() + 86400, "/");
+            setcookie("loginAdmin", boolToStr($p->isAllowed($this)), time() + 86400, "/");
         }
     }
 

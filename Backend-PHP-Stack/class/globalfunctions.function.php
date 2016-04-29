@@ -45,6 +45,16 @@ function strToBool($str) {
     return false;
 }
 
+function boolToStr($str) {
+
+    if($str == true) {
+
+        return "true";
+    }
+
+    return "false";
+}
+
 
 /**
  * send SSE message without id
