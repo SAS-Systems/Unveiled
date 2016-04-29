@@ -488,8 +488,15 @@ class User
 
         if ($this->token != '') {
 
+            $admin = false;
+            if($this->permission >= 3) {
+                $admin = true;
+            }
+
             setcookie("loginID", $this->id, time() + 86400, "/");
             setcookie("loginToken", $this->token, time() + 86400, "/");
+            setcookie("loginUsername", $this->username, time() + 86400, "/");
+            setcookie("loginAdmin", $admin, time() + 86400, "/");
         }
     }
 
@@ -498,6 +505,8 @@ class User
 
         setcookie("loginID", "", time() - 100, "/");
         setcookie("loginToken", "", time() - 100, "/");
+        setcookie("loginUsername", "", time() - 100, "/");
+        setcookie("loginAdmin", "", time() - 100, "/");
     }
 
     public static function isTokenValid($token, $id)
