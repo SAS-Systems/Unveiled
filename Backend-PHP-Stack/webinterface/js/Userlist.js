@@ -19,9 +19,9 @@ list = function () {
 
                     li = $(document.createElement('li')).text(item.username);
                     li.addClass("list-group-item");
-                    ban = $(document.createElement('button')).text("Ban");
+                    ban = $(document.createElement('button')).text("Deactivate");
                     ban.attr("id","#"+item.id);
-                    but =  $(document.createElement('button')).text("Change Permission");
+                    but =  $(document.createElement('button')).text("Change Permission"+"("+item.permission+")");
                     but.attr("id",item.id);
                     but.click(function (event) {
 
@@ -71,11 +71,11 @@ list = function () {
 
                     });
                     but.addClass("btn btn-warning listBtn");
-                    ban.addClass("btn btn-danger listBtn");
+                    ban.addClass("btn btn-primary listBtn");
 
                     ban.click(function (event) {
                         swal({   title: "Are you sure?",
-                                text: "Your action will ban the selected user!",
+                                text: "Your action will deactivate the selected user!",
                                 type: "warning",
                                 showCancelButton: true,
                                 confirmButtonColor: "#DD6B55",
