@@ -1,6 +1,7 @@
 <?php
 
-interface messageDAOinterface {
+interface messageDAOinterface
+{
 
     /**
      * @param $code

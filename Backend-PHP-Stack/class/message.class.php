@@ -23,7 +23,7 @@ class Message
      * @param string $msg
      * @param string $language
      */
-    private function __construct($id, $code, $type, $msg, $language)
+    function __construct($id, $code, $type, $msg, $language)
     {
         $this->id = $id;
         $this->code = $code;
