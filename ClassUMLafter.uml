@@ -1,19 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Diagram>
   <ID>PHP</ID>
-  <OriginalElement>\File</OriginalElement>
+  <OriginalElement>\DAOinterface</OriginalElement>
   <nodes>
-    <node x="0.0" y="1325.0">\Message</node>
-    <node x="645.0" y="1325.0">\errorLog</node>
-    <node x="497.5" y="1061.0">\VideoFile</node>
+    <node x="306.0" y="1694.0">\VideoDAO</node>
+    <node x="577.0" y="1325.0">\Message</node>
+    <node x="939.0" y="1325.0">\UserPermission</node>
     <node x="0.0" y="0.0">\File</node>
-    <node x="362.0" y="1325.0">\UserPermission</node>
-    <node x="852.0" y="1325.0">\EmailService</node>
+    <node x="1683.0" y="1325.0">\EmailService</node>
+    <node x="6.0" y="1471.0">\userDAOinterface</node>
+    <node x="334.5" y="1504.0">\fileDAOinterface</node>
+    <node x="0.0" y="1661.0">\UserDAO</node>
+    <node x="193.0" y="1325.0">\DAOinterface</node>
+    <node x="1492.0" y="1325.0">\errorLog</node>
+    <node x="497.5" y="1061.0">\VideoFile</node>
+    <node x="1222.0" y="1325.0">\messageDAOinterface</node>
+    <node x="1253.5" y="1427.0">\MessageDAO</node>
     <node x="193.5" y="1028.0">\PictureFile</node>
     <node x="992.0" y="0.0">\User</node>
   </nodes>
   <notes />
   <edges>
+    <edge source="\VideoDAO" target="\fileDAOinterface">
+      <point x="0.0" y="-81.5" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="\userDAOinterface" target="\DAOinterface">
+      <point x="0.0" y="-70.0" />
+      <point x="143.0" y="1446.0" />
+      <point x="237.0" y="1446.0" />
+      <point x="-44.0" y="48.0" />
+    </edge>
+    <edge source="\MessageDAO" target="\messageDAOinterface">
+      <point x="0.0" y="-37.5" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="\fileDAOinterface" target="\DAOinterface">
+      <point x="0.0" y="-37.0" />
+      <point x="419.0" y="1446.0" />
+      <point x="325.0" y="1446.0" />
+      <point x="44.0" y="48.0" />
+    </edge>
+    <edge source="\UserDAO" target="\userDAOinterface">
+      <point x="0.0" y="-114.5" />
+      <point x="0.0" y="70.0" />
+    </edge>
     <edge source="\PictureFile" target="\File">
       <point x="0.0" y="-126.0" />
       <point x="335.5" y="1003.0" />
@@ -27,9 +58,9 @@
       <point x="236.75" y="489.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="153.0" y="130.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="252.0" y="210.0" />
   <SelectedNodes>
-    <node>\File</node>
+    <node>\DAOinterface</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
