@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClassUMLafter.uml" afterPath="$PROJECT_DIR$/ClassUMLafter.uml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Unveiled.iws" />
@@ -51,7 +50,7 @@
                 <node x="1492.0" y="1325.0">\errorLog</node>
                 <node x="497.5" y="1061.0">\VideoFile</node>
                 <node x="1222.0" y="1325.0">\messageDAOinterface</node>
-                <node x="1253.5" y="1427.0">\MessageDAO</node>
+                <node x="1261.5" y="1427.0">\MessageDAO</node>
                 <node x="193.5" y="1028.0">\PictureFile</node>
                 <node x="992.0" y="0.0">\User</node>
               </nodes>
@@ -94,7 +93,7 @@
                   <point x="236.75" y="489.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="252.0" y="210.0" />
+              <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="470.99999999999955" y="1210.9999999999998" />
               <SelectedNodes>
                 <node>\DAOinterface</node>
               </SelectedNodes>
@@ -795,14 +794,7 @@
       <updated>1446826513033</updated>
       <workItem from="1462536580891" duration="4392000" />
       <workItem from="1462541058783" duration="4155000" />
-      <workItem from="1462556897561" duration="80000" />
-    </task>
-    <task id="LOCAL-00042" summary="next try REST">
-      <created>1448726158641</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1448726158641</updated>
+      <workItem from="1462556897561" duration="154000" />
     </task>
     <task id="LOCAL-00043" summary="next try REST">
       <created>1448726519451</created>
@@ -1140,11 +1132,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462556655229</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="added diagrams">
+      <created>1462556988375</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1462556988375</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8627000" />
+    <option name="totallyTimeSpent" value="8701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1153,6 +1152,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15989584" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08012487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1160,7 +1160,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1186,7 +1185,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Git bug fixed" />
     <MESSAGE value="added REST API login/logout" />
     <MESSAGE value="added Slim lib" />
     <MESSAGE value="added REST API getUserData" />
@@ -1211,7 +1209,8 @@
     <MESSAGE value="implemeted videoDAO class" />
     <MESSAGE value="change all accesses to the new DAO classes" />
     <MESSAGE value="delete all old functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete all old functions" />
+    <MESSAGE value="added diagrams" />
+    <option name="LAST_COMMIT_MESSAGE" value="added diagrams" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1654,7 +1653,7 @@
             <node x="1492.0" y="1325.0">\errorLog</node>
             <node x="497.5" y="1061.0">\VideoFile</node>
             <node x="1222.0" y="1325.0">\messageDAOinterface</node>
-            <node x="1253.5" y="1427.0">\MessageDAO</node>
+            <node x="1261.5" y="1427.0">\MessageDAO</node>
             <node x="193.5" y="1028.0">\PictureFile</node>
             <node x="992.0" y="0.0">\User</node>
           </nodes>
@@ -1697,7 +1696,7 @@
               <point x="236.75" y="489.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="252.0" y="210.0" />
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="470.99999999999955" y="1210.9999999999998" />
           <SelectedNodes>
             <node>\DAOinterface</node>
           </SelectedNodes>
