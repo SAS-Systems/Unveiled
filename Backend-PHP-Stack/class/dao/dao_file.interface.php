@@ -1,6 +1,6 @@
 <?php
 
-interface messageDAOinterface extends DAOinterface {
+interface fileDAOinterface extends DAOinterface {
 
     /**
      * get Array with all VideoFiles from the current user
@@ -12,5 +12,5 @@ interface messageDAOinterface extends DAOinterface {
     /**
      * @return boolean
      */
-    public function delete();
+    public function delete($object);
 }

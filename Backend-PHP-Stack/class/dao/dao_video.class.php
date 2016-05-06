@@ -1,41 +1,23 @@
 <?php
 
-class VideoFile extends File
+class videoDAO implements fileDAOinterface
 {
 
-    private $length = 0;
-    private $resolution = "";
-
-
     /**
-     * VideoFile constructor.
-     * @param int $id
-     * @param User $ownerID
-     * @param string $caption
-     * @param string $filename
-     * @param string $mediatype
-     * @param int $uploadedAt
-     * @param int $size
-     * @param float $lat
-     * @param float $lng
-     * @param bool $public
-     * @param bool $verified
-     * @param int $lenth
+     * fileDAO constructor.
      */
-    public function __construct($id, $owner, $caption, $filename, $fileURL, $thumbnailURL, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified, $length, $resolution)
+    public function __construct()
     {
 
-        parent::__construct($id, $owner, $caption, $filename, $fileURL, $thumbnailURL, $mediatype, $uploadedAt, $size, $lat, $lng, $public, $verified);
-
-        $this->length = $length;
-        $this->resolution = $resolution;
+        super();
     }
 
     /**
-     * creates a new object of this class using id
-     * @param int $id
+     * return object from class
+     * @param $id
+     * @return object
      */
-    public static function newFromId($id)
+    public function newFromId($id)
     {
         global $dbConn;
 
@@ -83,36 +65,34 @@ class VideoFile extends File
     }
 
     /**
-     * write the data into DB
+     * flushed the object to DB
+     * @return boolean
      */
-    public function flushDB()
+    public function flushDB($video)
     {
         global $dbConn;
 
-        $id = (int)$this->getId();
-        //int object
-        if(is_int($this->owner)) {
-            $ownerId = (int)$this->owner;
-        }
-        else {
-            $ownerId = (int)$this->getOwner()->getId();
-        }
-        $caption = utf8_decode(strip_tags($this->getCaption()));
-        $filename = utf8_decode(strip_tags($this->getFilename()));
-        $fileURL = utf8_decode(strip_tags($this->getFileURL()));
-        $thumbnailURL = utf8_decode(strip_tags($this->getThumbnailURL()));
-        $mediatype = utf8_decode(strip_tags($this->getMediatype()));
-        $uploadedAt = (int)$this->getUploadedAt();
-        $size = (int)$this->getSize();
-        $lat = (double)$this->getLat();
-        $lng = (double)$this->getLng();
-        $public = boolToInt($this->isPublic());
-        $verified = boolToInt($this->isVerified());
-        $length = (int)$this->getLength();
-        $resolution = utf8_decode(strip_tags($this->getResolution()));
+        $id = (int)$video->getId();
+        //@TODO: get INT value if possible
+        $ownerId = (int)$this->getOwner()->getId();
+
+
+        $caption = utf8_decode(strip_tags($video->getCaption()));
+        $filename = utf8_decode(strip_tags($video->getFilename()));
+        $fileURL = utf8_decode(strip_tags($video->getFileURL()));
+        $thumbnailURL = utf8_decode(strip_tags($video->getThumbnailURL()));
+        $mediatype = utf8_decode(strip_tags($video->getMediatype()));
+        $uploadedAt = (int)$video->getUploadedAt();
+        $size = (int)$video->getSize();
+        $lat = (double)$video->getLat();
+        $lng = (double)$video->getLng();
+        $public = boolToInt($video->isPublic());
+        $verified = boolToInt($video->isVerified());
+        $length = (int)$video->getLength();
+        $resolution = utf8_decode(strip_tags($video->getResolution()));
 
         //object exists in DB
-        if ($this->existsInDB()) {
+        if ($this->existsInDB($video)) {
 
             $query = "UPDATE file SET owner_id=?, caption=?, filename=?, file_url=?, thumbnail_url=?, mediatype=?, uploaded_at=?, size=?, lat=?, lng=?,
                       public=?, verified=?, length=?, resolution=? WHERE id=? ";
@@ -155,52 +135,13 @@ class VideoFile extends File
         }
     }
 
-
     /**
-     * return all files from user
-     * @param $user
+     * check if the object exists in DB or if it's a new entry
+     * @return boolean
      */
-    public function getAllFilesFromUser($user)
+    public function existsInDB($video)
     {
-        // TODO: Implement getAllFilesFromUser() method.
-    }
-
-
-    /**
-     * @return int
-     */
-    public function getLength()
-    {
-        return $this->length;
-    }
-
-    /**
-     * @param int $length
-     */
-    public function setLength($length)
-    {
-        $this->length = $length;
-    }
-
-    /**
-     * @return string
-     */
-    public function getResolution()
-    {
-        return $this->resolution;
-    }
-
-    /**
-     * @param string $resolution
-     */
-    public function setResolution($resolution)
-    {
-        $this->resolution = $resolution;
-    }
-
-    public function existsInDB() {
-
-        if($this->id > 0) {
+        if($video->getId() > 0) {
 
             return true;
         }
@@ -260,12 +201,13 @@ class VideoFile extends File
     }
 
     /**
-     * delte this object and delete the db entry
+     * @return boolean
      */
-    public function delete($video) {
+    public function delete($video)
+    {
         global $dbConn;
 
-        $id = (int)$this->getId();
+        $id = (int)$video->getId();
 
         $res = $dbConn->query("DELETE FROM file WHERE id=$id");
 
@@ -284,5 +226,6 @@ class VideoFile extends File
 
         return false;
     }
-
 }
+
+?>

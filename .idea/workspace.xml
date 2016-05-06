@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.interface.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.interface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="dao_message.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+            <state relative-caret-position="34">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
               <folding>
                 <marker date="1462540560434" expanded="true" signature="478:548" placeholder="SELECT * FRO... messages" />
               </folding>
@@ -56,14 +56,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="message.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="612">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
               <folding>
                 <marker date="1462540560481" expanded="true" signature="860:930" placeholder="SELECT * FRO... messages" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dao_video.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="221" column="41" selection-start-line="221" selection-start-column="41" selection-end-line="221" selection-end-column="41" />
+              <folding>
+                <marker date="1462541688085" expanded="true" signature="379:414" placeholder="SELECT * FRO... file" />
+                <marker date="1462541688085" expanded="true" signature="3005:3212" placeholder="UPDATE file " />
+                <marker date="1462541688085" expanded="true" signature="3879:4050" placeholder="INSERT INTO user... " />
+                <marker date="1462541688085" expanded="true" signature="5127:5184" placeholder="SELECT * FRO... file" />
+                <marker date="1462541688085" expanded="true" signature="6711:6737" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video_file.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="264" column="33" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="33" />
+              <folding>
+                <marker date="1462541673298" expanded="true" signature="1113:1148" placeholder="SELECT * FRO... file" />
+                <marker date="1462541673298" expanded="true" signature="3780:3987" placeholder="UPDATE file " />
+                <marker date="1462541673298" expanded="true" signature="4654:4825" placeholder="INSERT INTO user... " />
+                <marker date="1462541673298" expanded="true" signature="6482:6539" placeholder="SELECT * FRO... file" />
+                <marker date="1462541673298" expanded="true" signature="8087:8113" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dao_file.interface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +169,6 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/usermanagement.html" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/index.html" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/media.html" />
@@ -144,7 +185,6 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/js/angularController.js" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao.interface.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.interface.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao.interface.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
@@ -152,6 +192,10 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.interface.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
       </list>
     </option>
   </component>
@@ -768,14 +812,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1446826513033</updated>
-      <workItem from="1462536580891" duration="3975000" />
-    </task>
-    <task id="LOCAL-00038" summary="added htaccess">
-      <created>1448723849595</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1448723849595</updated>
+      <workItem from="1462536580891" duration="4392000" />
+      <workItem from="1462541058783" duration="634000" />
     </task>
     <task id="LOCAL-00039" summary="added htaccess">
       <created>1448724391670</created>
@@ -1113,38 +1151,45 @@
       <option name="project" value="LOCAL" />
       <updated>1462540331560</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="implemented messageDAO class">
+      <created>1462540609626</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1462540609626</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3975000" />
+    <option name="totallyTimeSpent" value="5026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15221988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08012487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15989584" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15221988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08012487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3433923" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1159,7 +1204,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implement postUser" />
     <MESSAGE value="bug fixed in User class" />
     <MESSAGE value="bug fixed in Message class" />
     <MESSAGE value="load webinterface to server dir" />
@@ -1184,7 +1228,8 @@
     <MESSAGE value="implemented DAO message/files interface" />
     <MESSAGE value="implemented userDAO class" />
     <MESSAGE value="delte old functions in user class" />
-    <option name="LAST_COMMIT_MESSAGE" value="delte old functions in user class" />
+    <MESSAGE value="implemented messageDAO class" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented messageDAO class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1193,11 +1238,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text6.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text7.gif">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1392,7 +1432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1408,10 +1447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1462536512233" expanded="true" signature="15:76" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="4500:4620" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1419,26 +1454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="98" column="3" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
-          <folding>
-            <marker date="1462536512233" expanded="true" signature="121:351" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="361:527" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="564:746" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="611:673" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="683:744" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="776:3037" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="870:1685" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="914:1676" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="1000:1453" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="1206:1290" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="1321:1433" placeholder="{&quot;priority&quot;: 'success'...}" />
-            <marker date="1462536512233" expanded="true" signature="1486:1651" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="1518:1631" placeholder="{&quot;priority&quot;: 'danger'...}" />
-            <marker date="1462536512233" expanded="true" signature="2773:2786" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="2773:3025" placeholder="{&quot;type&quot;: &quot;DELETE&quot;...}" />
-            <marker date="1462536512233" expanded="true" signature="2773:3033" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="2822:3013" placeholder="{...}" />
-            <marker date="1462536512233" expanded="true" signature="2850:2998" placeholder="{&quot;errorType&quot;: &quot;E&quot;...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1446,7 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4029">
           <caret line="237" column="18" selection-start-line="237" selection-start-column="18" selection-end-line="237" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1470,6 +1484,7 @@
           <settings layout="Hierarchic Group" zoom="1.0" x="153.0" y="130.0" />
           <SelectedNodes />
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
@@ -1514,6 +1529,7 @@
             <Category>Constructors</Category>
             <Category>Methods</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
@@ -1522,7 +1538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1556,11 +1571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="161" column="5" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
-          <folding>
-            <marker date="1460619265112" expanded="true" signature="1152:1187" placeholder="SELECT * FRO... file" />
-            <marker date="1460619265112" expanded="true" signature="3453:3626" placeholder="UPDATE file " />
-            <marker date="1460619265112" expanded="true" signature="4239:4376" placeholder="INSERT INTO user... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1568,29 +1578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1499">
-          <caret line="264" column="4" selection-start-line="264" selection-start-column="4" selection-end-line="264" selection-end-column="28" />
-          <folding>
-            <marker date="1460625191335" expanded="true" signature="1113:1148" placeholder="SELECT * FRO... file" />
-            <marker date="1460625191335" expanded="true" signature="3780:3987" placeholder="UPDATE file " />
-            <marker date="1460625191335" expanded="true" signature="4654:4825" placeholder="INSERT INTO user... " />
-            <marker date="1460625191335" expanded="true" signature="6482:6539" placeholder="SELECT * FRO... file" />
-            <marker date="1460625191335" expanded="true" signature="8081:8107" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1598,7 +1585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1606,7 +1592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1634,6 +1619,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <marker date="1462540560481" expanded="true" signature="860:930" placeholder="SELECT * FRO... messages" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding>
+            <marker date="1462540560434" expanded="true" signature="478:548" placeholder="SELECT * FRO... messages" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.interface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1642,22 +1647,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+        <state relative-caret-position="238">
+          <caret line="264" column="33" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="33" />
           <folding>
-            <marker date="1462540560434" expanded="true" signature="478:548" placeholder="SELECT * FRO... messages" />
+            <marker date="1462541673298" expanded="true" signature="1113:1148" placeholder="SELECT * FRO... file" />
+            <marker date="1462541673298" expanded="true" signature="3780:3987" placeholder="UPDATE file " />
+            <marker date="1462541673298" expanded="true" signature="4654:4825" placeholder="INSERT INTO user... " />
+            <marker date="1462541673298" expanded="true" signature="6482:6539" placeholder="SELECT * FRO... file" />
+            <marker date="1462541673298" expanded="true" signature="8087:8113" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="221" column="41" selection-start-line="221" selection-start-column="41" selection-end-line="221" selection-end-column="41" />
           <folding>
-            <marker date="1462540560481" expanded="true" signature="860:930" placeholder="SELECT * FRO... messages" />
+            <marker date="1462541688085" expanded="true" signature="379:414" placeholder="SELECT * FRO... file" />
+            <marker date="1462541688085" expanded="true" signature="3005:3212" placeholder="UPDATE file " />
+            <marker date="1462541688085" expanded="true" signature="3879:4050" placeholder="INSERT INTO user... " />
+            <marker date="1462541688085" expanded="true" signature="5127:5184" placeholder="SELECT * FRO... file" />
+            <marker date="1462541688085" expanded="true" signature="6711:6737" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
