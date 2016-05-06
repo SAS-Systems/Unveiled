@@ -1,6 +1,6 @@
 <?php
 
-class videoDAO implements fileDAOinterface
+class VideoDAO implements fileDAOinterface
 {
 
     /**

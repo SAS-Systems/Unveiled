@@ -1,6 +1,6 @@
 <?php
 
-class userDAO implements userDAOinterface {
+class UserDAO implements userDAOinterface {
 
     public function __construct() {
 

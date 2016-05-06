@@ -1,6 +1,6 @@
 <?php
 
-class messageDAO implements messageDAOinterface
+class MessageDAO implements messageDAOinterface
 {
 
     /**

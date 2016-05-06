@@ -41,6 +41,21 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'er
 
 require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'user_permission.class.php');
 
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'dao' . DIRECTORY_SEPARATOR . 'dao.interface.php');
+
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'dao' . DIRECTORY_SEPARATOR . 'dao_file.interface.php');
+
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'dao' . DIRECTORY_SEPARATOR . 'dao_message.interface.php');
+
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'dao' . DIRECTORY_SEPARATOR . 'dao_user.interface.php');
+
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'dao' . DIRECTORY_SEPARATOR . 'dao_video.class.php');
+
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'dao' . DIRECTORY_SEPARATOR . 'dao_message.class.php');
+
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'dao' . DIRECTORY_SEPARATOR . 'dao_user.class.php');
+
+
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
