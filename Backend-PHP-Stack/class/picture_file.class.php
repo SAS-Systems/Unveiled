@@ -155,16 +155,6 @@ class PictureFile extends File
     }
 
     /**
-     * return all files from user
-     * @param $user
-     */
-    public function getAllFilesFromUser($user)
-    {
-        // TODO: Implement getAllFilesFromUser() method.
-    }
-
-
-    /**
      * @return int
      */
     public function getHeight()

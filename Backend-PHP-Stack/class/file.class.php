@@ -50,15 +50,6 @@ abstract class File
         $this->verified = $verified;
     }
 
-
-    /*
-     * write the data into DB
-     */
-    abstract public function flushDB();
-
-
-    abstract public function getAllFilesFromUser($user);
-
     /**
      * @return int
      */
