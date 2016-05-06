@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\File</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1435.0">\Message</node>
+    <node x="665.0" y="1435.0">\errorLog</node>
+    <node x="492.5" y="1072.0">\VideoFile</node>
+    <node x="382.0" y="1435.0">\UserPermission</node>
+    <node x="0.0" y="0.0">\File</node>
+    <node x="872.0" y="1435.0">\EmailService</node>
+    <node x="168.5" y="1094.0">\PictureFile</node>
+    <node x="1032.0" y="0.0">\User</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\PictureFile" target="\File">
+      <point x="0.0" y="-137.0" />
+      <point x="320.5" y="1047.0" />
+      <point x="246.75" y="1047.0" />
+      <point x="-246.75" y="511.0" />
+    </edge>
+    <edge source="\VideoFile" target="\File">
+      <point x="0.0" y="-159.0" />
+      <point x="666.5" y="1047.0" />
+      <point x="740.25" y="1047.0" />
+      <point x="246.75" y="511.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="153.5" y="1370.5" />
+  <SelectedNodes>
+    <node>\File</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constants</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

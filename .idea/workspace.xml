@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="delete all old functions">
+    <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,14 +34,58 @@
       <file leaf-file-name="message.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="790">
+              <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="picture_file.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PHP/\File" pinned="false" current-in-tab="true">
+        <entry file="uml://PHP/\File">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>PHP</ID>
+              <OriginalElement>\File</OriginalElement>
+              <nodes>
+                <node x="0.0" y="1325.0">\Message</node>
+                <node x="653.0" y="1325.0">\errorLog</node>
+                <node x="497.5" y="1061.0">\VideoFile</node>
+                <node x="0.0" y="0.0">\File</node>
+                <node x="362.0" y="1325.0">\UserPermission</node>
+                <node x="852.0" y="1325.0">\EmailService</node>
+                <node x="193.5" y="1028.0">\PictureFile</node>
+                <node x="992.0" y="0.0">\User</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="\PictureFile" target="\File">
+                  <point x="0.0" y="-126.0" />
+                  <point x="335.5" y="1003.0" />
+                  <point x="236.75" y="1003.0" />
+                  <point x="-236.75" y="489.0" />
+                </edge>
+                <edge source="\VideoFile" target="\File">
+                  <point x="0.0" y="-93.0" />
+                  <point x="611.5" y="1003.0" />
+                  <point x="710.25" y="1003.0" />
+                  <point x="236.75" y="489.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="153.0" y="130.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constants</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="picture_file.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -127,22 +167,6 @@
             <state relative-caret-position="17">
               <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dao_video.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="14" />
-              <folding>
-                <marker date="1462545680458" expanded="true" signature="379:414" placeholder="SELECT * FRO... file" />
-                <marker date="1462545680458" expanded="true" signature="3005:3212" placeholder="UPDATE file " />
-                <marker date="1462545680458" expanded="true" signature="3879:4050" placeholder="INSERT INTO user... " />
-                <marker date="1462545680458" expanded="true" signature="5127:5184" placeholder="SELECT * FRO... file" />
-                <marker date="1462545680458" expanded="true" signature="6711:6737" placeholder="DELETE FROM " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -374,7 +398,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1053" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
@@ -832,14 +856,7 @@
       <option name="presentableId" value="Default" />
       <updated>1446826513033</updated>
       <workItem from="1462536580891" duration="4392000" />
-      <workItem from="1462541058783" duration="3930000" />
-    </task>
-    <task id="LOCAL-00041" summary="next try REST">
-      <created>1448725931018</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1448725931018</updated>
+      <workItem from="1462541058783" duration="4104000" />
     </task>
     <task id="LOCAL-00042" summary="next try REST">
       <created>1448726158641</created>
@@ -1177,11 +1194,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462556479388</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="delete all old functions">
+      <created>1462556655229</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1462556655229</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8322000" />
+    <option name="totallyTimeSpent" value="8496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1190,7 +1214,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15989584" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15221988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1486,51 +1510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://PHP/\File">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\File</OriginalElement>
-          <nodes>
-            <node x="0.0" y="1435.0">\Message</node>
-            <node x="665.0" y="1435.0">\errorLog</node>
-            <node x="492.5" y="1072.0">\VideoFile</node>
-            <node x="382.0" y="1435.0">\UserPermission</node>
-            <node x="0.0" y="0.0">\File</node>
-            <node x="864.0" y="1435.0">\EmailService</node>
-            <node x="168.5" y="1094.0">\PictureFile</node>
-            <node x="1032.0" y="0.0">\User</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="\PictureFile" target="\File">
-              <point x="0.0" y="-137.0" />
-              <point x="320.5" y="1047.0" />
-              <point x="246.75" y="1047.0" />
-              <point x="-246.75" y="511.0" />
-            </edge>
-            <edge source="\VideoFile" target="\File">
-              <point x="0.0" y="-159.0" />
-              <point x="666.5" y="1047.0" />
-              <point x="740.25" y="1047.0" />
-              <point x="246.75" y="511.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-413.0" y="1165.0" />
-          <SelectedNodes>
-            <node>\File</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constants</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1675,14 +1654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1700,6 +1671,56 @@
             <marker date="1462556641107" expanded="true" signature="3453:3626" placeholder="UPDATE file " />
             <marker date="1462556641107" expanded="true" signature="4239:4376" placeholder="INSERT INTO user... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\File">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\File</OriginalElement>
+          <nodes>
+            <node x="0.0" y="1325.0">\Message</node>
+            <node x="653.0" y="1325.0">\errorLog</node>
+            <node x="497.5" y="1061.0">\VideoFile</node>
+            <node x="0.0" y="0.0">\File</node>
+            <node x="362.0" y="1325.0">\UserPermission</node>
+            <node x="852.0" y="1325.0">\EmailService</node>
+            <node x="193.5" y="1028.0">\PictureFile</node>
+            <node x="992.0" y="0.0">\User</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\PictureFile" target="\File">
+              <point x="0.0" y="-126.0" />
+              <point x="335.5" y="1003.0" />
+              <point x="236.75" y="1003.0" />
+              <point x="-236.75" y="489.0" />
+            </edge>
+            <edge source="\VideoFile" target="\File">
+              <point x="0.0" y="-93.0" />
+              <point x="611.5" y="1003.0" />
+              <point x="710.25" y="1003.0" />
+              <point x="236.75" y="489.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="153.0" y="130.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
