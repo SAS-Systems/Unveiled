@@ -30,7 +30,7 @@ interface userDAOinterface extends DAOinterface {
     /**
      * @return boolean
      */
-    public function delete();
+    public function delete($object);
 }
 
 ?>

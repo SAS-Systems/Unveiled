@@ -13,13 +13,13 @@ interface DAOinterface {
      * flushed the object to DB
      * @return boolean
      */
-    public function flushDB();
+    public function flushDB($object);
 
     /**
      * check if the object exists in DB or if it's a new entry
      * @return boolean
      */
-    public function existsInDB();
+    public function existsInDB($object);
 }
 
 ?>
