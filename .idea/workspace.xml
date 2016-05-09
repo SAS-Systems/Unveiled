@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+            <state relative-caret-position="595">
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <marker date="1462777201089" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
                 <marker date="1462777201089" expanded="true" signature="2375:2538" placeholder="UPDATE user " />
@@ -67,7 +65,7 @@
       <file leaf-file-name="dao_video.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="85">
               <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding>
                 <marker date="1462777069094" expanded="true" signature="370:405" placeholder="SELECT * FRO... file" />
@@ -80,11 +78,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="picture_file.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2091">
+              <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+              <folding>
+                <marker date="1462556641107" expanded="true" signature="1152:1187" placeholder="SELECT * FRO... file" />
+                <marker date="1462556641107" expanded="true" signature="3453:3626" placeholder="UPDATE file " />
+                <marker date="1462556641107" expanded="true" signature="4239:4376" placeholder="INSERT INTO user... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7633">
-              <caret line="449" column="37" selection-start-line="449" selection-start-column="37" selection-end-line="449" selection-end-column="37" />
+            <state relative-caret-position="472">
+              <caret line="501" column="0" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -150,7 +162,6 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
@@ -158,6 +169,7 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
       </list>
     </option>
   </component>
@@ -201,7 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,6 +305,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -729,116 +741,6 @@
       </list>
     </option>
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/diagramAfterWithMarks.png</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -887,14 +789,8 @@
       <workItem from="1462536580891" duration="4392000" />
       <workItem from="1462541058783" duration="4155000" />
       <workItem from="1462556897561" duration="290000" />
-      <workItem from="1462775399145" duration="1635000" />
-    </task>
-    <task id="LOCAL-00043" summary="next try REST">
-      <created>1448726519451</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1448726519451</updated>
+      <workItem from="1462775399145" duration="2260000" />
+      <workItem from="1462823318027" duration="1886000" />
     </task>
     <task id="LOCAL-00044" summary="next try REST">
       <created>1448726827119</created>
@@ -1232,11 +1128,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462556988375</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="bug fixed">
+      <created>1462777263129</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1462777263130</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10472000" />
+    <option name="totallyTimeSpent" value="12983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1290,7 +1193,6 @@
     <MESSAGE value="a lot of stuff" />
     <MESSAGE value="logout bug fixed" />
     <MESSAGE value="added new email Feature" />
-    <MESSAGE value="bug fixed" />
     <MESSAGE value="added MailService" />
     <MESSAGE value="apply copy changes" />
     <MESSAGE value="implemented DAO interface" />
@@ -1303,7 +1205,8 @@
     <MESSAGE value="change all accesses to the new DAO classes" />
     <MESSAGE value="delete all old functions" />
     <MESSAGE value="added diagrams" />
-    <option name="LAST_COMMIT_MESSAGE" value="added diagrams" />
+    <MESSAGE value="bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1589,9 +1492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <marker date="1460619265108" expanded="true" signature="176:281" placeholder="INSERT INTO error_log... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1599,7 +1499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1607,7 +1506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1615,7 +1513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1630,13 +1527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1768,19 +1658,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        <state relative-caret-position="595">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
-            <marker date="1462777017069" expanded="true" signature="469:539" placeholder="SELECT * FRO... messages" />
+            <marker date="1462777201089" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="2375:2538" placeholder="UPDATE user " />
+            <marker date="1462777201089" expanded="true" signature="3175:3339" placeholder="INSERT INTO user... " />
+            <marker date="1462777201089" expanded="true" signature="4677:4718" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="6708:6755" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="8428:8456" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="9763:9789" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="85">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding>
             <marker date="1462777069094" expanded="true" signature="370:405" placeholder="SELECT * FRO... file" />
@@ -1792,27 +1688,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7633">
-          <caret line="449" column="37" selection-start-line="449" selection-start-column="37" selection-end-line="449" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="2091">
+          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+          <folding>
+            <marker date="1462556641107" expanded="true" signature="1152:1187" placeholder="SELECT * FRO... file" />
+            <marker date="1462556641107" expanded="true" signature="3453:3626" placeholder="UPDATE file " />
+            <marker date="1462556641107" expanded="true" signature="4239:4376" placeholder="INSERT INTO user... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
           <folding>
-            <marker date="1462777201089" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
-            <marker date="1462777201089" expanded="true" signature="2375:2538" placeholder="UPDATE user " />
-            <marker date="1462777201089" expanded="true" signature="3175:3339" placeholder="INSERT INTO user... " />
-            <marker date="1462777201089" expanded="true" signature="4677:4718" placeholder="SELECT * FRO... user" />
-            <marker date="1462777201089" expanded="true" signature="6708:6755" placeholder="SELECT * FRO... user" />
-            <marker date="1462777201089" expanded="true" signature="8428:8456" placeholder="SELECT * FRO... user" />
-            <marker date="1462777201089" expanded="true" signature="9763:9789" placeholder="DELETE FROM " />
+            <marker date="1462777017069" expanded="true" signature="469:539" placeholder="SELECT * FRO... messages" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="501" column="0" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

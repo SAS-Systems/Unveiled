@@ -22,6 +22,7 @@ $app->post('/user', function () use ($app) {
     //all parameter exists
     if ($username == null || $email == null || $password == null) {
 
+        //Fehlende Parameter.
         $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -30,10 +31,12 @@ $app->post('/user', function () use ($app) {
     $user = new User(-1, $username, $email, true, $password, "", $ip, time(), new UserPermission(), true, false);
     if ($userDAO->flushDB($user)) {
 
+        //Nutzer wurde erfolgreich angelegt.
         $message = $messageDAO->newFromCode("A001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     } else {
 
+        //Der angegbene Nutzer existiert bereits.
         $message = $messageDAO->newFromCode("A002", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     }
@@ -52,6 +55,7 @@ $app->post('/user/login', function () use ($app) {
     //all parameter exists
     if ($username == null || $password == null) {
 
+        //fehlende Parameter.
         $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -62,10 +66,13 @@ $app->post('/user/login', function () use ($app) {
     if ($user != null) {
 
         $user->setCookie();
+
+        //Nutzer erfolgreich eingeloggt.
         $message = $messageDAO->newFromCode("A003", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     } else {
 
+        //Email oder Passwort falsch.
         $message = $messageDAO->newFromCode("A004", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     }
@@ -83,10 +90,13 @@ $app->post('/user/logout', function () use ($app) {
     if ($user != null) {
 
         $user->unsetCookie();
+
+        //Nutzer wurde erfolgreich ausgeloggt.
         $message = $messageDAO->newFromCode("A006", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     } else {
 
+        //Sie müssen eingeloggt sein um diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A005", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     }
@@ -104,6 +114,7 @@ $app->get('/user/:id', function ($id) use ($app) {
     //user has to be logged in
     if ($user == null) {
 
+        //Sie müssen eingeloggt sein um diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A005", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -112,6 +123,7 @@ $app->get('/user/:id', function ($id) use ($app) {
     //id(int) or me
     if ($id == "me") {
 
+        //Aktion wurde erfolgreich durchgeführt.
         $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
             "userData" => array("id" => $user->getId(), "username" => $user->getUsername(), "email" => $user->getEmail(),
@@ -133,10 +145,12 @@ $app->get('/user/:id', function ($id) use ($app) {
                     "permission" => $tmpUser->getPermission()->toString());
             }
 
+            //Aktion wurde erfolgreich durchgeführt.
             $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(), "users" => $tmpUserData));
         } else {
 
+            //Sie haben nicht die Berechtigung diese Aktion durchzuführen.
             $message = $messageDAO->newFromCode("A008", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
@@ -151,12 +165,14 @@ $app->get('/user/:id', function ($id) use ($app) {
 
             $requestUser = $userDAO->newFromId($id);
 
+            //Aktion wurde erfolgreich durchgeführt.
             $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
                 "userData" => array("id" => $requestUser->getId(), "username" => $requestUser->getUsername(),
                     "email" => $requestUser->getEmail(), "emailNotification" => $requestUser->isEmailNotification())));
         } else {
 
+            //Sie haben nicht die Berechtigung diese Aktion durchzuführen.
             $message = $messageDAO->newFromCode("A008", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
@@ -178,6 +194,7 @@ $app->put('/user/:id', function ($id) use ($app) {
     //user has to be logged in
     if ($user == null) {
 
+        //Sie müssen eingeloggt sein um diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A005", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -192,6 +209,7 @@ $app->put('/user/:id', function ($id) use ($app) {
     //all parameter exists
     if (!($username != null || $email != null || $emailNotification != null || $accActive != null || $accApproved != null)) {
 
+        //Fehlende Parameter.
         $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -206,10 +224,12 @@ $app->put('/user/:id', function ($id) use ($app) {
 
         if ($userDAO->flushDB($user)) {
 
+            //Daten wurden erfolgreich gespeichert.
             $message = $messageDAO->newFromCode("A009", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         } else {
 
+            //Fehler beim Speichern der Daten.
             $message = $messageDAO->newFromCode("A010", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         }
@@ -235,10 +255,12 @@ $app->put('/user/:id', function ($id) use ($app) {
 
                 if ($userDAO->flushDB($requestUser)) {
 
+                    //Daten wurden erfolgreich gespeichert.
                     $message = $messageDAO->newFromCode("A009", SYSTEM_LANGUAGE);
                     echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
                 } else {
 
+                    //Fehler beim Speichern der Daten.
                     $message = $messageDAO->newFromCode("A010", SYSTEM_LANGUAGE);
                     echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
                     return;
@@ -247,6 +269,7 @@ $app->put('/user/:id', function ($id) use ($app) {
             }
             else {
 
+                //Der angeforderte Nutzer existiert nicht.
                 $message = $messageDAO->newFromCode("A011", SYSTEM_LANGUAGE);
                 echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
                 return;
@@ -254,6 +277,7 @@ $app->put('/user/:id', function ($id) use ($app) {
 
         } else {
 
+            //Sie haben nicht die Berechtigung diese Aktion durchzuführen.
             $message = $messageDAO->newFromCode("A008", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
@@ -274,6 +298,7 @@ $app->put('/user/me/password', function () use ($app) {
     //user has to be logged in
     if ($user == null) {
 
+        //Sie müssen eingeloggt sein um diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A005", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -285,6 +310,7 @@ $app->put('/user/me/password', function () use ($app) {
     //all parameter exists
     if ($oldPassword == null || $newPassword == null ) {
 
+        //Fehlende Parameter.
         $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -298,6 +324,7 @@ $app->put('/user/me/password', function () use ($app) {
     //is old password correct?
     if($user->setPassword($oldPassword, $newPassword)) {
 
+        //Das alte Passwort ist nicht korrekt.
         $message = $messageDAO->newFromCode("A012", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -305,11 +332,13 @@ $app->put('/user/me/password', function () use ($app) {
 
     if ($userDAO->flushDB($user)) {
 
+        //Daten wurden erfolgreich gespeichert.
         $message = $messageDAO->newFromCode("A009", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
     }
 
+    //Fehler beim Speichern der Daten.
     $message = $messageDAO->newFromCode("A010", SYSTEM_LANGUAGE);
     echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
     return;
@@ -330,6 +359,7 @@ $app->delete('/user/me', function () use ($app) {
     //user has to be logged in
     if ($user == null) {
 
+        //Sie müssen eingeloggt sein um diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A005", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -337,6 +367,7 @@ $app->delete('/user/me', function () use ($app) {
 
     if($userDAO->delete($user)) {
 
+        //Aktion wurde erfolgreich durchgeführt.
         $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -361,6 +392,7 @@ $app->get('/file/:id', function ($id) use ($app) {
     //user has to be logged in
     if ($user == null) {
 
+        //Sie müssen eingeloggt sein um diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A005", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -379,6 +411,7 @@ $app->get('/file/:id', function ($id) use ($app) {
                     "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize(), "resolution" => $tmpFile->getResolution());
             }
 
+            //Aktion wurde erfolgreich durchgeführt.
             $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(), "files" => $tmpFilesData));
     } else {
@@ -390,6 +423,7 @@ $app->get('/file/:id', function ($id) use ($app) {
         //File exists
         if($tmpFile == null) {
 
+            //Der angeforderte Nutzer existiert nicht.
             $message = $messageDAO->newFromCode("A011", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
@@ -399,6 +433,7 @@ $app->get('/file/:id', function ($id) use ($app) {
         $userPermission = new UserPermission(3);
         if ($userPermission->isAllowed($user) || $user->getId() == $tmpFile->getOwnerId()) {
 
+            //Aktion wurde erfolgreich durchgeführt.
             $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
                 "fileData" => array("id" => $tmpFile->getId(), "title" => $tmpFile->getCaption(), "thumbnailUrl" => $tmpFile->getThumbURI(), "fileUrl" => $tmpFile->getURI(),
@@ -406,6 +441,7 @@ $app->get('/file/:id', function ($id) use ($app) {
                     "length" => $tmpFile->getLength(), "size" => $tmpFile->getSize(), "resolution" => $tmpFile->getResolution())));
         } else {
 
+            //Sie haben keine Berechtigung diese Aktion durchzuführen.
             $message = $messageDAO->newFromCode("A008", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
@@ -426,6 +462,7 @@ $app->delete('/file/:id', function ($id) use ($app) {
     //user has to be logged in
     if ($user == null) {
 
+        //Sie müssen eingeloggt sein um diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A005", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -438,6 +475,7 @@ $app->delete('/file/:id', function ($id) use ($app) {
     //file exists
     if($tmpFile == null) {
 
+        //Der angeforderte Nutzer existiert nicht.
         $message = $messageDAO->newFromCode("A011", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
@@ -449,6 +487,7 @@ $app->delete('/file/:id', function ($id) use ($app) {
 
         if($videoDAO->delete($tmpFile)) {
 
+            //Aktion wurde erfolgreich durchgeführt.
             $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
             echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
             return;
@@ -461,6 +500,7 @@ $app->delete('/file/:id', function ($id) use ($app) {
 
     } else {
 
+        //Sie haben keine Berechtigung diese Aktion durchzuführen.
         $message = $messageDAO->newFromCode("A008", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
         return;
