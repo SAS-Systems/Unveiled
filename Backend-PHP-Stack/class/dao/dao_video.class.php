@@ -8,8 +8,7 @@ class VideoDAO implements fileDAOinterface
      */
     public function __construct()
     {
-
-        super();
+        
     }
 
     /**

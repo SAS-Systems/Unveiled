@@ -4,7 +4,6 @@ class UserDAO implements userDAOinterface {
 
     public function __construct() {
 
-        super();
     }
 
     /**
@@ -63,9 +62,9 @@ class UserDAO implements userDAOinterface {
         global $dbConn;
 
         $id = (int)$user->getId();
-        $username = utf8_decode(strip_tags($user->getUsername));
+        $username = utf8_decode(strip_tags($user->getUsername()));
         $email = $user->getEmail();
-        $emailNotification = boolToInt($user->geteEmailNotification());
+        $emailNotification = boolToInt($user->isEmailNotification());
         $password = $user->getPassword();
         $token = $user->getToken();
         $lastIP = $user->getLastIP();

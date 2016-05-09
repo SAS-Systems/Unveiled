@@ -8,8 +8,7 @@ class MessageDAO implements messageDAOinterface
      */
     public function __construct()
     {
-
-        super();
+        
     }
 
     /**

@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,79 +34,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PHP/\DAOinterface" pinned="false" current-in-tab="true">
-        <entry file="uml://PHP/\DAOinterface">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>PHP</ID>
-              <OriginalElement>\DAOinterface</OriginalElement>
-              <nodes>
-                <node x="306.0" y="1694.0">\VideoDAO</node>
-                <node x="577.0" y="1325.0">\Message</node>
-                <node x="939.0" y="1325.0">\UserPermission</node>
-                <node x="0.0" y="0.0">\File</node>
-                <node x="1683.0" y="1325.0">\EmailService</node>
-                <node x="6.0" y="1471.0">\userDAOinterface</node>
-                <node x="334.5" y="1504.0">\fileDAOinterface</node>
-                <node x="0.0" y="1661.0">\UserDAO</node>
-                <node x="193.0" y="1325.0">\DAOinterface</node>
-                <node x="1492.0" y="1325.0">\errorLog</node>
-                <node x="497.5" y="1061.0">\VideoFile</node>
-                <node x="1222.0" y="1325.0">\messageDAOinterface</node>
-                <node x="1261.5" y="1427.0">\MessageDAO</node>
-                <node x="193.5" y="1028.0">\PictureFile</node>
-                <node x="992.0" y="0.0">\User</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="\VideoDAO" target="\fileDAOinterface">
-                  <point x="0.0" y="-81.5" />
-                  <point x="0.0" y="37.0" />
-                </edge>
-                <edge source="\userDAOinterface" target="\DAOinterface">
-                  <point x="0.0" y="-70.0" />
-                  <point x="143.0" y="1446.0" />
-                  <point x="237.0" y="1446.0" />
-                  <point x="-44.0" y="48.0" />
-                </edge>
-                <edge source="\MessageDAO" target="\messageDAOinterface">
-                  <point x="0.0" y="-37.5" />
-                  <point x="0.0" y="26.0" />
-                </edge>
-                <edge source="\fileDAOinterface" target="\DAOinterface">
-                  <point x="0.0" y="-37.0" />
-                  <point x="419.0" y="1446.0" />
-                  <point x="325.0" y="1446.0" />
-                  <point x="44.0" y="48.0" />
-                </edge>
-                <edge source="\UserDAO" target="\userDAOinterface">
-                  <point x="0.0" y="-114.5" />
-                  <point x="0.0" y="70.0" />
-                </edge>
-                <edge source="\PictureFile" target="\File">
-                  <point x="0.0" y="-126.0" />
-                  <point x="335.5" y="1003.0" />
-                  <point x="236.75" y="1003.0" />
-                  <point x="-236.75" y="489.0" />
-                </edge>
-                <edge source="\VideoFile" target="\File">
-                  <point x="0.0" y="-93.0" />
-                  <point x="611.5" y="1003.0" />
-                  <point x="710.25" y="1003.0" />
-                  <point x="236.75" y="489.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="470.99999999999955" y="1210.9999999999998" />
-              <SelectedNodes>
-                <node>\DAOinterface</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constants</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-              </Categories>
-              <VISIBILITY>private</VISIBILITY>
+      <file leaf-file-name="dao_message.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+              <folding>
+                <marker date="1462777017069" expanded="true" signature="469:539" placeholder="SELECT * FRO... messages" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+              <folding>
+                <marker date="1462777201089" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
+                <marker date="1462777201089" expanded="true" signature="2375:2538" placeholder="UPDATE user " />
+                <marker date="1462777201089" expanded="true" signature="3175:3339" placeholder="INSERT INTO user... " />
+                <marker date="1462777201089" expanded="true" signature="4677:4718" placeholder="SELECT * FRO... user" />
+                <marker date="1462777201089" expanded="true" signature="6708:6755" placeholder="SELECT * FRO... user" />
+                <marker date="1462777201089" expanded="true" signature="8428:8456" placeholder="SELECT * FRO... user" />
+                <marker date="1462777201089" expanded="true" signature="9763:9789" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dao_video.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <marker date="1462777069094" expanded="true" signature="370:405" placeholder="SELECT * FRO... file" />
+                <marker date="1462777069094" expanded="true" signature="2996:3203" placeholder="UPDATE file " />
+                <marker date="1462777069094" expanded="true" signature="3870:4041" placeholder="INSERT INTO user... " />
+                <marker date="1462777069094" expanded="true" signature="5118:5175" placeholder="SELECT * FRO... file" />
+                <marker date="1462777069094" expanded="true" signature="6702:6728" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7633">
+              <caret line="449" column="37" selection-start-line="449" selection-start-column="37" selection-end-line="449" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,14 +150,14 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_file.interface.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/video_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
       </list>
     </option>
   </component>
@@ -219,6 +201,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -311,7 +294,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -747,6 +729,116 @@
       </list>
     </option>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/diagramAfterWithMarks.png</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -794,7 +886,8 @@
       <updated>1446826513033</updated>
       <workItem from="1462536580891" duration="4392000" />
       <workItem from="1462541058783" duration="4155000" />
-      <workItem from="1462556897561" duration="154000" />
+      <workItem from="1462556897561" duration="290000" />
+      <workItem from="1462775399145" duration="1635000" />
     </task>
     <task id="LOCAL-00043" summary="next try REST">
       <created>1448726519451</created>
@@ -1143,7 +1236,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8701000" />
+    <option name="totallyTimeSpent" value="10472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1152,18 +1245,18 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15989584" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08012487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15221988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07928118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15221988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3433923" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1485,39 +1578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.interface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7633">
-          <caret line="449" column="37" selection-start-line="449" selection-start-column="37" selection-end-line="449" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1559,7 +1623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1567,7 +1630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1575,11 +1637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2618">
           <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
-          <folding>
-            <marker date="1462556641107" expanded="true" signature="1152:1187" placeholder="SELECT * FRO... file" />
-            <marker date="1462556641107" expanded="true" signature="3453:3626" placeholder="UPDATE file " />
-            <marker date="1462556641107" expanded="true" signature="4239:4376" placeholder="INSERT INTO user... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1587,7 +1644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1621,7 +1677,7 @@
               <point x="-236.75" y="489.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="719.5" y="335.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="720.0" y="336.0" />
           <SelectedNodes>
             <node>\File</node>
           </SelectedNodes>
@@ -1631,6 +1687,7 @@
             <Category>Constructors</Category>
             <Category>Methods</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
@@ -1646,10 +1703,10 @@
             <node x="939.0" y="1325.0">\UserPermission</node>
             <node x="0.0" y="0.0">\File</node>
             <node x="1683.0" y="1325.0">\EmailService</node>
-            <node x="6.0" y="1471.0">\userDAOinterface</node>
-            <node x="334.5" y="1504.0">\fileDAOinterface</node>
-            <node x="0.0" y="1661.0">\UserDAO</node>
-            <node x="193.0" y="1325.0">\DAOinterface</node>
+            <node x="-2.0" y="1471.0">\userDAOinterface</node>
+            <node x="326.5" y="1504.0">\fileDAOinterface</node>
+            <node x="-8.0" y="1661.0">\UserDAO</node>
+            <node x="185.0" y="1325.0">\DAOinterface</node>
             <node x="1492.0" y="1325.0">\errorLog</node>
             <node x="497.5" y="1061.0">\VideoFile</node>
             <node x="1222.0" y="1325.0">\messageDAOinterface</node>
@@ -1696,7 +1753,7 @@
               <point x="236.75" y="489.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="470.99999999999955" y="1210.9999999999998" />
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="471.0" y="1211.0" />
           <SelectedNodes>
             <node>\DAOinterface</node>
           </SelectedNodes>
@@ -1706,7 +1763,56 @@
             <Category>Constructors</Category>
             <Category>Methods</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+          <folding>
+            <marker date="1462777017069" expanded="true" signature="469:539" placeholder="SELECT * FRO... messages" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <marker date="1462777069094" expanded="true" signature="370:405" placeholder="SELECT * FRO... file" />
+            <marker date="1462777069094" expanded="true" signature="2996:3203" placeholder="UPDATE file " />
+            <marker date="1462777069094" expanded="true" signature="3870:4041" placeholder="INSERT INTO user... " />
+            <marker date="1462777069094" expanded="true" signature="5118:5175" placeholder="SELECT * FRO... file" />
+            <marker date="1462777069094" expanded="true" signature="6702:6728" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7633">
+          <caret line="449" column="37" selection-start-line="449" selection-start-column="37" selection-end-line="449" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding>
+            <marker date="1462777201089" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="2375:2538" placeholder="UPDATE user " />
+            <marker date="1462777201089" expanded="true" signature="3175:3339" placeholder="INSERT INTO user... " />
+            <marker date="1462777201089" expanded="true" signature="4677:4718" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="6708:6755" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="8428:8456" placeholder="SELECT * FRO... user" />
+            <marker date="1462777201089" expanded="true" signature="9763:9789" placeholder="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
