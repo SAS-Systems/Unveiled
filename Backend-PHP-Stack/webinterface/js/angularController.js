@@ -1,11 +1,10 @@
 (function (ng) {
-    ng.module('app', [ 'ng-coverflow', 'ng-coverflow.utils','ngVideo' ])
-        //.filter('trustUrl', function ($sce) {
-        //return function(url) {
-         //   return $sce.trustAsResourceUrl(url);
-       // };
-    //})
-        .controller('AppCtrl', [ '$scope', 'ngCoverflowItemFactory', '$rootScope','$http','video',  function ($scope, itemFactory, $rootScope,$http, video) {
+    ng.module('app', [ 'ng-coverflow', 'ng-coverflow.utils'])
+        .filter('trustUrl', function ($sce) {
+        return function(url) {
+            return $sce.trustAsResourceUrl(url);
+        };})
+        .controller('AppCtrl', [ '$scope', 'ngCoverflowItemFactory', '$rootScope','$http',  function ($scope, itemFactory, $rootScope,$http) {
             $scope.selectedIndex = 0;
  
             $http({
@@ -16,7 +15,6 @@
                 $scope.items=[];
                 for(var index in response.data.files){
                     $scope.items.push(itemFactory(response.data.files[index]));
-                    video.addSource('mp4',response.data.files[index].fileUrl);
                 };
             }, function myError(response) {
                 console.log(response.statusText);
@@ -41,6 +39,8 @@
                 console.log($rootScope.currentItem);
                 console.log($rootScope.currentItem.targetScope._currentItem.__date);
                 console.log($rootScope.currentItem.targetScope.selectedIndex);
+
+               // $rootScope.open({type: "mp4", src: "http://sas.systemgrid.de/unveiled/content/test.mp4"});
             };
 
 
