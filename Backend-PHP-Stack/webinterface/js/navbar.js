@@ -5,14 +5,14 @@
 loadNavbar = function () {
     if (($.cookie("loginToken")) !== undefined) {
         $("#userMenu").css("visibility", "visible");
-        $("#loginPage").css("visibility", "hidden");
+        $("#loginPage").css("display", "none");
         $("#mediaPage").css("visibility", "visible");
         $("#usernameField").text(($.cookie("loginUsername")));
     }
     else {
         $("#userMenu").css("visibility", "hidden");
         $("#mediaPage").css("visibility", "hidden");
-        $("#loginPage").css("visibility", "visible");
+        $("#loginPage").css("display", "inline");
     }
 };
 
