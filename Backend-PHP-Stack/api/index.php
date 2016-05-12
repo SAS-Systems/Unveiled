@@ -205,9 +205,10 @@ $app->put('/user/:id', function ($id) use ($app) {
     $emailNotification = $app->request->params('emailNotification');
     $accActive = $app->request->params('active');
     $accApproved = $app->request->params('approved');
+    $permission = $app->request->params('permission');
 
     //all parameter exists
-    if (!($username != null || $email != null || $emailNotification != null || $accActive != null || $accApproved != null)) {
+    if (!($username != null || $email != null || $emailNotification != null || $accActive != null || $accApproved != null || $permission != null)) {
 
         //Fehlende Parameter.
         $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
@@ -252,6 +253,7 @@ $app->put('/user/:id', function ($id) use ($app) {
                 if($emailNotification != null)  $requestUser->setEmailNotification(strToBool($emailNotification));
                 if($accActive != null) $requestUser->setAccActive(strToBool($accActive));
                 if($accApproved != null) $requestUser->setAccApproved(strToBool($accApproved));
+                if($permission != null) $requestUser->setPermission(new UserPermission((int)$permission));
 
                 if ($userDAO->flushDB($requestUser)) {
 
