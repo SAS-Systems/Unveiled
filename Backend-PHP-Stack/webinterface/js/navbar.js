@@ -7,7 +7,16 @@ loadNavbar = function () {
         $("#userMenu").css("visibility", "visible");
         $("#loginPage").css("display", "none");
         $("#mediaPage").css("visibility", "visible");
-        $("#usernameField").text(($.cookie("loginUsername")));
+        $.ajax({
+            url: "../api/user/me",
+            method: "GET",
+//        data: dataTest,
+            success: function(result){
+                var res = JSON.parse(result);
+                if(res.error === 0){
+                    $("#usernameField").text(res.userData.username);
+                }
+            }});
     }
     else {
         $("#userMenu").css("visibility", "hidden");
