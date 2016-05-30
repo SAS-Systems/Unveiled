@@ -7,7 +7,16 @@ loadNavbar = function () {
         $("#userMenu").css("visibility", "visible");
         $("#loginPage").css("display", "none");
         $("#mediaPage").css("visibility", "visible");
-        $("#usernameField").text(($.cookie("loginUsername")));
+        $.ajax({
+            url: "../api/user/me",
+            method: "GET",
+//        data: dataTest,
+            success: function(result){
+                var res = JSON.parse(result);
+                if(res.error === 0){
+                    $("#usernameField").text(res.userData.username);
+                }
+            }});
     }
     else {
         $("#userMenu").css("visibility", "hidden");
@@ -77,21 +86,30 @@ $(document).ready(function(){
     });
 
     $("#deleteBtn").click(function(){
-        console.log(currentItem.currentItem.targetScope._currentItem.__id);
-        $.ajax({
-            url: "../api/file/"+currentItem.currentItem.targetScope._currentItem.__id,
-            type: "DELETE",
-            success: function(result){
-                var res = JSON.parse(result);
+        swal({   title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",   showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: true },
+            function(){    $.ajax({
+                url: "../api/file/"+currentItem.currentItem.targetScope._currentItem.__id,
+                type: "DELETE",
+                success: function(result){
+                    var res = JSON.parse(result);
+                    swal("Deleted!", "Your file has been deleted.", "success");
+                    setTimeout(function(){ location.reload(); }, 2000);
 
-            },
-            error: function(error){
-                var res = {
-                    "error": error.status,
-                    "errorMsg":error.statusText,
-                    "errorType": "E"
-                };
-            }
+
+                },
+                error: function(error){
+                    var res = {
+                        "error": error.status,
+                        "errorMsg":error.statusText,
+                        "errorType": "E"
+                    };
+                }
+                });
 
 
         });

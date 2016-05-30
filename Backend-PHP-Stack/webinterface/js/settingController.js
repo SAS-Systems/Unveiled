@@ -18,6 +18,55 @@ $(document).ready(function(){
     });
 
 
+    $("#changePwBtn").click(function(){
+        var data = {
+            "oldpwd": $("#previousPassword").val(),
+            "newpwd": $("#inputNewPassword").val()};
+        if($("#inputRepeatPassword").val()===data.newpwd) {
+
+            $.ajax({
+                url: "../api/user/me/password",
+                method: "PUT",
+                data: data,
+                success: function (result) {
+                    var res = JSON.parse(result);
+                    if (res.error === 0) {
+                        $("#passwordDialog").modal("toggle");
+                        $.toaster({
+                            priority: 'success',
+                            title: 'Success',
+                            message: res.errorMsg
+                        });
+
+                    }
+                },
+
+
+                error: function (error) {
+                    var res = {
+                        "error": error.status,
+                        "errorMsg": error.statusText,
+                        "errorType": "E"
+                    };
+                    $.toaster({
+                        priority: 'danger',
+                        title: error.error,
+                        message: error.errorMsg
+                    });
+                }
+
+
+            });
+        }
+        else{
+            $.toaster({
+                priority: 'danger',
+                title: 'Error',
+                message: "The new password doesn't equal the repeated password"
+            });
+        }
+    });
+
 
     $("#changeUsernameBtn").click(function(){
         var username;
@@ -43,6 +92,7 @@ $(document).ready(function(){
                     $.toaster({ priority:'success',
                         title:'Success',
                         message: res.errorMsg});
+                    loadNavbar();
 
                 }
             },
