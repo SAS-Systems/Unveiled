@@ -15,6 +15,8 @@ class User
     private $accActive = true;
     private $accApproved = false;
     private $uploadToken = "";
+    private $email_token  = "";
+    private $email_approved = "";
 
     /**
      * User constructor.
@@ -30,8 +32,10 @@ class User
      * @param bool $accActive
      * @param bool $accApproved
      * @param string $uploadToken
+     * @param string $email_token
+     * @param string $email_approved
      */
-    public function __construct($id, $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken)
+    public function __construct($id, $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken, $email_token, $email_approved)
     {
         $this->id = $id;
         $this->username = $username;
@@ -45,6 +49,8 @@ class User
         $this->accActive = $accActive;
         $this->accApproved = $accApproved;
         $this->uploadToken = $uploadToken;
+        $this->email_token = $email_token;
+        $this->email_approved = $email_approved;
     }
     
     /**
@@ -248,6 +254,38 @@ class User
     public function setUploadToken($uploadToken)
     {
         $this->uploadToken = $uploadToken;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmailToken()
+    {
+        return $this->email_token;
+    }
+
+    /**
+     * @param string $email_token
+     */
+    public function setEmailToken($email_token)
+    {
+        $this->email_token = $email_token;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmailApproved()
+    {
+        return $this->email_approved;
+    }
+
+    /**
+     * @param string $email_approved
+     */
+    public function setEmailApproved($email_approved)
+    {
+        $this->email_approved = $email_approved;
     }
 
 

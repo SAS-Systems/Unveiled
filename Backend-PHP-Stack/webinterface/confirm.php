@@ -1,3 +1,19 @@
+<?php
+
+///////////////////////////////////////////////////////////////////////////
+//Webstart
+require_once('../webstart.inc.php');
+///////////////////////////////////////////////////////////////////////////
+
+if(isset($_GET["emailtoken"]) && $_GET["emailtoken"] != "") {
+
+    $emailToken = $_GET["emailtoken"];
+
+    
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

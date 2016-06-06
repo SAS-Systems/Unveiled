@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.html" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +33,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email_service.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="36" column="195" selection-start-line="36" selection-start-column="185" selection-end-line="36" selection-end-column="195" />
               <folding />
             </state>
           </provider>
@@ -53,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4777">
-              <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
+            <state relative-caret-position="561">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -66,7 +86,7 @@
       <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
+            <state relative-caret-position="2281">
               <caret line="310" column="16" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="16" />
               <folding>
                 <marker date="1465240518302" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
@@ -166,10 +186,11 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
       </list>
     </option>
   </component>
@@ -243,6 +264,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Backend-PHP-Stack" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unveiled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unveiled" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend-PHP-Stack" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webinterface" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -796,14 +835,7 @@
       <workItem from="1464617922375" duration="278000" />
       <workItem from="1464618843838" duration="255000" />
       <workItem from="1465237783585" duration="1095000" />
-      <workItem from="1465238921135" duration="1523000" />
-    </task>
-    <task id="LOCAL-00049" summary="implement postUser">
-      <created>1448730778013</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1448730778013</updated>
+      <workItem from="1465238921135" duration="2404000" />
     </task>
     <task id="LOCAL-00050" summary="implement postUser">
       <created>1448730917251</created>
@@ -1141,11 +1173,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465240282482</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="added POST login request for App">
+      <created>1465240632088</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1465240632088</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17214000" />
+    <option name="totallyTimeSpent" value="18095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1187,7 +1226,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change config file: added file path" />
     <MESSAGE value="added getTubURI and getURI to class File" />
     <MESSAGE value="added REST API files/all" />
     <MESSAGE value="fixed bug" />
@@ -1212,7 +1250,8 @@
     <MESSAGE value="added uploadToken in User DAO" />
     <MESSAGE value="generate uploadToken if user were created" />
     <MESSAGE value="change system langue to EN" />
-    <option name="LAST_COMMIT_MESSAGE" value="change system langue to EN" />
+    <MESSAGE value="added POST login request for App" />
+    <option name="LAST_COMMIT_MESSAGE" value="added POST login request for App" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1221,11 +1260,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/pictures/text9.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/lib/Slim/App.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1403,13 +1437,6 @@
       </provider>
     </entry>
     <entry file="uml://PHP/\EmailService" />
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao.interface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1534,17 +1561,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/email_service.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4777">
-          <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
+        <state relative-caret-position="454">
+          <caret line="36" column="195" selection-start-line="36" selection-start-column="185" selection-end-line="36" selection-end-column="195" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
+        <state relative-caret-position="2281">
           <caret line="310" column="16" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="16" />
           <folding>
             <marker date="1465240518302" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
@@ -1559,10 +1602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding />
         </state>
       </provider>
