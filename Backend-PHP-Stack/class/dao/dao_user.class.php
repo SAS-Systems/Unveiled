@@ -99,10 +99,12 @@ class UserDAO implements userDAOinterface {
         }
         else {
 
+            $uploadToken = User::generateToken(0);
+
             $query = "INSERT INTO user (username, email, email_notification_flag, password, token, last_ip, last_login, permission, acc_active, acc_approved, upload_token) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $query_stmt = $dbConn->prepare($query);
 
-            $query_stmt->bind_param('ssisssiiii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken);
+            $query_stmt->bind_param('ssisssiiiis', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken);
             $query_stmt->execute();
 
             //Logg all MySQL errors
