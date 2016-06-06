@@ -125,6 +125,8 @@ class UserDAO implements userDAOinterface {
 
                 $user->setId((int)$dbConn->insert_id);
 
+                EmailService::sendEmailVerification($username, $email, $emailToken);
+
                 return true;
             }
             else {
@@ -204,7 +206,6 @@ class UserDAO implements userDAOinterface {
     }
 
     /**
-     * @param $id
      * @param $token
      * @return object
      */

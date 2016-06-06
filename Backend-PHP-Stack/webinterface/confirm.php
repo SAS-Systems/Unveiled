@@ -9,7 +9,15 @@ if(isset($_GET["emailtoken"]) && $_GET["emailtoken"] != "") {
 
     $emailToken = $_GET["emailtoken"];
 
-    
+    $userDAO = new UserDAO();
+
+    $user = $userDAO->newFromEmailToken($emailToken);
+
+    if($user != null) {
+
+        $user->setEmailApproved(true);
+        $userDAO->flushDB($user);
+    }
 }
 
 ?>
