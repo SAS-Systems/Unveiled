@@ -19,18 +19,23 @@ list = function () {
 
                     li = $(document.createElement('li')).text(item.username);
                     li.addClass("list-group-item");
-                    ban = $(document.createElement('button')).text("Deactivate");
+                    console.log(item.isActive);
+                    if (item.isActive)
+                        ban = $(document.createElement('button')).text("Deactivate");
+                    else
+                        ban = $(document.createElement('button')).text("Activate");
+
                     ban.attr("id","#"+item.id);
                     but =  $(document.createElement('button')).text("Change Permission"+"("+item.permission+")");
                     but.attr("id",item.id);
                     but.click(function (event) {
 
                         swal({   title: "User Permission!",
-                            text: "1 = low, 2 = moderator, 3 = admin",
-                            type: "input",   showCancelButton: true,
-                            closeOnConfirm: false,
-                            animation: "slide-from-top",
-                            inputPlaceholder: "Permission" },
+                                text: "1 = low, 2 = moderator, 3 = admin",
+                                type: "input",   showCancelButton: true,
+                                closeOnConfirm: false,
+                                animation: "slide-from-top",
+                                inputPlaceholder: "Permission" },
                             function(inputValue){
                                 if (inputValue === false) return false;
                                 if (inputValue === "") {
@@ -38,14 +43,14 @@ list = function () {
                                     return false   }
                                 else{
                                     swal({   title: "Are you sure?",
-                                        text: "Your action will change the permission of the user!",
-                                        type: "warning",
-                                        showCancelButton: true,
-                                        confirmButtonColor: "#DD6B55",
-                                        confirmButtonText: "Yes, change it!",
-                                        cancelButtonText: "No, cancel plx!",
-                                        closeOnConfirm: false,
-                                        closeOnCancel: false },
+                                            text: "Your action will change the permission of the user!",
+                                            type: "warning",
+                                            showCancelButton: true,
+                                            confirmButtonColor: "#DD6B55",
+                                            confirmButtonText: "Yes, change it!",
+                                            cancelButtonText: "No, cancel plx!",
+                                            closeOnConfirm: false,
+                                            closeOnCancel: false },
                                         function(isConfirm){
                                             if (isConfirm) {
                                                 var data = {"permission": inputValue};
@@ -57,6 +62,7 @@ list = function () {
                                                         var res = JSON.parse(result);
                                                         if(res.error === 0){
                                                             swal("Changed!", "The permission has been changed.", "success");
+                                                            setTimeout(function(){ location.reload(); }, 2000);
                                                         }
                                                     }
                                                 });
@@ -67,7 +73,7 @@ list = function () {
                                                 swal("Cancelled", "The permission is unaltered", "error");
                                             } });
                                 }
-                                });
+                            });
 
                     });
                     but.addClass("btn btn-warning listBtn");
@@ -75,7 +81,7 @@ list = function () {
 
                     ban.click(function (event) {
                         swal({   title: "Are you sure?",
-                                text: "Your action will deactivate the selected user!",
+                                text: "Your action will "+event.target.textContent+" the selected user!",
                                 type: "warning",
                                 showCancelButton: true,
                                 confirmButtonColor: "#DD6B55",
@@ -85,7 +91,10 @@ list = function () {
                                 closeOnCancel: false },
                             function(isConfirm){
                                 if (isConfirm) {
-                                    var data = {"active": "false"};
+                                    if(event.target.textContent === "Deactivate")
+                                        var data = {"active": "false"};
+                                    else
+                                        var data = {"active": "true"};
                                     var  userid = event.target.id;
                                     userid = userid.substring(1,userid.length);
                                     $.ajax({
@@ -95,13 +104,17 @@ list = function () {
                                         success: function(result){
                                             var res = JSON.parse(result);
                                             if(res.error === 0){
-                                                swal("Completed!", "User banned.", "success");
+                                                swal("Completed!", "User "+event.target.textContent+"d.", "success");
+                                                setTimeout(function(){ location.reload(); }, 2000);
                                             }
                                         }
                                     });
                                 }
                                 else {
-                                    swal("Cancelled", "User is still active", "error");
+                                    if(event.target.textContent === "Deactivate")
+                                        swal("Cancelled", "User is still active", "error");
+                                    else
+                                        swal("Cancelled", "User is still deactivated", "error");
                                 } });
                     });
 
