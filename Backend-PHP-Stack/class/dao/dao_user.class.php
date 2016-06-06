@@ -204,6 +204,51 @@ class UserDAO implements userDAOinterface {
     }
 
     /**
+     * @param $id
+     * @param $token
+     * @return object
+     */
+    public function newFromEmailToken($token)
+    {
+        global $dbConn;
+
+        $token = $dbConn->real_escape_string($token);
+
+        $res = $dbConn->query("SELECT * FROM user WHERE email_token = '$token'");
+        $row = $res->fetch_object();
+
+        //Logg all MySQL errors
+        if ($dbConn->error != "") {
+
+            //Log error
+            errorLog::newEntry("MySQL error: " . $dbConn->error, 2, __FILE__, __CLASS__, __FUNCTION__);
+        }
+
+        if ($row != null) {
+
+            $db_id = (int)$row->id;
+            $db_username = utf8_encode($row->username);
+            $db_email = $row->email;
+            $db_emailNotification = intToBool((int)$row->email_notification_flag);
+            $db_password = $row->password;
+            $db_token = $row->token;
+            $db_lastIP = $row->last_ip;
+            $db_lastLogin = (int)$row->last_login;
+            $db_permission = new UserPermission((int)$row->permission);
+            $db_acc_active = intToBool((int)$row->acc_active);
+            $db_acc_approved = intToBool((int)$row->acc_approved);
+            $db_upload_token = $row->upload_token;
+            $db_email_token = $row->email_token;
+            $db_email_approved = intToBool((int)$row->email_approved);
+
+            return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved, $db_upload_token, $db_email_token, $db_email_approved);
+        } else {
+
+            return null;
+        }
+    }
+
+    /**
      * @return object
      */
     public function newFromCookie()
