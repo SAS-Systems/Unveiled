@@ -16,7 +16,7 @@ class User
     private $accApproved = false;
     private $uploadToken = "";
     private $email_token  = "";
-    private $email_approved = "";
+    private $email_approved = false;
 
     /**
      * User constructor.
@@ -33,7 +33,7 @@ class User
      * @param bool $accApproved
      * @param string $uploadToken
      * @param string $email_token
-     * @param string $email_approved
+     * @param bool $email_approved
      */
     public function __construct($id, $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken, $email_token, $email_approved)
     {
@@ -52,7 +52,8 @@ class User
         $this->email_token = $email_token;
         $this->email_approved = $email_approved;
     }
-    
+
+
     /**
      * @return int
      */
@@ -273,21 +274,20 @@ class User
     }
 
     /**
-     * @return string
+     * @return bool|string
      */
-    public function getEmailApproved()
+    public function isEmailApproved()
     {
         return $this->email_approved;
     }
 
     /**
-     * @param string $email_approved
+     * @param bool|string $email_approved
      */
     public function setEmailApproved($email_approved)
     {
         $this->email_approved = $email_approved;
     }
-
 
     public function setCookie()
     {

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.html" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
     </list>
     <ignored path="Unveiled.iws" />
@@ -73,30 +73,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+            <state relative-caret-position="360">
+              <caret line="283" column="7" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2281">
-              <caret line="310" column="16" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="16" />
+            <state relative-caret-position="54">
+              <caret line="377" column="240" selection-start-line="377" selection-start-column="240" selection-end-line="377" selection-end-column="240" />
               <folding>
-                <marker date="1465240518302" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
-                <marker date="1465240518302" expanded="true" signature="2496:2675" placeholder="UPDATE user " />
-                <marker date="1465240518302" expanded="true" signature="3379:3559" placeholder="INSERT INTO user... " />
-                <marker date="1465240518302" expanded="true" signature="4912:4953" placeholder="SELECT * FRO... user" />
-                <marker date="1465240518302" expanded="true" signature="7016:7063" placeholder="SELECT * FRO... user" />
-                <marker date="1465240518302" expanded="true" signature="8873:8920" placeholder="SELECT * FRO... user" />
-                <marker date="1465240518302" expanded="true" signature="10619:10647" placeholder="SELECT * FRO... user" />
-                <marker date="1465240518302" expanded="true" signature="12023:12049" placeholder="DELETE FROM " />
+                <marker date="1465241927945" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
+                <marker date="1465241927945" expanded="true" signature="2769:2981" placeholder="UPDATE user " />
+                <marker date="1465241927945" expanded="true" signature="3767:3962" placeholder="INSERT INTO user... " />
+                <marker date="1465241927945" expanded="true" signature="5328:5369" placeholder="SELECT * FRO... user" />
+                <marker date="1465241927945" expanded="true" signature="7597:7644" placeholder="SELECT * FRO... user" />
+                <marker date="1465241927945" expanded="true" signature="9611:9658" placeholder="SELECT * FRO... user" />
+                <marker date="1465241927945" expanded="true" signature="11498:11526" placeholder="SELECT * FRO... user" />
+                <marker date="1465241927945" expanded="true" signature="13059:13085" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -187,10 +187,10 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
       </list>
     </option>
   </component>
@@ -835,14 +835,7 @@
       <workItem from="1464617922375" duration="278000" />
       <workItem from="1464618843838" duration="255000" />
       <workItem from="1465237783585" duration="1095000" />
-      <workItem from="1465238921135" duration="2404000" />
-    </task>
-    <task id="LOCAL-00050" summary="implement postUser">
-      <created>1448730917251</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1448730917252</updated>
+      <workItem from="1465238921135" duration="2839000" />
     </task>
     <task id="LOCAL-00051" summary="implement postUser">
       <created>1448731153171</created>
@@ -1180,11 +1173,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465240632088</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="added emailToken /emailApproved in User Model&#10;">
+      <created>1465241517579</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1465241517579</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18095000" />
+    <option name="totallyTimeSpent" value="18530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1193,7 +1193,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14904863" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15221988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07928118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1226,7 +1226,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added getTubURI and getURI to class File" />
     <MESSAGE value="added REST API files/all" />
     <MESSAGE value="fixed bug" />
     <MESSAGE value="a lot of stuff" />
@@ -1251,7 +1250,8 @@
     <MESSAGE value="generate uploadToken if user were created" />
     <MESSAGE value="change system langue to EN" />
     <MESSAGE value="added POST login request for App" />
-    <option name="LAST_COMMIT_MESSAGE" value="added POST login request for App" />
+    <MESSAGE value="added emailToken /emailApproved in User Model&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added emailToken /emailApproved in User Model&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1585,28 +1585,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2281">
-          <caret line="310" column="16" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="16" />
-          <folding>
-            <marker date="1465240518302" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
-            <marker date="1465240518302" expanded="true" signature="2496:2675" placeholder="UPDATE user " />
-            <marker date="1465240518302" expanded="true" signature="3379:3559" placeholder="INSERT INTO user... " />
-            <marker date="1465240518302" expanded="true" signature="4912:4953" placeholder="SELECT * FRO... user" />
-            <marker date="1465240518302" expanded="true" signature="7016:7063" placeholder="SELECT * FRO... user" />
-            <marker date="1465240518302" expanded="true" signature="8873:8920" placeholder="SELECT * FRO... user" />
-            <marker date="1465240518302" expanded="true" signature="10619:10647" placeholder="SELECT * FRO... user" />
-            <marker date="1465240518302" expanded="true" signature="12023:12049" placeholder="DELETE FROM " />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="283" column="7" selection-start-line="283" selection-start-column="7" selection-end-line="283" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="54">
+          <caret line="377" column="240" selection-start-line="377" selection-start-column="240" selection-end-line="377" selection-end-column="240" />
+          <folding>
+            <marker date="1465241927945" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
+            <marker date="1465241927945" expanded="true" signature="2769:2981" placeholder="UPDATE user " />
+            <marker date="1465241927945" expanded="true" signature="3767:3962" placeholder="INSERT INTO user... " />
+            <marker date="1465241927945" expanded="true" signature="5328:5369" placeholder="SELECT * FRO... user" />
+            <marker date="1465241927945" expanded="true" signature="7597:7644" placeholder="SELECT * FRO... user" />
+            <marker date="1465241927945" expanded="true" signature="9611:9658" placeholder="SELECT * FRO... user" />
+            <marker date="1465241927945" expanded="true" signature="11498:11526" placeholder="SELECT * FRO... user" />
+            <marker date="1465241927945" expanded="true" signature="13059:13085" placeholder="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
