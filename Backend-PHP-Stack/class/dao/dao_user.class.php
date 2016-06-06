@@ -40,8 +40,9 @@ class UserDAO implements userDAOinterface {
                 $db_permission = new UserPermission((int)$row->permission);
                 $db_acc_active = intToBool((int)$row->acc_active);
                 $db_acc_approved = intToBool((int)$row->acc_approved);
+                $db_upload_token = $row->upload_token;
 
-                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved);
+                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved, $db_upload_token);
             } else {
 
                 return null;
@@ -72,14 +73,15 @@ class UserDAO implements userDAOinterface {
         $permission = $user->getPermission()->getLevel();
         $accActive = boolToInt($user->isAccActive());
         $accApproved = boolToInt($user->isAccApproved());
+        $uploadToken = $user->getUploadToken();
 
         //object exists in DB
         if($this->existsInDB($user)) {
 
-            $query = "UPDATE user SET username=?, email=?, email_notification_flag=?, password=?, token=?, last_ip=?, last_login=?, permission=?, acc_active=?, acc_approved=? WHERE id=?";
+            $query = "UPDATE user SET username=?, email=?, email_notification_flag=?, password=?, token=?, last_ip=?, last_login=?, permission=?, acc_active=?, acc_approved=?, upload_token=? WHERE id=?";
             $query_stmt = $dbConn->prepare($query);
 
-            $query_stmt->bind_param('ssisssiiiii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $id);
+            $query_stmt->bind_param('ssisssiiiisi', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken, $id);
             $query_stmt->execute();
 
             //Logg all MySQL errors
@@ -97,10 +99,10 @@ class UserDAO implements userDAOinterface {
         }
         else {
 
-            $query = "INSERT INTO user (username, email, email_notification_flag, password, token, last_ip, last_login, permission, acc_active, acc_approved) VALUES (?,?,?,?,?,?,?,?,?,?)";
+            $query = "INSERT INTO user (username, email, email_notification_flag, password, token, last_ip, last_login, permission, acc_active, acc_approved, upload_token) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $query_stmt = $dbConn->prepare($query);
 
-            $query_stmt->bind_param('ssisssiiii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved);
+            $query_stmt->bind_param('ssisssiiii', $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken);
             $query_stmt->execute();
 
             //Logg all MySQL errors
@@ -178,8 +180,9 @@ class UserDAO implements userDAOinterface {
                 $db_permission = new UserPermission((int)$row->permission);
                 $db_acc_active = intToBool((int)$row->acc_active);
                 $db_acc_approved = intToBool((int)$row->acc_approved);
+                $db_upload_token = $row->upload_token;
 
-                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved);
+                return new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved, $db_upload_token);
             } else {
 
                 return null;
@@ -242,10 +245,11 @@ class UserDAO implements userDAOinterface {
             $db_permission = new UserPermission((int)$row->permission);
             $db_acc_active = intToBool((int)$row->acc_active);
             $db_acc_approved = intToBool((int)$row->acc_approved);
+            $db_upload_token = $row->upload_token;
 
             if (crypt($password, $gvCryptSalt) == $db_password) {
 
-                $u = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved);
+                $u = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved, $db_upload_token);
 
                 $u->setToken(User::generateToken($db_id));
                 $u->setLastLogin(time());
@@ -299,8 +303,9 @@ class UserDAO implements userDAOinterface {
             $db_permission = new UserPermission((int)$row->permission);
             $db_acc_active = intToBool((int)$row->acc_active);
             $db_acc_approved = intToBool((int)$row->acc_approved);
+            $db_upload_token = $row->upload_token;
 
-            $user = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved);
+            $user = new User($db_id, $db_username, $db_email, $db_emailNotification, $db_password, $db_token, $db_lastIP, $db_lastLogin, $db_permission, $db_acc_active, $db_acc_approved, $db_upload_token);
 
             $tmp[] = $user;
         }
