@@ -78,6 +78,41 @@ $app->post('/user/login', function () use ($app) {
     }
 });
 
+$app->post('/user/login/app', function () use ($app) {
+
+    //creating DAOs
+    $messageDAO = new MessageDAO();
+    $userDAO = new UserDAO();
+
+    $username = $app->request->post('username');
+    $password = $app->request->post('password');
+
+    //all parameter exists
+    if ($username == null || $password == null) {
+
+        //fehlende Parameter.
+        $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $user = $userDAO->newFromLoginApp($username, $password);
+
+    if ($user != null) {
+
+        $user->setCookie();
+
+        //Nutzer erfolgreich eingeloggt.
+        $message = $messageDAO->newFromCode("A003", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    } else {
+
+        //Email oder Passwort falsch.
+        $message = $messageDAO->newFromCode("A004", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    }
+});
+
 
 $app->post('/user/logout', function () use ($app) {
 
@@ -127,7 +162,7 @@ $app->get('/user/:id', function ($id) use ($app) {
         $message = $messageDAO->newFromCode("A007", SYSTEM_LANGUAGE);
         echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(),
             "userData" => array("id" => $user->getId(), "username" => $user->getUsername(), "email" => $user->getEmail(),
-                "emailNotification" => $user->isEmailNotification())));
+                "emailNotification" => $user->isEmailNotification(), "uploadToken" => $user->getUploadToken())));
 
     } elseif ($id == "all") {
 
