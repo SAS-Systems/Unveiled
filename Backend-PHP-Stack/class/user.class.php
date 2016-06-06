@@ -308,6 +308,20 @@ class User
         }
     }
 
+    public function setAppCookie()
+    {
+
+        if ($this->token != '') {
+
+            $p = new UserPermission(3);
+
+            setcookie("loginID", $this->id, time() + 86400, "/");
+            setcookie("loginToken", $this->uploadToken, time() + 86400, "/");
+            setcookie("loginUsername", $this->username, time() + 86400, "/");
+            setcookie("loginAdmin", boolToStr($p->isAllowed($this)), time() + 86400, "/");
+        }
+    }
+
     public static function unsetCookie()
     {
 

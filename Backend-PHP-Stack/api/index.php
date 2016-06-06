@@ -100,7 +100,7 @@ $app->post('/user/login/app', function () use ($app) {
 
     if ($user != null) {
 
-        $user->setCookie();
+        $user->setAppCookie();
 
         //Nutzer erfolgreich eingeloggt.
         $message = $messageDAO->newFromCode("A003", SYSTEM_LANGUAGE);
