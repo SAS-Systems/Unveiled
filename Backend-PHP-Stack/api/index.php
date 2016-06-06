@@ -28,7 +28,7 @@ $app->post('/user', function () use ($app) {
         return;
     }
 
-    $user = new User(-1, $username, $email, true, $password, "", $ip, time(), new UserPermission(), true, false);
+    $user = new User(-1, $username, $email, true, $password, "", $ip, time(), new UserPermission(), true, false, "");
     if ($userDAO->flushDB($user)) {
 
         //Nutzer wurde erfolgreich angelegt.

@@ -71,5 +71,5 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'gl
 ///////////////////////////////////////////////////////////////////////////
 
 
-define("SYSTEM_LANGUAGE", "DE");
+define("SYSTEM_LANGUAGE", "EN");
 
