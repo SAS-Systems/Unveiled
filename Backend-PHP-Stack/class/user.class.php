@@ -100,6 +100,10 @@ class User
     public function setEmail($email)
     {
         $this->email = $email;
+        
+        //new approve required
+        $this->email_token = User::generateToken(-1);
+        $this->email_approved = false;
     }
 
     /**
