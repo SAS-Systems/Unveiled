@@ -14,6 +14,7 @@ class User
     private $permission;
     private $accActive = true;
     private $accApproved = false;
+    private $uploadToken = "";
 
     /**
      * User constructor.
@@ -28,8 +29,9 @@ class User
      * @param $permission
      * @param bool $accActive
      * @param bool $accApproved
+     * @param string $uploadToken
      */
-    public function __construct($id, $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved)
+    public function __construct($id, $username, $email, $emailNotification, $password, $token, $lastIP, $lastLogin, $permission, $accActive, $accApproved, $uploadToken)
     {
         $this->id = $id;
         $this->username = $username;
@@ -42,8 +44,9 @@ class User
         $this->permission = $permission;
         $this->accActive = $accActive;
         $this->accApproved = $accApproved;
+        $this->uploadToken = $uploadToken;
     }
-
+    
     /**
      * @return int
      */
@@ -230,6 +233,23 @@ class User
 
         return false;
     }
+
+    /**
+     * @return string
+     */
+    public function getUploadToken()
+    {
+        return $this->uploadToken;
+    }
+
+    /**
+     * @param string $uploadToken
+     */
+    public function setUploadToken($uploadToken)
+    {
+        $this->uploadToken = $uploadToken;
+    }
+
 
     public function setCookie()
     {

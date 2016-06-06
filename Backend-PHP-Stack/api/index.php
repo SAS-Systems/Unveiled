@@ -142,7 +142,7 @@ $app->get('/user/:id', function ($id) use ($app) {
 
                 $tmpUserData[] = array("id" => $tmpUser->getId(), "username" => $tmpUser->getUsername(),
                     "email" => $tmpUser->getEmail(), "lastLogin" => timestampToString($tmpUser->getLastLogin()),
-                    "permission" => $tmpUser->getPermission()->toString(), "isActive" => $tmpUser->isActive(), "isActive" => $tmpUser->isAccActive(), "isApproved" => $tmpUser->isAccApproved());
+                    "permission" => $tmpUser->getPermission()->toString(), "isActive" => $tmpUser->isAccActive(), "isApproved" => $tmpUser->isAccApproved());
             }
 
             //Aktion wurde erfolgreich durchgeführt.
