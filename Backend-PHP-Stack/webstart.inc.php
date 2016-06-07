@@ -73,5 +73,12 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'gl
 ///////////////////////////////////////////////////////////////////////////
 
 
+///////////////////////////////////////////////////////////////////////////
+//PHP Mailer
+
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'PHPMailer' . DIRECTORY_SEPARATOR .  'class.phpmailer.php');
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'PHPMailer' . DIRECTORY_SEPARATOR .  'class.smtp.php');
+///////////////////////////////////////////////////////////////////////////
+
 define("SYSTEM_LANGUAGE", "EN");
 
