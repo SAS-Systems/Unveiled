@@ -315,10 +315,10 @@ class User
 
             $p = new UserPermission(3);
 
-            setcookie("loginID", $this->id, time() + 86400, "/");
-            setcookie("loginToken", $this->uploadToken, time() + 86400, "/");
-            setcookie("loginUsername", $this->username, time() + 86400, "/");
-            setcookie("loginAdmin", boolToStr($p->isAllowed($this)), time() + 86400, "/");
+            setcookie("uploadID", $this->id, time() + 999999, "/");
+            setcookie("uploadToken", $this->uploadToken, time() + 999999, "/");
+            setcookie("uploadUsername", $this->username, time() + 999999, "/");
+            setcookie("uploadAdmin", boolToStr($p->isAllowed($this)), time() + 999999, "/");
         }
     }
 

@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88728263-1cec-401d-9056-556531ae99a0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" afterPath="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
     </list>
     <ignored path="Unveiled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state relative-caret-position="535">
+              <caret line="537" column="0" selection-start-line="537" selection-start-column="0" selection-end-line="537" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,7 +59,7 @@
       <file leaf-file-name="message.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="1054">
               <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
               <folding />
             </state>
@@ -87,29 +89,28 @@
       <file leaf-file-name="user.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="315" column="39" selection-start-line="315" selection-start-column="39" selection-end-line="315" selection-end-column="39" />
+            <state relative-caret-position="5440">
+              <caret line="320" column="85" selection-start-line="320" selection-start-column="85" selection-end-line="320" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dao_user.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="319" column="7" selection-start-line="319" selection-start-column="7" selection-end-line="319" selection-end-column="7" />
+            <state relative-caret-position="6545">
+              <caret line="385" column="45" selection-start-line="384" selection-start-column="25" selection-end-line="385" selection-end-column="45" />
               <folding>
-                <marker date="1465243183726" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
-                <marker date="1465243183726" expanded="true" signature="2769:2981" placeholder="UPDATE user " />
-                <marker date="1465243183726" expanded="true" signature="3767:3962" placeholder="INSERT INTO user... " />
-                <marker date="1465243183726" expanded="true" signature="5414:5455" placeholder="SELECT * FRO... user" />
-                <marker date="1465243183726" expanded="true" signature="7266:7314" placeholder="SELECT * FRO... user" />
-                <marker date="1465243183726" expanded="true" signature="9028:9075" placeholder="SELECT * FRO... user" />
-                <marker date="1465243183726" expanded="true" signature="11538:11585" placeholder="SELECT * FRO... user" />
-                <marker date="1465243183726" expanded="true" signature="13552:13599" placeholder="SELECT * FRO... user" />
-                <marker date="1465243183726" expanded="true" signature="15439:15467" placeholder="SELECT * FRO... user" />
-                <marker date="1465243183726" expanded="true" signature="17000:17026" placeholder="DELETE FROM " />
+                <marker date="1465303659976" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
+                <marker date="1465303659976" expanded="true" signature="2769:2981" placeholder="UPDATE user " />
+                <marker date="1465303659976" expanded="true" signature="3767:3962" placeholder="INSERT INTO user... " />
+                <marker date="1465303659976" expanded="true" signature="5415:5456" placeholder="SELECT * FRO... user" />
+                <marker date="1465303659976" expanded="true" signature="7171:7218" placeholder="SELECT * FRO... user" />
+                <marker date="1465303659976" expanded="true" signature="9601:9648" placeholder="SELECT * FRO... user" />
+                <marker date="1465303659976" expanded="true" signature="11615:11662" placeholder="SELECT * FRO... user" />
+                <marker date="1465303659976" expanded="true" signature="13502:13530" placeholder="SELECT * FRO... user" />
+                <marker date="1465303659976" expanded="true" signature="15063:15089" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -128,8 +129,8 @@
       <file leaf-file-name="webstart.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+            <state relative-caret-position="731">
+              <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -199,11 +200,11 @@
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/picture_file.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_message.class.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_video.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php" />
-        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
         <option value="$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php" />
+        <option value="$PROJECT_DIR$/Backend-PHP-Stack/api/index.php" />
       </list>
     </option>
   </component>
@@ -248,6 +249,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -277,24 +279,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Backend-PHP-Stack" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Unveiled" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Unveiled" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Backend-PHP-Stack" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webinterface" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,7 +342,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -848,14 +831,10 @@
       <workItem from="1464617922375" duration="278000" />
       <workItem from="1464618843838" duration="255000" />
       <workItem from="1465237783585" duration="1095000" />
-      <workItem from="1465238921135" duration="4090000" />
-    </task>
-    <task id="LOCAL-00056" summary="bug fixed in User class">
-      <created>1448732564416</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1448732564416</updated>
+      <workItem from="1465238921135" duration="5630000" />
+      <workItem from="1465303365928" duration="909000" />
+      <workItem from="1465318666449" duration="401000" />
+      <workItem from="1465319952891" duration="95000" />
     </task>
     <task id="LOCAL-00057" summary="bug fixed in Message class">
       <created>1448733123094</created>
@@ -1193,38 +1172,45 @@
       <option name="project" value="LOCAL" />
       <updated>1465242707876</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="implement upload_token for App usage">
+      <created>1465243220982</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1465243220982</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19781000" />
+    <option name="totallyTimeSpent" value="22726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15221988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07928118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3433923" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1239,7 +1225,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added MailService" />
     <MESSAGE value="apply copy changes" />
     <MESSAGE value="implemented DAO interface" />
     <MESSAGE value="implemented DAO user interface" />
@@ -1264,7 +1249,8 @@
     <MESSAGE value="if email changes a new email_approve is required" />
     <MESSAGE value="added User DAO newFromEmailToken" />
     <MESSAGE value="added email verification" />
-    <option name="LAST_COMMIT_MESSAGE" value="added email verification" />
+    <MESSAGE value="implement upload_token for App usage" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement upload_token for App usage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1559,14 +1545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webinterface/confirm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1577,7 +1555,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/message.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="1054">
           <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
           <folding />
         </state>
@@ -1591,38 +1569,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/webstart.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="315" column="39" selection-start-line="315" selection-start-column="39" selection-end-line="315" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="731">
+          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/dao/dao_user.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="319" column="7" selection-start-line="319" selection-start-column="7" selection-end-line="319" selection-end-column="7" />
+        <state relative-caret-position="6545">
+          <caret line="385" column="45" selection-start-line="384" selection-start-column="25" selection-end-line="385" selection-end-column="45" />
           <folding>
-            <marker date="1465243183726" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
-            <marker date="1465243183726" expanded="true" signature="2769:2981" placeholder="UPDATE user " />
-            <marker date="1465243183726" expanded="true" signature="3767:3962" placeholder="INSERT INTO user... " />
-            <marker date="1465243183726" expanded="true" signature="5414:5455" placeholder="SELECT * FRO... user" />
-            <marker date="1465243183726" expanded="true" signature="7266:7314" placeholder="SELECT * FRO... user" />
-            <marker date="1465243183726" expanded="true" signature="9028:9075" placeholder="SELECT * FRO... user" />
-            <marker date="1465243183726" expanded="true" signature="11538:11585" placeholder="SELECT * FRO... user" />
-            <marker date="1465243183726" expanded="true" signature="13552:13599" placeholder="SELECT * FRO... user" />
-            <marker date="1465243183726" expanded="true" signature="15439:15467" placeholder="SELECT * FRO... user" />
-            <marker date="1465243183726" expanded="true" signature="17000:17026" placeholder="DELETE FROM " />
+            <marker date="1465303659976" expanded="true" signature="313:348" placeholder="SELECT * FRO... user" />
+            <marker date="1465303659976" expanded="true" signature="2769:2981" placeholder="UPDATE user " />
+            <marker date="1465303659976" expanded="true" signature="3767:3962" placeholder="INSERT INTO user... " />
+            <marker date="1465303659976" expanded="true" signature="5415:5456" placeholder="SELECT * FRO... user" />
+            <marker date="1465303659976" expanded="true" signature="7171:7218" placeholder="SELECT * FRO... user" />
+            <marker date="1465303659976" expanded="true" signature="9601:9648" placeholder="SELECT * FRO... user" />
+            <marker date="1465303659976" expanded="true" signature="11615:11662" placeholder="SELECT * FRO... user" />
+            <marker date="1465303659976" expanded="true" signature="13502:13530" placeholder="SELECT * FRO... user" />
+            <marker date="1465303659976" expanded="true" signature="15063:15089" placeholder="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/class/user.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5440">
+          <caret line="320" column="85" selection-start-line="320" selection-start-column="85" selection-end-line="320" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend-PHP-Stack/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="537" column="0" selection-start-line="537" selection-start-column="0" selection-end-line="537" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

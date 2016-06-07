@@ -78,41 +78,6 @@ $app->post('/user/login', function () use ($app) {
     }
 });
 
-$app->post('/user/login/app', function () use ($app) {
-
-    //creating DAOs
-    $messageDAO = new MessageDAO();
-    $userDAO = new UserDAO();
-
-    $username = $app->request->post('username');
-    $password = $app->request->post('password');
-
-    //all parameter exists
-    if ($username == null || $password == null) {
-
-        //fehlende Parameter.
-        $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-        return;
-    }
-
-    $user = $userDAO->newFromLoginApp($username, $password);
-
-    if ($user != null) {
-
-        $user->setAppCookie();
-
-        //Nutzer erfolgreich eingeloggt.
-        $message = $messageDAO->newFromCode("A003", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-    } else {
-
-        //Email oder Passwort falsch.
-        $message = $messageDAO->newFromCode("A004", SYSTEM_LANGUAGE);
-        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
-    }
-});
-
 
 $app->post('/user/logout', function () use ($app) {
 
@@ -543,6 +508,45 @@ $app->delete('/file/:id', function ($id) use ($app) {
         return;
     }
 
+});
+
+
+//////////////////////////////////////////////////////////////////////App API
+
+
+$app->post('/app/user/login', function () use ($app) {
+
+    //creating DAOs
+    $messageDAO = new MessageDAO();
+    $userDAO = new UserDAO();
+
+    $username = $app->request->post('username');
+    $password = $app->request->post('password');
+
+    //all parameter exists
+    if ($username == null || $password == null) {
+
+        //fehlende Parameter.
+        $message = $messageDAO->newFromCode("S001", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+        return;
+    }
+
+    $user = $userDAO->newFromLoginApp($username, $password);
+
+    if ($user != null) {
+
+        $user->setAppCookie();
+
+        //Nutzer erfolgreich eingeloggt.
+        $message = $messageDAO->newFromCode("A003", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 0, "errorMsg" => $message->getMsg(), "errorType" => $message->getType(), "uploadToken" => $user->getUploadToken(), "userId" => $user->getId()));
+    } else {
+
+        //Email oder Passwort falsch.
+        $message = $messageDAO->newFromCode("A004", SYSTEM_LANGUAGE);
+        echo json_encode(array("error" => 1, "errorMsg" => $message->getMsg(), "errorType" => $message->getType()));
+    }
 });
 
 
